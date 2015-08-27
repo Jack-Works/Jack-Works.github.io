@@ -12,7 +12,7 @@
 	});
 })();
 var conf = {
-	article_title: "Jack Works",
+	article_title: "Jack Works 的并没有什么用的书单",
 	items: [{
 		title: "哥德尔艾舍尔巴赫",
 		content: "看到了第 550 页……",

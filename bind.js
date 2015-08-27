@@ -10,6 +10,7 @@ var conf = conf || {
 		progress: [12, 42]
 	}]
 }
+document.title = conf.article_title;
 $("#article_title").html(conf.article_title);
 conf.items.forEach(function (item){
 	var d = $(".item-example").clone().removeClass("item-example");
