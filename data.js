@@ -4,12 +4,14 @@
 			return "<span class='color'>text</span>".replace("color", color).replace("text", this);
 		}];
 	}
-	[gen("red"), gen("green"), gen("orange"),
+	[gen("red"), gen("green"), gen("orange"), gen("gray"), gen("del"),
 		["processing", function (){return this + "...";}],
 		["done", function (){return "✓ " + this;}]
 	].forEach(function (value){
 		String.prototype.__defineGetter__(value[0], value[1]);
 	});
+	String.prototype.id = function (id){return "<span id='" + id + "'>" + this + "</span>";}
+	String.prototype.link = function (url){return "<a href='" + url + "'>" + this + "</a>";}
 })();
 var conf = {
 	article_title: "Jack Works 的并没有什么用的书单",
@@ -26,6 +28,25 @@ var conf = {
 		content: "霍比特人 魔戒同盟 双塔殊途 王者归来 精灵宝钻<br>本来已经把霍比特人看完了，后来换了一个翻译版本，于是从头看起<br />现在是第 33 页",
 		progress: [33, 706, 2004]
 	},{
+		title: "网易云课堂 - 计算机网络之网尽其用",
+		content: [
+			"第 1 章: 计算机网络概述 (上)".done.green + " > " + "计算机网络概述 (下)".orange.processing,
+			"第 2 章: 计算机网络应用 (上) > 计算机网络应用 (下)".gray
+		],
+		progress: [11, 17, 39]
+	},{
+		title: "网易云课堂 - CS 大一",
+		content: [
+			"程序设计入门 - Python",
+			"程序设计入门 - C 语言 > " + "C 语言程序设计进阶".gray,
+			("程序设计入门 - Java".red + " > " + "Java 语言程序设计进阶".gray).del,
+			"计算机专业导论之思维与系统",
+			"计算机专业导论之语言与算法",
+			"计算机专业导论之学科与专业",
+			"工科数学分析(1) > " + "工科数学分析(2)".gray
+		],
+		progress: [0, 7, 10]
+	},{
 		title: "计算机科学",
 		content: [
 			"计算机体系结构",
@@ -39,8 +60,7 @@ var conf = {
 			"编译原理".processing,
 			"操作系统",
 			"网络协议"
-		],
-		progress: [0, 2, 11],
+		]
 	}, {
 		title: "数学",
 		content: [
@@ -56,16 +76,16 @@ var conf = {
 			"《什么是数学》",
 			"《数学之美》"
 		],
-		progress: [0, 1, 11]
+		progress: [0, 0, 2]//book only
 	}, {
 		title: "语言",
 		content: [
 			"English".processing.orange,
 			"Esperanto",
 			"Latin"
-		],
-		progress: [0, 1, 3]
-	}, {
+		]
+	}, /*{ 
+		//Not now
 		title: "物理",
 		content: [
 			"数学物理方程",
@@ -73,9 +93,8 @@ var conf = {
 			"统计力学",
 			"经典力学",
 			"电动力学"
-		],
-		progress: [0, 0, 5]
-	}, {
+		]
+	}*/, {
 		title: "计算机语言",
 		content: [
 			"JavaScript".done.green,
@@ -90,12 +109,11 @@ var conf = {
 			"C#(momo)",
 			"Lisp",
 			"ECMAScript 2015".processing
-		],
-		progress: [1, 4, 12]
+		]
 	}, {
 		title: "思维、逻辑、社会、设计、玄学",
 		content: [
-			"黑客与画家".done.green,
+			"黑客与画家".done.green.id("book_hackers_and_painters"),
 			"批判性思维工具",
 			"哥德尔艾舍尔巴赫".processing.orange,
 			"不确定状况下的判断",
@@ -103,7 +121,7 @@ var conf = {
 			"给大家看的设计书",
 			"可笑的思维谬误：批判性思考与查错神经",
 			"乌合之众",
-			"提问的智慧".done.green,
+			"提问的智慧".done.green.id("book_smart_questions"),
 			"浪潮之巅"
 		],
 		progress: [2, 3, 10]
@@ -111,14 +129,11 @@ var conf = {
 		title: "一些奇怪的东西",
 		content: [
 			"魔戒".processing.orange,
-			"Uno".done.green,
-			"万智牌规则",
 			"DND规则",
 			"1984",
 			"美丽新世界",
 			"三体".processing.red
-		],
-		progress: [1, 2, 4]
+		]
 	}, {
 		title: "听起来很厉害的样子，说不定会去拜读",
 		content: [
@@ -141,30 +156,37 @@ var conf = {
 	}, {
 		title: "我们的征途，是星辰大海！",
 		content: [
-			"<a href='http://www.bilibili.tv/video/av734504/'>我们所居住的宇宙</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av330634/'>宇宙之死</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av519325/'>旅行者号-冲出太阳系</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av532292/'>上帝创造宇宙</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av366303/'>为什么夜空是黑的</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av705870/'>宇宙中的高速通道-虫洞</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av734155/'>已观测的宇宙</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av375315/'>什么是空间</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av286821/'>宇宙中最大的星球</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av825951/'>3分钟了解宇宙大爆炸</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av411844/'>跳进一个黑洞会怎样</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av306190/'>10个宇宙的古怪事实</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av476783/'>宇宙有多小</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av745860/'>太空中的十个奇迹</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av497776/'>60秒漫画天文学</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av499656/'>宇宙有多大</a>".done.green,
-			"<a href='http://www.bilibili.tv/video/av497776/'>60秒漫画天文学</a>".done.green,
+			"我们所居住的宇宙".done.green.link("http://www.bilibili.tv/video/av734504/"),
+			"宇宙之死".done.green.link("http://www.bilibili.tv/video/av330634/"),
+			"旅行者号-冲出太阳系".done.green.link("http://www.bilibili.tv/video/av519325/"),
+			"上帝创造宇宙".done.green.link("http://www.bilibili.tv/video/av532292/"),
+			"为什么夜空是黑的".done.green.link("http://www.bilibili.tv/video/av366303"),
+			"宇宙中的高速通道-虫洞".done.green.link("http://www.bilibili.tv/video/av705870"),
+			"已观测的宇宙".done.green.link("http://www.bilibili.tv/video/av734155"),
+			"什么是空间".done.green.link("http://www.bilibili.tv/video/av375315"),
+			"宇宙中最大的星球".done.green.link("http://www.bilibili.tv/video/av286821"),
+			"3分钟了解宇宙大爆炸".done.green.link("http://www.bilibili.tv/video/av825951"),
+			"跳进一个黑洞会怎样".done.green.link("http://www.bilibili.tv/video/av411844"),
+			"10个宇宙的古怪事实".done.green.link("http://www.bilibili.tv/video/av306190"),
+			"宇宙有多小".done.green.link("http://www.bilibili.tv/video/av476783"),
+			"太空中的十个奇迹".done.green.link("http://www.bilibili.tv/video/av745860"),
+			"60秒漫画天文学".done.green.link("http://www.bilibili.tv/video/av497776"),
+			"宇宙有多大".done.green.link("http://www.bilibili.tv/video/av499656"),
+			"60秒漫画天文学".done.green.link("http://www.bilibili.tv/video/av497776"),
 			
-			"<a href='http://www.bilibili.tv/video/av284084/'>纪录片-宇宙</a>",
-			"<a href='http://www.bilibili.tv/video/av821216/'>霍金的宇宙</a>",
-			"<a href='http://www.bilibili.tv/video/av298279/'>与弗里曼穿越虫洞</a>",
-			"<a href='http://www.bilibili.tv/video/av328469/'>地球君的演化</a>",
-			"<a href='http://www.bilibili.tv/video/av335794/'>500亿光年外的深邃宇宙</a>"
+			"纪录片-宇宙".link("http://www.bilibili.tv/video/av284084"),
+			"霍金的宇宙".link("http://www.bilibili.tv/video/av821216"),
+			"与弗里曼穿越虫洞".link("http://www.bilibili.tv/video/av298279"),
+			"地球君的演化".link("http://www.bilibili.tv/video/av328469"),
+			"500亿光年外的深邃宇宙".link("http://www.bilibili.tv/video/av335794")
 		],
 		progress: [17, 22, 22]
+	}, {
+		title: "Done!",
+		content: [
+			"提问的智慧".done.green.link("#book_smart_questions") + " 2015/??/??",
+			"黑客与画家".done.green.link("#book_hackers_and_painters") + " 2015/??/??",
+			"Uno".done.green + "2015/08/18"
+		]
 	}]
 }

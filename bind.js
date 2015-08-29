@@ -25,17 +25,20 @@ conf.items.forEach(function (item){
 	d.find(".item-content p").html(item.content);	
 	d.find(".item-title h4").html(item.title);
 
-
-	if(!item.progress[1] === undefined){
-		item.progress[1] = item.progress[2] | 100;
+	if(item.progress === undefined){
+		d.find(".item-progress").remove();
+	} else {
+		if(!item.progress[1] === undefined){
+			item.progress[1] = item.progress[2] | 100;
+		}
+		if(item.progress[2]){
+			item.progress[0] = item.progress[0] / item.progress[2] * 100;
+			item.progress[1] = item.progress[1] / item.progress[2] * 100;
+		}
+		d.find(".item-progress")[0].addEventListener('mdl-componentupgraded', function() {
+			this.MaterialProgress.setProgress(item.progress[0]);
+			this.MaterialProgress.setBuffer(item.progress[1]);
+		});
 	}
-	if(item.progress[2]){
-		item.progress[0] = item.progress[0] / item.progress[2] * 100;
-		item.progress[1] = item.progress[1] / item.progress[2] * 100;
-	}
-	d.find(".item-progress")[0].addEventListener('mdl-componentupgraded', function() {
-    	this.MaterialProgress.setProgress(item.progress[0]);
-    	this.MaterialProgress.setBuffer(item.progress[1]);
-  	});
 	d.appendTo(".item-container");
 });
