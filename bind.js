@@ -15,15 +15,19 @@ $("#article_title").html(conf.article_title);
 conf.items.forEach(function (item){
 	var d = $(".item-example").clone().removeClass("item-example");
 	
-	if(item.content.forEach){
+	if(item.content && item.content.forEach){
 		var lst = "<ul>";
 		item.content.forEach(function (list){
 			lst += "<li>" + list + "</li>";
 		});
 		item.content = lst + "</ul>";
 	}
-	d.find(".item-content p").html(item.content);	
-	d.find(".item-title h4").html(item.title);
+	
+	if(item.content) d.find(".item-content p").html(item.content);
+	else d.find(".item-content p").remove();
+	
+	if(item.title) d.find(".item-title h4").html(item.title);
+	else d.find(".item-title").remove();
 
 	if(item.progress === undefined){
 		d.find(".item-progress").remove();

@@ -17,16 +17,20 @@ var conf = {
 	article_title: "Jack Works 的并没有什么用的书单",
 	items: [{
 		title: "哥德尔艾舍尔巴赫",
-		content: "看到了第 550 页……",
-		progress: [550, 982, 982]
+		content: "看到了第 570 页……",
+		progress: [570, 982, 982]
 	},{
 		title: "失控",
 		content: "看到了第 216 页……",
 		progress: [216, 1027, 1027]
 	},{
 		title: "魔戒",
-		content: "霍比特人 魔戒同盟 双塔殊途 王者归来 精灵宝钻<br>本来已经把霍比特人看完了，后来换了一个翻译版本，于是从头看起<br />现在是第 33 页",
-		progress: [33, 706, 2004]
+		content: ["霍比特人".done.green,
+			"魔戒同盟".processing.orange,
+			"王者归来",
+			"精灵宝钻", 
+		],
+		progress: [40, 706, 2004]
 	},{
 		title: "网易云课堂 - 计算机网络之网尽其用",
 		content: [
@@ -135,6 +139,9 @@ var conf = {
 			"三体".processing.red
 		]
 	}, {
+		content: "d520c1fe1e7226321f8e11df4ee9f764",
+		progress: [0, 0, 3]
+	}, {
 		title: "听起来很厉害的样子，说不定会去拜读",
 		content: [
 			"重构",
@@ -173,14 +180,14 @@ var conf = {
 			"60秒漫画天文学".done.green.link("http://www.bilibili.tv/video/av497776"),
 			"宇宙有多大".done.green.link("http://www.bilibili.tv/video/av499656"),
 			"60秒漫画天文学".done.green.link("http://www.bilibili.tv/video/av497776"),
+			"纪录片-宇宙".done.green.link("http://www.bilibili.tv/video/av284084"),
 			
-			"纪录片-宇宙".link("http://www.bilibili.tv/video/av284084"),
 			"霍金的宇宙".link("http://www.bilibili.tv/video/av821216"),
 			"与弗里曼穿越虫洞".link("http://www.bilibili.tv/video/av298279"),
 			"地球君的演化".link("http://www.bilibili.tv/video/av328469"),
 			"500亿光年外的深邃宇宙".link("http://www.bilibili.tv/video/av335794")
 		],
-		progress: [17, 22, 22]
+		progress: [18, 22, 22]
 	}, {
 		title: "Done!",
 		content: [
