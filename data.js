@@ -17,12 +17,12 @@ var conf = {
 	article_title: "Jack Works 的并没有什么用的书单",
 	items: [{
 		title: "哥德尔艾舍尔巴赫",
-		content: "看到了第 570 页……",
-		progress: [570, 982, 982]
+		content: "看到了第 594 页……",
+		progress: [594, 982, 982]
 	},{
 		title: "失控",
-		content: "看到了第 216 页……",
-		progress: [216, 1027, 1027]
+		content: "看到了第 231 页……",
+		progress: [231, 1027, 1027]
 	},{
 		title: "魔戒",
 		content: ["霍比特人".done.green,
@@ -30,7 +30,7 @@ var conf = {
 			"王者归来",
 			"精灵宝钻", 
 		],
-		progress: [40, 706, 2004]
+		progress: [135, 706, 2004]
 	},{
 		title: "网易云课堂 - 计算机网络之网尽其用",
 		content: [
