@@ -24,7 +24,7 @@ conf.items.forEach(function (item){
 	}
 	
 	if(item.content) d.find(".item-content p").html(item.content);
-	else d.find(".item-content p").remove();
+	else d.find(".item-content").remove();
 	
 	if(item.title) d.find(".item-title h4").html(item.title);
 	else d.find(".item-title").remove();

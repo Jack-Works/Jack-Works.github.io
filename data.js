@@ -14,15 +14,13 @@
 	String.prototype.link = function (url){return "<a href='" + url + "'>" + this + "</a>";}
 })();
 var conf = {
-	article_title: "Jack Works 的并没有什么用的书单",
+	article_title: "Jack Works 的并没有什么用的愿望单",
 	items: [{
 		title: "哥德尔艾舍尔巴赫",
-		content: "看到了第 594 页……",
-		progress: [594, 982, 982]
+		progress: [684, 982, 982]
 	},{
-		title: "失控",
-		content: "看到了第 231 页……",
-		progress: [231, 1027, 1027]
+		title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107"),
+		progress: [233, 1027, 1027]
 	},{
 		title: "魔戒",
 		content: ["霍比特人".done.green,
@@ -30,7 +28,10 @@ var conf = {
 			"王者归来",
 			"精灵宝钻", 
 		],
-		progress: [135, 706, 2004]
+		progress: [182, 706, 2004]
+	},{
+		title: "暗时间".link("https://github.com/programthink/books/blob/master/README.wiki#107"),
+		progress: [49, 174, 179]
 	},{
 		title: "网易云课堂 - 计算机网络之网尽其用",
 		content: [
@@ -89,8 +90,8 @@ var conf = {
 			"Latin"
 		]
 	}, /*{ 
-		//Not now
-		title: "物理",
+		//Not now, maybe never
+		 title: "物理",
 		content: [
 			"数学物理方程",
 			"量子力学",
@@ -139,9 +140,6 @@ var conf = {
 			"三体".processing.red
 		]
 	}, {
-		content: "d520c1fe1e7226321f8e11df4ee9f764",
-		progress: [0, 0, 3]
-	}, {
 		title: "听起来很厉害的样子，说不定会去拜读",
 		content: [
 			"重构",
@@ -182,7 +180,7 @@ var conf = {
 			"60秒漫画天文学".done.green.link("http://www.bilibili.tv/video/av497776"),
 			"纪录片-宇宙".done.green.link("http://www.bilibili.tv/video/av284084"),
 			
-			"霍金的宇宙".link("http://www.bilibili.tv/video/av821216"),
+			"霍金的宇宙".link("http://www.bilibili.tv/video/av821216").processing,
 			"与弗里曼穿越虫洞".link("http://www.bilibili.tv/video/av298279"),
 			"地球君的演化".link("http://www.bilibili.tv/video/av328469"),
 			"500亿光年外的深邃宇宙".link("http://www.bilibili.tv/video/av335794")
