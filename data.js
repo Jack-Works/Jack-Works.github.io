@@ -14,13 +14,15 @@
 	String.prototype.link = function (url){return "<a href='" + url + "'>" + this + "</a>";}
 })();
 var conf = {
-	article_title: "Jack Works 的并没有什么用的愿望单",
+	article_title: "Jack Works 的东西",
 	items: [{
+		title: "介于我国开放而自由的网络环境，随时可能会无法提交更新。呵呵。"
+	},{
 		title: "哥德尔艾舍尔巴赫",
 		progress: [684, 982, 982]
 	},{
 		title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107"),
-		progress: [233, 1027, 1027]
+		progress: [262, 1027, 1027]
 	},{
 		title: "魔戒",
 		content: ["霍比特人".done.green,
@@ -31,7 +33,7 @@ var conf = {
 		progress: [182, 706, 2004]
 	},{
 		title: "暗时间".link("https://github.com/programthink/books/blob/master/README.wiki#107"),
-		progress: [49, 174, 179]
+		progress: [63, 174, 179]
 	},{
 		title: "网易云课堂 - 计算机网络之网尽其用",
 		content: [
@@ -179,13 +181,13 @@ var conf = {
 			"宇宙有多大".done.green.link("http://www.bilibili.tv/video/av499656"),
 			"60秒漫画天文学".done.green.link("http://www.bilibili.tv/video/av497776"),
 			"纪录片-宇宙".done.green.link("http://www.bilibili.tv/video/av284084"),
+			"霍金的宇宙".done.red.link("http://www.bilibili.tv/video/av821216") + "(P2已无法观看)",
 			
-			"霍金的宇宙".link("http://www.bilibili.tv/video/av821216").processing,
-			"与弗里曼穿越虫洞".link("http://www.bilibili.tv/video/av298279"),
-			"地球君的演化".link("http://www.bilibili.tv/video/av328469"),
-			"500亿光年外的深邃宇宙".link("http://www.bilibili.tv/video/av335794")
+			"与弗里曼穿越虫洞".red.link("http://www.bilibili.tv/video/av298279").processing + "(P1 P2无法观看)",
+			"地球君的演化".done.green.link("http://www.bilibili.tv/video/av328469"),
+			"500亿光年外的深邃宇宙".red.link("http://www.bilibili.tv/video/av335794") + "(无法观看)"
 		],
-		progress: [18, 22, 22]
+		progress: [20, 22, 22]
 	}, {
 		title: "Done!",
 		content: [
