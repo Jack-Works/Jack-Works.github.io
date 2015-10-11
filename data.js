@@ -14,12 +14,10 @@
 	String.prototype.link = function (url){return "<a href='" + url + "'>" + this + "</a>";}
 })();
 var conf = {
-	article_title: "Jack Works 的东西",
+	article_title: "Jack Works's Todo list",
 	items: [{
-		title: "介于我国开放而自由的网络环境，随时可能会无法提交更新。呵呵。"
-	},{
 		title: "哥德尔艾舍尔巴赫",
-		progress: [684, 982, 982]
+		progress: [716, 982, 982]
 	},{
 		title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107"),
 		progress: [262, 1027, 1027]
@@ -33,7 +31,7 @@ var conf = {
 		progress: [182, 706, 2004]
 	},{
 		title: "暗时间".link("https://github.com/programthink/books/blob/master/README.wiki#107"),
-		progress: [63, 174, 179]
+		progress: [69, 174, 179]
 	},{
 		title: "网易云课堂 - 计算机网络之网尽其用",
 		content: [
@@ -41,6 +39,9 @@ var conf = {
 			"第 2 章: 计算机网络应用 (上) > 计算机网络应用 (下)".gray
 		],
 		progress: [11, 17, 39]
+	},{
+		title: "edX - 60240013x 组合数学".link("https://courses.edx.org/courses/course-v1:TsinghuaX+60240013x+3T2015").id("comb"),
+		content: "当前进度：Various Permutations"
 	},{
 		title: "网易云课堂 - CS 大一",
 		content: [
@@ -76,8 +77,8 @@ var conf = {
 			"数值分析",
 			"概率统计",
 			"复变函数",
-			"高等数学".processing,
-			"离散数学",
+			"高等数学".red.processing,
+			"离散数学".link("#comb").processing,
 			"抽象代數",
 			"拓扑",
 			"《什么是数学》",
@@ -161,39 +162,12 @@ var conf = {
 		],
 		progress: [0, 1, 14]
 	}, {
-		title: "我们的征途，是星辰大海！",
-		content: [
-			"我们所居住的宇宙".done.green.link("http://www.bilibili.tv/video/av734504/"),
-			"宇宙之死".done.green.link("http://www.bilibili.tv/video/av330634/"),
-			"旅行者号-冲出太阳系".done.green.link("http://www.bilibili.tv/video/av519325/"),
-			"上帝创造宇宙".done.green.link("http://www.bilibili.tv/video/av532292/"),
-			"为什么夜空是黑的".done.green.link("http://www.bilibili.tv/video/av366303"),
-			"宇宙中的高速通道-虫洞".done.green.link("http://www.bilibili.tv/video/av705870"),
-			"已观测的宇宙".done.green.link("http://www.bilibili.tv/video/av734155"),
-			"什么是空间".done.green.link("http://www.bilibili.tv/video/av375315"),
-			"宇宙中最大的星球".done.green.link("http://www.bilibili.tv/video/av286821"),
-			"3分钟了解宇宙大爆炸".done.green.link("http://www.bilibili.tv/video/av825951"),
-			"跳进一个黑洞会怎样".done.green.link("http://www.bilibili.tv/video/av411844"),
-			"10个宇宙的古怪事实".done.green.link("http://www.bilibili.tv/video/av306190"),
-			"宇宙有多小".done.green.link("http://www.bilibili.tv/video/av476783"),
-			"太空中的十个奇迹".done.green.link("http://www.bilibili.tv/video/av745860"),
-			"60秒漫画天文学".done.green.link("http://www.bilibili.tv/video/av497776"),
-			"宇宙有多大".done.green.link("http://www.bilibili.tv/video/av499656"),
-			"60秒漫画天文学".done.green.link("http://www.bilibili.tv/video/av497776"),
-			"纪录片-宇宙".done.green.link("http://www.bilibili.tv/video/av284084"),
-			"霍金的宇宙".done.red.link("http://www.bilibili.tv/video/av821216") + "(P2已无法观看)",
-			
-			"与弗里曼穿越虫洞".red.link("http://www.bilibili.tv/video/av298279").processing + "(P1 P2无法观看)",
-			"地球君的演化".done.green.link("http://www.bilibili.tv/video/av328469"),
-			"500亿光年外的深邃宇宙".red.link("http://www.bilibili.tv/video/av335794") + "(无法观看)"
-		],
-		progress: [20, 22, 22]
-	}, {
 		title: "Done!",
 		content: [
 			"提问的智慧".done.green.link("#book_smart_questions") + " 2015/??/??",
 			"黑客与画家".done.green.link("#book_hackers_and_painters") + " 2015/??/??",
-			"Uno".done.green + "2015/08/18"
+			"Uno".done.green + " 2015/08/18",
+			"我们的征途，是星辰大海！ - Bilibili 专题".done.green.link("http://www.bilibili.com/topic/245.html") + " 2015/10/4"
 		]
 	}]
 }
