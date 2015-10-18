@@ -17,10 +17,10 @@ var conf = {
 	article_title: "Jack Works's Todo list",
 	items: [{
 		title: "哥德尔艾舍尔巴赫",
-		progress: [716, 982, 982]
+		progress: [748, 982, 982]
 	},{
 		title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107"),
-		progress: [262, 1027, 1027]
+		progress: [284, 1027, 1027]
 	},{
 		title: "魔戒",
 		content: ["霍比特人".done.green,
@@ -28,10 +28,10 @@ var conf = {
 			"王者归来",
 			"精灵宝钻", 
 		],
-		progress: [182, 706, 2004]
+		progress: [204, 706, 2004]
 	},{
 		title: "暗时间".link("https://github.com/programthink/books/blob/master/README.wiki#107"),
-		progress: [69, 174, 179]
+		progress: [76, 174, 179]
 	},{
 		title: "网易云课堂 - 计算机网络之网尽其用",
 		content: [
@@ -116,7 +116,9 @@ var conf = {
 			"Swift",
 			"C#(momo)",
 			"Lisp",
-			"ECMAScript 2015".processing
+			"ECMAScript 2015".processing,
+			"R",
+			"Haskell".processing
 		]
 	}, {
 		title: "思维、逻辑、社会、设计、玄学",
