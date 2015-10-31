@@ -15,35 +15,48 @@
 })();
 var conf = {
 	article_title: "Jack Works's Todo list",
-	items: [{
-		title: "哥德尔艾舍尔巴赫",
-		progress: [748, 982, 982]
-	},{
-		title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107"),
-		progress: [284, 1027, 1027]
-	},{
+	items: [{title: "哥德尔艾舍尔巴赫",progress: [761, 982, 982], group: "books"},{
+		title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [284, 1027, 1027], group: "books"},{
+		title: "Borland 传奇".link("https://github.com/programthink/books/blob/master/README.wiki#106-it-公司"), progress: [175, 507, 507], group: "books"},{
+		title: "暗时间".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [91, 174, 179], group: "books"},{
+		title: "猜想与反驳".link("https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学"), progress: [7, 62, 722], group: "books"
+		},{
 		title: "魔戒",
 		content: ["霍比特人".done.green,
 			"魔戒同盟".processing.orange,
 			"王者归来",
 			"精灵宝钻", 
 		],
-		progress: [204, 706, 2004]
+		progress: [204, 706, 2004],
+		group: "books_details"
+	}, {
+		"title": "三体".id("threebody"),
+		content: ["三体".done.green,
+			"三体 - 黑暗森林".done.green,
+			"三体 - 死神永生".processing.orange
+		],
+		progress: [1114, 1114, 1742],
+		group: "books_details"
 	},{
-		title: "暗时间".link("https://github.com/programthink/books/blob/master/README.wiki#107"),
-		progress: [76, 174, 179]
-	},{
-		title: "网易云课堂 - 计算机网络之网尽其用",
+		title: "网易云课堂 - 计算机网络之网尽其用".link("http://mooc.study.163.com/course/HIT-1000002010?tid=1000003008"),
 		content: [
 			"第 1 章: 计算机网络概述 (上)".done.green + " > " + "计算机网络概述 (下)".orange.processing,
 			"第 2 章: 计算机网络应用 (上) > 计算机网络应用 (下)".gray
 		],
-		progress: [11, 17, 39]
+		progress: [11, 17, 39],
+		group: "netease"
 	},{
 		title: "edX - 60240013x 组合数学".link("https://courses.edx.org/courses/course-v1:TsinghuaX+60240013x+3T2015").id("comb"),
-		content: "当前进度：Various Permutations"
+		content: "当前进度：Various Permutations",
+		group: "edX"
 	},{
-		title: "网易云课堂 - CS 大一",
+		title: "edX - FP101 函数式编程入门".link("https://courses.edx.org/courses/course-v1:DelftX+FP101x+3T2015/info"),
+		content: "当前进度：Types and Classes",
+		group: "edX"
+	},{
+		
+	},{
+		title: "网易云课堂 - CS 大一".link("http://study.163.com/curricula/cs/grade-1.htm"),
 		content: [
 			"程序设计入门 - Python",
 			"程序设计入门 - C 语言 > " + "C 语言程序设计进阶".gray,
@@ -59,13 +72,13 @@ var conf = {
 		content: [
 			"计算机体系结构",
 			"计算机网络原理",
-			"数据结构".processing,
+			"数据结构",
 			"算法导论",
 			"计算机组成原理",
 			"图形学",
 			"人工智能",
 			"数据库系统",
-			"编译原理".processing,
+			"编译原理",
 			"操作系统",
 			"网络协议"
 		]
@@ -142,7 +155,7 @@ var conf = {
 			"DND规则",
 			"1984",
 			"美丽新世界",
-			"三体".processing.red
+			"三体".link("#threebody").processing
 		]
 	}, {
 		title: "听起来很厉害的样子，说不定会去拜读",
@@ -152,9 +165,9 @@ var conf = {
 			"代码大全2",
 			"数学之美",
 			"Rework中文版",
-			"高效程序员的45个习惯",
+			"高效程序员的45个习惯".gray.del,
 			"自私的基因",
-			"失控",
+			"失控".processing,
 			"万物由来",
 			"黑客攻防技术宝典（Web实战篇）".processing.red,
 			"白帽子讲Web安全",
@@ -172,4 +185,10 @@ var conf = {
 			"我们的征途，是星辰大海！ - Bilibili 专题".done.green.link("http://www.bilibili.com/topic/245.html") + " 2015/10/4"
 		]
 	}]
+}
+setInterval(function (){
+	$(".page-ribbon").css("background", rgb(~~(Math.random()*255), ~~(Math.random()*255), ~~(Math.random()*255)))
+}, 2000);
+function rgb(r,g,b){
+	return "rgb(" + r + "," + g + "," + b + ")";
 }

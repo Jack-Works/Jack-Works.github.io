@@ -12,6 +12,7 @@ var conf = conf || {
 }
 document.title = conf.article_title;
 $("#article_title").html(conf.article_title);
+var joined = false;
 conf.items.forEach(function (item){
 	var d = $(".item-example").clone().removeClass("item-example");
 	
@@ -44,5 +45,9 @@ conf.items.forEach(function (item){
 			this.MaterialProgress.setBuffer(item.progress[1]);
 		});
 	}
-	d.appendTo(".item-container");
+	if(item.group){
+		var group = $("[data-group=" + item.group + "]");
+		group.length == 0 ? d.appendTo(".item-container").attr("data-group", item.group) : d.find("div").appendTo(group);
+	}
+	else d.appendTo(".item-container");
 });
