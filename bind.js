@@ -16,12 +16,8 @@ var joined = false;
 conf.items.forEach(function (item){
 	var d = $(".item-example").clone().removeClass("item-example");
 	
-	if(item.content && item.content.forEach){
-		var lst = "<ul>";
-		item.content.forEach(function (list){
-			lst += "<li>" + list + "</li>";
-		});
-		item.content = lst + "</ul>";
+	if(Array.isArray(item.content)){
+		item.content = "<ul>" + item.content.map(function (i){return "<li>" + i + "</li>";}).join("") + "</ul>";
 	}
 	
 	if(item.content) d.find(".item-content p").html(item.content);

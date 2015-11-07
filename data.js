@@ -17,9 +17,9 @@ var conf = {
 	article_title: "Jack Works's Todo list",
 	items: [{title: "哥德尔艾舍尔巴赫",progress: [761, 982, 982], group: "books"},{
 		title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [284, 1027, 1027], group: "books"},{
-		title: "Borland 传奇".link("https://github.com/programthink/books/blob/master/README.wiki#106-it-公司"), progress: [175, 507, 507], group: "books"},{
+		title: "Borland 传奇".link("https://github.com/programthink/books/blob/master/README.wiki#106-it-公司"), progress: [246, 507, 507], group: "books"},{
 		title: "暗时间".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [91, 174, 179], group: "books"},{
-		title: "猜想与反驳".link("https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学"), progress: [7, 62, 722], group: "books"
+		title: "猜想与反驳".link("https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学"), progress: [9, 62, 722], group: "books"
 		},{
 		title: "魔戒",
 		content: ["霍比特人".done.green,
@@ -35,7 +35,7 @@ var conf = {
 			"三体 - 黑暗森林".done.green,
 			"三体 - 死神永生".processing.orange
 		],
-		progress: [1114, 1114, 1742],
+		progress: [1528, 1742, 1742],
 		group: "books_details"
 	},{
 		title: "网易云课堂 - 计算机网络之网尽其用".link("http://mooc.study.163.com/course/HIT-1000002010?tid=1000003008"),
@@ -47,14 +47,20 @@ var conf = {
 		group: "netease"
 	},{
 		title: "edX - 60240013x 组合数学".link("https://courses.edx.org/courses/course-v1:TsinghuaX+60240013x+3T2015").id("comb"),
-		content: "当前进度：Various Permutations",
+		content: "当前进度：Different Kinds of Combinations",
 		group: "edX"
 	},{
-		title: "edX - FP101 函数式编程入门".link("https://courses.edx.org/courses/course-v1:DelftX+FP101x+3T2015/info"),
+		title: "edX - FP101 函数式编程入门".link("https://courses.edx.org/courses/course-v1:DelftX+FP101x+3T2015"),
 		content: "当前进度：Types and Classes",
 		group: "edX"
 	},{
-		
+		title: "edX - DEV204x C# 编程".link("https://courses.edx.org/courses/course-v1:Microsoft+DEV204x+1T2016"),
+		content: "当前进度：Introducing C#",
+		group: "edX"
+	},{
+		title: "edX - PH525.1x 生命科学数据分析 1".link("https://courses.edx.org/courses/course-v1:HarvardX+PH525.1x+3T-2015"),
+		content: "当前进度：Getting Started",
+		group: "edX"
 	},{
 		title: "网易云课堂 - CS 大一".link("http://study.163.com/curricula/cs/grade-1.htm"),
 		content: [
@@ -127,10 +133,10 @@ var conf = {
 			"Go",
 			"Dart",
 			"Swift",
-			"C#(momo)",
+			"C#".processing,
 			"Lisp",
 			"ECMAScript 2015".processing,
-			"R",
+			"R".processing,
 			"Haskell".processing
 		]
 	}, {
@@ -138,7 +144,7 @@ var conf = {
 		content: [
 			"黑客与画家".done.green.id("book_hackers_and_painters"),
 			"批判性思维工具",
-			"哥德尔艾舍尔巴赫".processing.orange,
+			"哥德尔艾舍尔巴赫".processing,
 			"不确定状况下的判断",
 			"影响力:科学与实践",
 			"给大家看的设计书",
@@ -151,7 +157,7 @@ var conf = {
 	}, {
 		title: "一些奇怪的东西",
 		content: [
-			"魔戒".processing.orange,
+			"魔戒".processing,
 			"DND规则",
 			"1984",
 			"美丽新世界",
