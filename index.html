@@ -2,23 +2,23 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Material Design Lite</title>
+        <title>Jack Works's Todo List</title>
 
         <link rel="stylesheet" href="material.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
-            * {
-                font-family: "Noto Sans CJK SC", "Microsoft Yahei UI Light", "Microsoft Yahei Light", sans-serif !important;
-            }
+            h3, h4, h6 {font-family: "Noto Sans CJK SC Light", "Microsoft Yahei Light", sans-serif;}
             .page-ribbon {
                 width: 100%;
-                height: 40vh;
+                height: 100%;
+                position: fixed;
                 background: #3F51B5;
                 flex-shrink: 0;
-                transition-duration: 5s;
+                transition-duration: 10s;
                 transition-property: background;
             }
             .page-main {
-                margin-top: -35vh;
+                margin-top: 2.5vh;
                 flex-shrink: 0;
             }
             .page-container {
@@ -28,14 +28,15 @@
             }
             .page-content {
                 border-radius: 2px;
-                padding: 80px 56px;
-                margin-bottom: 80px;
+                padding: 80px 56px 20px;
+                margin-bottom: 40px;
+                background-color: rgba(255, 255, 255, 0.1) !important;
             }
             .page-content h3 {
                 margin-top: 0px;
+                color: white;
             }
             .item {
-                background: ghostwhite;
                 margin-bottom: 2em;
                 min-height: 0px;
             }
@@ -44,6 +45,7 @@
             }
             .full-width {
                 width: 100%;
+                background-color: rgba(255, 255, 255, 0.9) !important;
             }
             .item-content, .item-content li {
                 color: #333;
@@ -52,13 +54,22 @@
             .item-title h4 {
                 margin: 0;
             }
+            .item-title h4 a {
+                color: black;
+            }
+            #motto {
+                color: white;
+                float: right;
+            }
             .green {color: green;}
             .orange {color: orange;}
             .red {color: red;}
-            .del {text-decoration: line-through;}
             .gray {color: gray;}
-            a {text-decoration: none;}
             .right {float:right;}
+            .del {text-decoration: line-through;}
+            a {text-decoration: none;}
+            .leftAlign td, .leftAlign th {text-align: left;}
+            td {font-size: 18px;}
         </style>
     </head>
     <body>
@@ -68,9 +79,11 @@
             <main class="page-main mdl-layout__content">
                 <div class="page-container mdl-grid">
                     <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-                    <div class="page-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col item-container">
+                    <div class="page-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
                         <h3 class="title" id="article_title"></h3>
-                    </div>                    
+                        <div class="item-container"></div>
+                        <h6 id="motto"></h3>                        
+                    </div>
                 </div>
             </main>
         </div>
@@ -83,6 +96,7 @@
 
         <script src="material.min.js"></script>
         <script src="jquery.js"></script>
+        <script src="types.js"></script>
         <script src="data.js"></script>
         <script src="bind.js"></script>
     </body>
