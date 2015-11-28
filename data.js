@@ -1,21 +1,10 @@
-(function () {
-	var gen = function (color) {return [color, function () {return "<span class='" + color + "'>" + this + "</span>";}]};
-	var genico = function(icon) {return [icon, function (){return this + '<i class="material-icons right">' + icon + '</i>'}]};
-	[gen("red"), gen("green"), gen("orange"), gen("gray"), gen("del"), genico("done"), genico("clear"),
-		["processing", function () {return this + '<div style="zoom: 0.8;" class="mdl-spinner mdl-js-spinner is-active right"></div>';}],
-		["right",      function () {return "<span class='right'>" + this + "</span>";}]
-	]
-	.forEach(function (value) {return String.prototype.__defineGetter__(value[0], value[1]);});
-	String.prototype.id = function (id) {return "<span id='" + id + "'>" + this + "</span>"}
-	String.prototype.link = function (url) {return "<a href='" + url + "'>" + this + "</a>"}
-})();
-function icon(icon){return '<i class="material-icons">' + icon + '</i>'}
 var conf = {
 	article_title: "Jack Works's Todo list",
-	items: [{title: "哥德尔艾舍尔巴赫",progress: [764, 982, 982], group: "books"},{
-			title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [353, 1027, 1027], group: "books"},{
-			title: "Borland 传奇".link("https://github.com/programthink/books/blob/master/README.wiki#106-it-公司"), progress: [276, 507, 507], group: "books"},{
-			title: "暗时间".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [91, 174, 179], group: "books"},{
+	weekMsg: "……每天有 48 小时怎么样? Huh?",
+	items: [{title: "哥德尔艾舍尔巴赫",progress: [779, 982, 982], group: "books"},{
+			title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [404, 1027, 1027], group: "books"},{
+			title: "Borland 传奇".link("https://github.com/programthink/books/blob/master/README.wiki#106-it-公司"), progress: [324, 507, 507], group: "books"},{
+			title: "暗时间".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [125, 174, 179], group: "books"},{
 			title: "猜想与反驳".link("https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学"), progress: [10, 62, 722], group: "books"},{
 			title: "Doom 启示录", progress: [7, 30, 433], group: "books"},
 	{
@@ -25,7 +14,7 @@ var conf = {
 			"王者归来",
 			"精灵宝钻"
 		],
-		progress: [204, 706, 2004],
+		progress: [205, 706, 2004],
 		group: "books_details"
 	},{
 		title: "网易云课堂 - 计算机网络之网尽其用".link("http://mooc.study.163.com/course/HIT-1000002010?tid=1000003008"),
@@ -42,21 +31,26 @@ var conf = {
 		content: {
 			headers: [["课程", "进度", "状态"]], 
 			body: [
-				["6.004.1x", "Welcome to 6.004.1x!".green, ""],
-				["6.004.2x", "6.004.1x".gray,""],
-				["IELTSx", "Starts 11/27".red, icon("clear").orange],
+				["IELTSx", "Finding your way around the course".gray, ""],
 				["IT.1.1x", "What is this course about?".gray, ""],
 				["Think101x", "A taste of things to come".gray, ""],
-				["Louv1.1x", "Basic programming concepts".gray, ""],
-				["Louv1.2x", "Introduction to Louv1.2x - ".gray + " require Louv1.1x".red, icon("clear").red],
+				["Louv1.1x", "Sum of digits with communicating vases".gray, ""],
+				["Louv1.2x", "Summary of data abstractions".green + "这课炫酷".comment, "".processingL],
 				["CloudIntro.x", "Welcome from the Instructor".gray, ""],
-				["HTML5.1x", "Why accessibility is important".green, ""],
+				["HTML5.1x", "Why accessibility is important".gray, ""],
 				["HTML5.2x", "Starts 12/01 && HTML5.1x".red, icon("clear").red],
-				["LFS101x.2", "Introduction/ Learning Objectives".green, ""],
-				["DEV204x", "Introducing C#".orange, ""],
-				["FP101", "List Comprehensions".green, ""],
+				["LFS101x.2", "Introduction/ Learning Objectives".gray, ""],
+				["DEV204x", "Introducing C#".gray, ""],
+				["FP101", "Recursive Functions".green, "".processingL],
 				["PH525.1x", "Getting Started".gray, ""],
-				["60240013x", "Different Kinds of Combinations".orange, ""]
+				["60240013x", "Different Kinds of Combinations".green + "菊苣求教".comment, "".processingL],
+				["6.004.1x", "已退选".red + "不明觉厉".comment, icon("clear").red],
+				["6.004.2x", "已退选".red + "……真的。".comment, icon("clear").red],
+				["M101x", "Introduction to the Course", ""],
+				["Code101x", "Pre-Course Survey".gray, ""],
+				["CS50x3", "Important Pre-Course Survey".gray + "我以前上过这课".comment, ""],
+				["".clas("tucao"), "发现 62040013x 要每天完成一周的课才能赶上期末".comment, ""],
+				["".clas("tucao"), "真是失败的日程管理".comment, ""]
 			]
 		}
 	},{
@@ -172,14 +166,17 @@ var conf = {
 		progress: [0, 1, 14]
 	}, {
 		title: "Done!",
-		content: [
-			"提问的智慧".done.green.link("#book_smart_questions") + " 2015/??/??",
-			"黑客与画家".done.green.link("#book_hackers_and_painters") + " 2015/??/??",
-			"Uno".done.green + " 2015/08/18",
-			"我们的征途，是星辰大海！ - Bilibili 专题".done.green.link("http://www.bilibili.com/topic/245.html") + " 2015/10/4",
-			"平面国".done.green + " - 2015/11/08",
-			"三体".done.green + " - 2015/11/09"
-		]
+		content: {
+			headers: [[]],
+			body: [
+				["提问的智慧".green.link("#book_smart_questions"), "2015/??/??", "".done.green],
+				["黑客与画家".green.link("#book_hackers_and_painters"), "2015/??/??", "".done.green],
+				["Uno", "2015/08/18", "".done.green],
+				["我们的征途，是星辰大海！ - Bilibili 专题".green.link("http://www.bilibili.com/topic/245.html"), "2015/10/4", "".done.green],
+				["平面国", "2015/11/08", "".done.green],
+				["三体", "2015/11/09", "".done.green]
+			]
+		}
 	}],
 	motto: "——在一群出色的人中间，常常误以为自己也是其中一员，然后忘了努力"
 }

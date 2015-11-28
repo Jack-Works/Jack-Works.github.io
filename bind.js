@@ -1,8 +1,7 @@
-var conf = conf || {article_title: "Untitled",items: [{title: "Error"}]}
-
 document.title = conf.article_title;
 $("#article_title").html(conf.article_title);
 $("#motto").html(conf.motto);
+$("#weekMsg").html(conf.weekMsg);
 
 conf.items.forEach(function (item){
 	var d = $(".item-example").clone().removeClass("item-example");

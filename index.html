@@ -4,9 +4,11 @@
         <meta charset="utf-8">
         <title>Jack Works's Todo List</title>
 
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="material.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
+            a {text-decoration: none;}
             h3, h4, h6 {font-family: "Noto Sans CJK SC Light", "Microsoft Yahei Light", sans-serif;}
             .page-ribbon {
                 width: 100%;
@@ -57,9 +59,10 @@
             .item-title h4 a {
                 color: black;
             }
-            #motto {
+            #motto, #weekMsg {
                 color: white;
                 float: right;
+                margin-top: 0px;
             }
             .green {color: green;}
             .orange {color: orange;}
@@ -67,13 +70,13 @@
             .gray {color: gray;}
             .right {float:right;}
             .del {text-decoration: line-through;}
-            a {text-decoration: none;}
+            .italic {font-style: italic;}
             .leftAlign td, .leftAlign th {text-align: left;}
             td {font-size: 18px;}
         </style>
     </head>
     <body>
-        <div class="mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+        <div class="mdl-layout">
             <div id="bg"></div>
             <div class="page-ribbon"></div>
             <main class="page-main mdl-layout__content">
@@ -81,8 +84,9 @@
                     <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
                     <div class="page-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
                         <h3 class="title" id="article_title"></h3>
+                        <h6 id="weekMsg" class="italic gray"></h6>
                         <div class="item-container"></div>
-                        <h6 id="motto"></h3>                        
+                        <h6 id="motto" class="italic"></h3>                        
                     </div>
                 </div>
             </main>
