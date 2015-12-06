@@ -41,7 +41,7 @@ function typeChecker(content, callback){
 	
 	if(!content) type = "none";
 	else if(Array.isArray(content)) content = list(content), type = "array";
-	else if("headers" in content && "body" in content) content = table(content.headers, content.body), type="table";
+	else if(content instanceof Object && "headers" in content && "body" in content) content = table(content.headers, content.body), type="table";
 	
 	(callback[type] || function(){})(content);
 	return content;

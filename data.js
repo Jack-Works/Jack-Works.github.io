@@ -1,12 +1,12 @@
 var conf = {
 	article_title: "Jack Works's Todo list",
-	weekMsg: "……每天有 48 小时怎么样? Huh?",
+	weekMsg: "……看不懂课的我表示情绪稳定",
 	items: [{title: "哥德尔艾舍尔巴赫",progress: [779, 982, 982], group: "books"},{
 			title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [404, 1027, 1027], group: "books"},{
-			title: "Borland 传奇".link("https://github.com/programthink/books/blob/master/README.wiki#106-it-公司"), progress: [324, 507, 507], group: "books"},{
-			title: "暗时间".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [125, 174, 179], group: "books"},{
+			title: "Borland 传奇".link("https://github.com/programthink/books/blob/master/README.wiki#106-it-公司"), progress: [331, 507, 507], group: "books"},{
 			title: "猜想与反驳".link("https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学"), progress: [10, 62, 722], group: "books"},{
-			title: "Doom 启示录", progress: [7, 30, 433], group: "books"},
+			title: "Doom 启示录", progress: [7, 30, 433], group: "books"},{
+			title: "怎样阅读一本书", group: "books"},
 	{
 		title: "魔戒",
 		content: ["霍比特人".done.green,
@@ -14,7 +14,7 @@ var conf = {
 			"王者归来",
 			"精灵宝钻"
 		],
-		progress: [205, 706, 2004],
+		progress: [217, 706, 2004],
 		group: "books_details"
 	},{
 		title: "网易云课堂 - 计算机网络之网尽其用".link("http://mooc.study.163.com/course/HIT-1000002010?tid=1000003008"),
@@ -31,26 +31,28 @@ var conf = {
 		content: {
 			headers: [["课程", "进度", "状态"]], 
 			body: [
-				["IELTSx", "Finding your way around the course".gray, ""],
+				["IELTSx - Listening", "Unit Overview".gray, ""],
+				["IELTSx - Speaking".clas("sub ieltsx"), "Unit Overview".gray, ""],
+				["IELTSx - Reading".clas("sub ieltsx"), "Unit Overview".gray, ""],
+				["IELTSx - Writing".clas("sub ieltsx"), "Unit Overview".gray, ""],
 				["IT.1.1x", "What is this course about?".gray, ""],
 				["Think101x", "A taste of things to come".gray, ""],
 				["Louv1.1x", "Sum of digits with communicating vases".gray, ""],
-				["Louv1.2x", "Summary of data abstractions".green + "这课炫酷".comment, "".processingL],
-				["CloudIntro.x", "Welcome from the Instructor".gray, ""],
-				["HTML5.1x", "Why accessibility is important".gray, ""],
-				["HTML5.2x", "Starts 12/01 && HTML5.1x".red, icon("clear").red],
+				["Louv1.2x", "Introduction to Java".green + "这课炫酷".comment, "".processingL],
+				["CloudIntro.x", "Assumptions, Terms of Service, & Promises".green, ""],
+				["HTML5.1x", "Why internationalisation is important".gray, ""],
+				["HTML5.2x", "".red, ""],
 				["LFS101x.2", "Introduction/ Learning Objectives".gray, ""],
 				["DEV204x", "Introducing C#".gray, ""],
-				["FP101", "Recursive Functions".green, "".processingL],
+				["FP101", "Functional Parsers and Monads".green, "".processingL],
 				["PH525.1x", "Getting Started".gray, ""],
-				["60240013x", "Different Kinds of Combinations".green + "菊苣求教".comment, "".processingL],
+				["RTSIx", "Part 1 What are Real-Time Systems".gray, ""],
+				["60240013x", "Homework of Week 3".red + "真的看不懂了……".comment, icon("clear").red],
 				["6.004.1x", "已退选".red + "不明觉厉".comment, icon("clear").red],
 				["6.004.2x", "已退选".red + "……真的。".comment, icon("clear").red],
 				["M101x", "Introduction to the Course", ""],
 				["Code101x", "Pre-Course Survey".gray, ""],
-				["CS50x3", "Important Pre-Course Survey".gray + "我以前上过这课".comment, ""],
-				["".clas("tucao"), "发现 62040013x 要每天完成一周的课才能赶上期末".comment, ""],
-				["".clas("tucao"), "真是失败的日程管理".comment, ""]
+				["CS50x3", "Important Pre-Course Survey".gray + "我以前上过这课".comment, ""]
 			]
 		}
 	},{
@@ -82,20 +84,21 @@ var conf = {
 		]
 	}, {
 		title: "数学",
-		content: [
+		/*content: [
 			"微积分",
 			"线性代数",
 			"数值分析",
 			"概率统计",
 			"复变函数",
 			"高等数学",
-			"离散数学".link("#comb").processing,
+			"离散数学".link("#comb").red,
 			"抽象代數",
 			"拓扑",
 			"《什么是数学》",
 			"《数学之美》"
-		],
-		progress: [0, 0, 2]//book only
+		]*/
+		content: "还是要学习一个",
+		//progress: [0, 0, 2]//book only
 	}, {
 		title: "语言",
 		content: [
@@ -107,7 +110,7 @@ var conf = {
 		title: "计算机语言",
 		content: [
 			"JavaScript".done.green,
-			"Python".processing,
+			"Python",
 			"Node.js".processing,
 			"C++",
 			"Bash",
@@ -155,7 +158,7 @@ var conf = {
 			"Rework中文版",
 			"高效程序员的45个习惯".gray.del,
 			"自私的基因",
-			"失控".processing,
+			"失控".processing.green,
 			"万物由来",
 			"黑客攻防技术宝典（Web实战篇）".processing.red,
 			"白帽子讲Web安全",
@@ -174,7 +177,8 @@ var conf = {
 				["Uno", "2015/08/18", "".done.green],
 				["我们的征途，是星辰大海！ - Bilibili 专题".green.link("http://www.bilibili.com/topic/245.html"), "2015/10/4", "".done.green],
 				["平面国", "2015/11/08", "".done.green],
-				["三体", "2015/11/09", "".done.green]
+				["三体", "2015/11/09", "".done.green],
+				["暗时间".green, "2015/12/03", "".done.green]
 			]
 		}
 	}],
