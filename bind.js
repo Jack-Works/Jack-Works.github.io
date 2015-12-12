@@ -20,7 +20,7 @@ conf.items.forEach(function (item){
 	if(item.progress === undefined){
 		d.find(".item-progress").remove();
 	} else {
-		var a = item.progress[0], b = item.progress[1], c = item.progress[2];
+		var a = item.progress[0], b = item.progress[1], c = item.progress[2] || b;
 		a = a / (c || b || 1) * 100;
 		b = b / (c || 1) * 100;
 		d.find(".item-progress")[0].addEventListener('mdl-componentupgraded', function() {
