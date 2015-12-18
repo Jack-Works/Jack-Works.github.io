@@ -4,8 +4,7 @@
  */
 var conf = {
 	article_title: "Jack Works's Todo list",
-	weekMsg: "……It's gonna totally awesome!".replace(/;/g, "<br>"),
-	//from 'a very potter musical', awesome!
+	weekMsg: "计划谬误啊啊啊啊啊……;被计划谬误坑了, 本周就不更了".replace(/;/g, "<br>"),
 	items: [{title: "哥德尔艾舍尔巴赫".id("book_geb") + "人工智能: 回顾 - 改变问题空间".comment, progress: [804, 982], group: "books"},{
 			title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [404, 1027], group: "books"},{
 			title: "Borland 传奇".link("https://github.com/programthink/books/blob/master/README.wiki#106-it-公司"), progress: [331, 507], group: "books"},{
@@ -13,21 +12,8 @@ var conf = {
 			title: "Doom 启示录", progress: [7, 30, 433], group: "books"},{
 			title: "怎样阅读一本书" + "第一章 阅读的活力与艺术".comment, progress: [6, 114], group: "books"},
 	{
-		title: "哈利波特与理性之道" + " -读书笔记摘抄".italic + "重读: 第七章 回赠".comment ,
-		content: {
-			headers: [["思考、了解、发现乐趣", "所在章节", "评论"]],
-			body: [
-				("《哥德尔、埃舍尔、巴赫》".link("#book_geb") + ",第零章：预告,这我也得重读"),
-				"《不确定情况下的判断：启发式研究和偏差》,,",
-				"《费曼物理学讲义》,,",
-				"我为什么相信我所相信的？".orange + ",第一章：极小概率的一天,",
-				"《进阶龙与地下城》,第三章：现实和其他可能性的对比,有趣",
-				"——然而可悲的是……更好的,第四章：有效市场假说,为什么?",
-				"——如果是的话……钱不能吃,,为什么不套利呢？",
-				"A Very Potter Musical,第七章：回赠," + "".done.green
-			].map(function (v){return v.split(",")})
-		},
-		progress: [29, 1283]
+		title: "哈利波特与理性之道" + " -读书笔记摘抄".italic + "重读: 第六十四章 平行世界".comment,
+		progress: [361, 1283]
 	}, {
 		title: "魔戒",
 		content: ["霍比特人".done.green,
@@ -60,12 +46,12 @@ var conf = {
 	//			["Think101x", "A taste of things to come".gray, ""],
 				["Louv1.1x", "Sum of digits with communicating vases".gray, ""],
 				["Louv1.2x", "Motivation for concurrency".green, "".processingL],
-				["CloudIntro.x", "日程管理失败".red, "".processingL],
+				["CloudIntro.x", "计划谬误".red, icon("clear").red],
 				["HTML5.1x", "Course syllabus".green, ""],
 	//			["HTML5.2x", "".red, ""],
 				["LFS101x.2", "Introduction/ Learning Objectives".gray, ""],
 				["DEV204x", "Introducing C#".gray, ""],
-				["FP101", "Functional Parsers and Monads".green, "".processingL],
+				["FP101", "计划谬误".red, icon("clear").red],
 	//			["PH525.1x", "Getting Started".gray, ""],
 				["RTSIx", "Part 1 What are Real-Time Systems".gray, ""],
 				["60240013x", "Homework of Week 3".red + "真的看不懂了……".comment, icon("clear").red],

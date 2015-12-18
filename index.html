@@ -1,106 +1,91 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Jack Works's Todo List</title>
-
-        <link rel="stylesheet" href="material.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <style>
-            a {text-decoration: none;}
-            h3, h4, h6 {font-family: "Noto Sans CJK SC Light", "Microsoft Yahei Light", sans-serif;}
-            .page-ribbon {
-                width: 100%;
-                height: 100%;
-                position: fixed;
-                background: #3F51B5;
-                flex-shrink: 0;
-                transition-duration: 10s;
-                transition-property: background;
-            }
-            .page-main {
-                margin-top: 2.5vh;
-                flex-shrink: 0;
-            }
-            .page-container {
-                max-width: 1600px;
-                width: calc(100% - 16px);
-                margin: 0 auto;
-            }
-            .page-content {
-                border-radius: 2px;
-                padding: 80px 56px 20px;
-                margin-bottom: 40px;
-                background-color: rgba(255, 255, 255, 0.1) !important;
-            }
-            .page-content h3 {
-                margin-top: 0px;
-                color: white;
-            }
-            .item {
-                margin-bottom: 2em;
-                min-height: 0px;
-            }
-            .item-example {
-                display: none;
-            }
-            .full-width {
-                width: 100%;
-                background-color: rgba(255, 255, 255, 0.9) !important;
-            }
-            .item-content, .item-content li {
-                color: #333;
-                font-size: 16px;
-            }
-            .item-title h4 {
-                margin: 0;
-            }
-            .item-title h4 a {
-                color: black;
-            }
-            #motto, #weekMsg {
-                color: white;
-                float: right;
-                margin-top: 0px;
-            }
-            .green {color: green;}
-            .orange {color: orange;}
-            .red {color: red;}
-            .gray {color: gray;}
-            .right {float:right;}
-            .del {text-decoration: line-through;}
-            .italic {font-style: italic;}
-            .leftAlign td, .leftAlign th {text-align: left;}
-            td {font-size: 18px;}
-        </style>
-    </head>
-    <body>
-        <div class="mdl-layout">
-            <div id="bg"></div>
-            <div class="page-ribbon"></div>
-            <main class="page-main mdl-layout__content">
-                <div class="page-container mdl-grid">
-                    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-                    <div class="page-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-                        <h3 class="title" id="article_title"></h3>
-                        <h6 id="weekMsg" class="italic gray"></h6>
-                        <div class="item-container"></div>
-                        <h6 id="motto" class="italic"></h3>                        
-                    </div>
-                </div>
-            </main>
-        </div>
-        
-        <div class="mdl-card mdl-shadow--2dp item-example item full-width">
-            <div class="mdl-card__title mdl-card--expand item-title"><h4></h4></div>
-            <div class="mdl-card__supporting-text item-content"><p></p></div>
-            <div class="mdl-progress mdl-js-progress item-progress full-width"></div>
-        </div>
-
-        <script src="material.min.js"></script>
-        <script src="jquery.js"></script>
-        <script src="types.js"></script>
-        <script src="data.js"></script>
-        <script src="bind.js"></script>
-    </body>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+	<title>Jack Works</title>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+		body {
+			background-image: url(background.png);
+			background-size: 2x;
+			background-position: 50% 100%;
+			background-repeat: no-repeat;
+			margin: 0;
+					
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			
+			text-align: center;
+		}
+		header h2, header h4 {font-weight: lighter; display: inline-flex; margin: 0;}
+		header h4 {color: lightgray;}
+		header h5 {font-weight: lighter; color: gray; margin-top: 0; font-style: italic; transition-duration: 0.5s;}
+		nav a {padding: 12px; width: 500px; display: block; text-decoration: none; color: white;}
+		nav a.disabled {color: gray;}
+		nav a:hover {background: rgba(255, 255, 255, 0.2);}
+		footer {
+			position: fixed;
+			right: 2em;
+			bottom: 2em;
+			
+			text-align: right;
+			font-size: 14px;
+			color: rgba(255, 255, 255, 0.4);
+		}
+		footer a {color: rgba(255, 255, 255, 0.8);}
+		
+		.hiddenAni {
+			overflow: hidden;
+			animation-name: hidden;
+			animation-duration: 0.5s;
+			animation-delay: 2s;
+			animation-fill-mode: forwards;
+		}
+		.hiddenAni.left {margin-right: 5px;}
+		.hiddenAni.right {margin-left: 5px;}
+		@media screen and (max-width:760px) {
+			nav div {width: 300px;}
+			nav h5, .hiddenAni, footer {display: none;}
+		}
+		@keyframes hidden {
+			from {opacity: 1; width: 150px;}
+			to {opacity: 0; width: 0px;}
+		}
+		nav a div {height: 26px; display: inline-block; vertical-align: bottom;}
+	</style>
+	</head>
+	
+	<body>
+		<main>
+			<header>
+				<h2>Jack Works</h2>
+				<h4>.github.io</h4>
+				<h5>"Aww, it sounds like someone fell prey to the planning fallacy"</h5>
+			</header>
+			<nav>
+				<a href="todo/index.html"><div>Todo List</div><div class="hiddenAni right">/ 备忘录</div></a>
+				<a href="vlrc/index.html"><div>vLrc Demo</div><div class="hiddenAni right">/ 歌词制作器 Demo</div></a>
+				<a class="disabled"><div class="hiddenAni left">Kitsch Rationality /</div><div>刻奇理性</div></a>
+				<a class="disabled"><div class="hiddenAni left">Bayesian Conspiracy /</div><div>贝叶斯阴谋会</div></a>
+			</nav>
+			<footer>
+				<div>Owner: <a href="https://plus.google.com/+JackWorks">+Jack Works</a></div>
+				<div>Background belong to <a href="https://plus.google.com/+AustinClark1">+AustinClark1</a></div>
+			</footer>
+		</main>
+		<script>setTimeout((function (d){return function (){
+			d.style.opacity = 0
+			setTimeout(function (){
+				d.innerHTML = "“噢，听起来有人成了计划谬误的牺牲品了”"				
+				d.style.opacity = 1
+			}, 500)
+		}})(document.getElementsByTagName('h5')[0]), 2000)</script>
+	</body>
 </html>
