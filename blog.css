@@ -1,0 +1,42 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+	background-image: url(background.png);
+	background-size: 2x;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+	margin: 0;
+}
+main {
+	flex-wrap: column;
+	justify-content: center;
+	align-content: flex-start;
+	
+	padding: 16px 72px;
+}
+.blog-card {
+	margin-bottom: 1em;
+	margin-left: 1em;
+	min-height: 0px;
+	width: 530px;
+}
+.blog-card a {text-decoration: none;}
+article {
+	color: #000;
+	line-height: normal;
+	padding: 16px;
+}
+article p {margin: 0;}
+article p:empty {margin: 1em;}
+.blog-comment, .blog-ref {width: auto; background: rgba(0, 0, 0, .1);}
+.blog-comment img, .blog-editor img {border-radius: 100%; width: 36px; height: 36px; margin-right: 0.5em;}
+.blog-comment .name {font-weight: 500; font-size: 110%;}
+.blog-ref a {display: block; line-height: 22px;}
+
+[bold] {font-weight: 900;}
+[italic] {font-style: italic;}
+[del] {text-decoration: line-through;}
+[ref] {font-size: 12px; position: relative; top: -6px; left: -6px;}

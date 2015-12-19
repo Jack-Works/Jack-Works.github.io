@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
-	<title>Jack Works</title>
+	<title>Jack-Works.github.io</title>
 	<style>
 		html, body {
 			width: 100%;
@@ -65,27 +65,29 @@
 	<body>
 		<main>
 			<header>
-				<h2>Jack Works</h2>
+				<h2>Jack-Works</h2>
 				<h4>.github.io</h4>
 				<h5>"Aww, it sounds like someone fell prey to the planning fallacy"</h5>
 			</header>
 			<nav>
 				<a href="todo/index.html"><div>Todo List</div><div class="hiddenAni right">/ 备忘录</div></a>
 				<a href="vlrc/index.html"><div>vLrc Demo</div><div class="hiddenAni right">/ 歌词制作器 Demo</div></a>
-				<a class="disabled"><div class="hiddenAni left">Kitsch Rationality /</div><div>刻奇理性</div></a>
-				<a class="disabled"><div class="hiddenAni left">Bayesian Conspiracy /</div><div>贝叶斯阴谋会</div></a>
+				<a href="kitsch-rationality/index.html"><div class="hiddenAni left">Kitsch Rationality /</div><div>刻奇理性</div></a>
+				<a href="bayesian-conspiracy/index.html"><div class="hiddenAni left">Bayesian Conspiracy /</div><div>贝叶斯阴谋会</div></a>
 			</nav>
 			<footer>
 				<div>Owner: <a href="https://plus.google.com/+JackWorks">+Jack Works</a></div>
 				<div>Background belong to <a href="https://plus.google.com/+AustinClark1">+AustinClark1</a></div>
 			</footer>
 		</main>
-		<script>setTimeout((function (d){return function (){
-			d.style.opacity = 0
-			setTimeout(function (){
-				d.innerHTML = "“噢，听起来有人成了计划谬误的牺牲品了”"				
-				d.style.opacity = 1
-			}, 500)
-		}})(document.getElementsByTagName('h5')[0]), 2000)</script>
+		<script>
+            setTimeout((function (d){return function (){
+                d.style.opacity = 0
+                setTimeout(function (){
+                    d.innerHTML = "“噢，听起来有人成了计划谬误的牺牲品了”"				
+    				d.style.opacity = 1
+                }, 500)
+    		}})(document.getElementsByTagName('h5')[0]), 2000)
+        </script>
 	</body>
 </html>
