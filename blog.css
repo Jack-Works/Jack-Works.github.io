@@ -21,7 +21,8 @@ main {
 	margin-bottom: 1em;
 	margin-left: 1em;
 	min-height: 0px;
-	width: 530px;
+	max-width: 530px;
+	min-width: 280px;
 }
 .blog-card a {text-decoration: none;}
 article {
@@ -40,3 +41,8 @@ article p:empty {margin: 1em;}
 [italic] {font-style: italic;}
 [del] {text-decoration: line-through;}
 [ref] {font-size: 12px; position: relative; top: -6px; left: -6px;}
+
+@media screen and (max-width:760px) {
+	.blog-card {width: auto; margin-left: auto; margin-right: auto;}
+	main {padding: 16px 4px;}
+}
