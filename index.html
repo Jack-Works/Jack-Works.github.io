@@ -4,62 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
 	<title>Jack-Works.github.io</title>
-	<style>
-		html, body {
-			width: 100%;
-			height: 100%;
-			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-		}
-		body {
-			background-image: url(background.png);
-			background-size: 2x;
-			background-position: 50% 100%;
-			background-repeat: no-repeat;
-			margin: 0;
-					
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			color: white;
-			
-			text-align: center;
-		}
-		header h2, header h4 {font-weight: lighter; display: inline-flex; margin: 0;}
-		header h4 {color: lightgray;}
-		header h5 {font-weight: lighter; color: gray; margin-top: 0; font-style: italic; transition-duration: 0.5s;}
-		nav a {padding: 12px; width: 500px; display: block; text-decoration: none; color: white;}
-		nav a.disabled {color: gray;}
-		nav a:hover {background: rgba(255, 255, 255, 0.2);}
-		footer {
-			position: fixed;
-			right: 2em;
-			bottom: 2em;
-			
-			text-align: right;
-			font-size: 14px;
-			color: rgba(255, 255, 255, 0.4);
-		}
-		footer a {color: rgba(255, 255, 255, 0.8);}
-		
-		.hiddenAni {
-			overflow: hidden;
-			animation-name: hidden;
-			animation-duration: 0.5s;
-			animation-delay: 2s;
-			animation-fill-mode: forwards;
-		}
-		.hiddenAni.left {margin-right: 5px;}
-		.hiddenAni.right {margin-left: 5px;}
-		@media screen and (max-width:760px) {
-			nav div {width: 300px;}
-			nav h5, .hiddenAni, footer {display: none;}
-		}
-		@keyframes hidden {
-			from {opacity: 1; width: 150px;}
-			to {opacity: 0; width: 0px;}
-		}
-		nav a div {height: 26px; display: inline-block; vertical-align: bottom;}
-	</style>
+	<link rel="stylesheet" href="res/css/base.css" />
+	<link rel="stylesheet" href="res/css/index.css" />
 	</head>
 	
 	<body>
@@ -67,7 +13,7 @@
 			<header>
 				<h2>Jack-Works</h2>
 				<h4>.github.io</h4>
-				<h5>"Aww, it sounds like someone fell prey to the planning fallacy"</h5>
+				<h5>Exam week! BOOOOOOOOM!</h5>
 			</header>
 			<nav>
 				<a href="todo/index.html"><div>Todo List</div><div class="hiddenAni right">/ 备忘录</div></a>
@@ -80,14 +26,5 @@
 				<div>Background belong to <a href="https://plus.google.com/+AustinClark1">+AustinClark1</a></div>
 			</footer>
 		</main>
-		<script>
-            setTimeout((function (d){return function (){
-                d.style.opacity = 0
-                setTimeout(function (){
-                    d.innerHTML = "“噢，听起来有人成了计划谬误的牺牲品了”"				
-    				d.style.opacity = 1
-                }, 500)
-    		}})(document.getElementsByTagName('h5')[0]), 2000)
-        </script>
 	</body>
 </html>

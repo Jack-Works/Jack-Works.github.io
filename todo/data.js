@@ -4,7 +4,7 @@
  */
 var conf = {
 	article_title: "Jack Works's Todo list",
-	weekMsg: "计划谬误啊啊啊啊啊……;被计划谬误坑了, 本周就不更了".replace(/;/g, "<br>"),
+	weekMsg: "考试周全面停更".replace(/;/g, "<br>"),
 	items: [{title: "哥德尔艾舍尔巴赫".id("book_geb") + "人工智能: 回顾 - 改变问题空间".comment, progress: [804, 982], group: "books"},{
 			title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [404, 1027], group: "books"},{
 			title: "Borland 传奇".link("https://github.com/programthink/books/blob/master/README.wiki#106-it-公司"), progress: [331, 507], group: "books"},{
@@ -191,10 +191,4 @@ var conf = {
 		}
 	}],
 	motto: "——在一群出色的人中间，常常误以为自己也是其中一员，然后忘了努力"
-}
-setInterval(function (){
-	$(".page-ribbon").css("background", rgb(~~(Math.random()*255), ~~(Math.random()*255), ~~(Math.random()*255)))
-}, 2000);
-function rgb(r,g,b){
-	return "rgb(" + r + "," + g + "," + b + ")";
 }

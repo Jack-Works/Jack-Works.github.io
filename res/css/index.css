@@ -1,0 +1,44 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-align: center;
+}
+header h2, header h4 {font-weight: lighter; display: inline-flex; margin: 0;}
+header h4 {color: lightgray;}
+header h5 {font-weight: lighter; color: gray; margin-top: 0; font-style: italic; transition-duration: 0.5s;}
+
+nav a {padding: 12px; width: 500px; display: block; text-decoration: none; color: white;}
+nav a.disabled {color: gray;}
+nav a:hover {background: rgba(255, 255, 255, 0.2);}
+nav a div {height: 26px; display: inline-block; vertical-align: bottom;}
+
+footer {
+	position: fixed;
+	right: 2em;
+	bottom: 2em;
+	
+	text-align: right;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.4);
+}
+footer a {color: rgba(255, 255, 255, 0.8);}
+
+.hiddenAni {
+	overflow: hidden;
+	animation-name: slide;
+	animation-duration: 0.5s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+.hiddenAni.left {margin-right: 5px;}
+.hiddenAni.right {margin-left: 5px;}
+@media screen and (max-width:760px) {
+	nav div {width: 300px;}
+	nav h5, .hiddenAni, footer {display: none;}
+}
+@keyframes slide {
+	from {opacity: 1; width: 150px;}
+	to {opacity: 0; width: 0px;}
+}
