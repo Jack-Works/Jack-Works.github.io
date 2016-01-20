@@ -9,7 +9,7 @@ h3, h4, h6 {font-family: "Noto Sans CJK SC Light", "Microsoft Yahei Light", sans
 	width: calc(100% - 16px);
 	margin: 0 auto;
 }
-	.page-content {
+.page-content {
 	border-radius: 2px;
 	padding: 80px 56px 20px;
 	margin-bottom: 40px;
@@ -46,12 +46,17 @@ h3, h4, h6 {font-family: "Noto Sans CJK SC Light", "Microsoft Yahei Light", sans
 	margin-top: 0px;
 }
 
-.green {color: green;}
-.orange {color: orange;}
-.red {color: red;}
-.gray {color: gray;}
-.right {float:right;}
-.del {text-decoration: line-through;}
-.italic {font-style: italic;}
+.green {color: green;} .orange {color: orange;} .red {color: red;} .gray {color: gray;}
+.right {float:right;} .del {text-decoration: line-through;} .italic {font-style: italic;}
 .leftAlign td, .leftAlign th {text-align: left;}
 td {font-size: 18px;}
+
+.sub {padding-left: 1em;}
+@media screen and (max-width: 560px) {
+	.page-content {
+		padding-left: 0px;
+		padding-right: 0px;
+		background-color: transparent !important;
+	}
+	.sub {padding-left: 0.5em;}
+}

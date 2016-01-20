@@ -3,12 +3,15 @@
  * 好事情要放到开始了再展示，我猜你也是这么想的——如果真的有人会看的话
  */
 var conf = {
-	article_title: "计划谬误者的清单",
-	weekMsg: "考试周幸存，接下来要好好思考了".replace(/;/g, "<br>"),
+	article_title: "Todo list of Jack Works",
+	weekMsg: "Erised stra ehym tah wwonk tonodi".replace(/;/g, "<br>"),
 	items: [{
 		title: "时间规划",
-		content: "由于非常严重的计划谬误和时间规划错误，导致出了很多问题，我想我需要花上一段时间好好学习一下时间规划相关的理论。在此期间，其他因计划谬误而暂停的项目一律暂时删除。我真心希望这不会成为我延迟选择的绝妙借口，如果我有了什么成果的话，我猜我应该会把它发出来。<br>对于那些可能有也可能没有的量子态的订阅者们，我想说，我很抱歉。——Jack Works"
-	},{title: "哥德尔艾舍尔巴赫".id("book_geb") + "演绎式认知之别于类比式认知".comment, progress: [815, 982], group: "books"},{
+		content: "由于非常严重的计划谬误和时间规划错误，导致出了很多问题，我想我需要花上一段时间好好学习一下时间规划相关的理论。在此期间，其他因计划谬误而暂停的项目一律暂时删除。我真心希望这不会成为我延迟选择的绝妙借口，如果我有了什么成果的话，我猜我应该会把它发出来。对于那些可能有也可能没有的量子态的订阅者们，我想说，我很抱歉。<br>"
+		+ "——Jack Works, Jan 8, 2016".right
+		+ "<br>Wow！我发现我有了一个延迟选择的绝妙借口！<br>"
+		+ "——Jack Works, Jan 20, 2016".right
+	},{title: "哥德尔艾舍尔巴赫".id("book_geb") + "句法和语义".comment, progress: [830, 982], group: "books"},{
 	//		title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [404, 1027], group: "books"},{
 	//		title: "Borland 传奇".link("https://github.com/programthink/books/blob/master/README.wiki#106-it-公司"), progress: [331, 507], group: "books"},{
 	//		title: "猜想与反驳".link("https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学"), progress: [10, 62, 722], group: "books"},{
@@ -19,7 +22,7 @@ var conf = {
 		content: [
 			"重读" + "".done.green,
 			"添加笔记" + "".done.green,
-			"整理笔记".gray + "我猜我会寒假开始做这件事".comment,
+			"整理笔记".gray + "我猜我会寒假开始后的过一段时间做这件事".comment,
 			"整理书单".gray,
 			"发到理性刻奇".gray
 		]
@@ -42,15 +45,16 @@ var conf = {
 	//	],
 	//	progress: [11, 17, 39],
 	//	group: "netease"
-	//},{
-	//	title: "edX 课程",
-	//	content: {
-	//		headers: [["课程", "进度", "状态"]], 
-	//		body: [
-	//			["IELTSx - Listening", "Unit Overview".gray, ""],
-	//			["IELTSx - Speaking".clas("sub ieltsx"), "Unit Overview".gray, ""],
-	//			["IELTSx - Reading".clas("sub ieltsx"), "Unit Overview".gray, ""],
-	//			["IELTSx - Writing".clas("sub ieltsx"), "Unit Overview".gray, ""],
+	//},
+	{
+		title: "edX 课程",
+		content: {
+			headers: [["课程", "进度", "状态"]], 
+			body: [
+				["IELTSx - Listening", "Unit 2: Listening Strategies".green, "".processingL],
+				["IELTSx - Speaking".clas("sub ieltsx"), "Unit Overview".gray, ""],
+				["IELTSx - Reading".clas("sub ieltsx"), "Unit Overview".gray, ""],
+				["IELTSx - Writing".clas("sub ieltsx"), "Unit Overview".gray, ""],
 	//			["IT.1.1x", "What is this course about?".gray, ""],
 	//			["Think101x", "A taste of things to come".gray, ""],
 	//			["Louv1.1x", "Sum of digits with communicating vases".gray, ""],
@@ -69,9 +73,9 @@ var conf = {
 	//			["M101x", "Introduction to the Course", ""],
 	//			["Code101x", "Pre-Course Survey".gray, ""],
 	//			["CS50x3", "Important Pre-Course Survey".gray + "我以前上过这课".comment, ""]
-	//		]
-	//	}
-	//},{
+			]
+		}
+	}, //{
 	//	title: "网易云课堂 - CS 大一".link("http://study.163.com/curricula/cs/grade-1.htm"),
 	//	content: [
 	//		"程序设计入门 - Python",
