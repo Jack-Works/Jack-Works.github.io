@@ -1,7 +1,3 @@
-/* Hey! 我注释了我暂时还没有开始进行的内容，而不是删除它，更没有修改commit记录
- * 这是不是能让我看起来不那么好高骛远了？（笑
- * 好事情要放到开始了再展示，我猜你也是这么想的——如果真的有人会看的话
- */
 var conf = {
 	article_title: "Todo list of Jack Works",
 	weekMsg: "Erised stra ehym tah wwonk tonodi".replace(/;/g, "<br>"),
@@ -11,7 +7,7 @@ var conf = {
 		+ "——Jack Works, Jan 8, 2016".right
 		+ "<br>Wow！我发现我有了一个延迟选择的绝妙借口！<br>"
 		+ "——Jack Works, Jan 20, 2016".right
-	},{title: "哥德尔艾舍尔巴赫".id("book_geb") + "句法和语义".comment, progress: [830, 982], group: "books"},{
+	},{title: "哥德尔艾舍尔巴赫".id("book_geb") + "与其他类型思维的联系".comment, progress: [872, 982], group: "books"},{
 	//		title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [404, 1027], group: "books"},{
 	//		title: "Borland 传奇".link("https://github.com/programthink/books/blob/master/README.wiki#106-it-公司"), progress: [331, 507], group: "books"},{
 	//		title: "猜想与反驳".link("https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学"), progress: [10, 62, 722], group: "books"},{
@@ -52,9 +48,9 @@ var conf = {
 			headers: [["课程", "进度", "状态"]], 
 			body: [
 				["IELTSx - Listening", "Unit 2: Listening Strategies".green, "".processingL],
-				["IELTSx - Speaking".clas("sub ieltsx"), "Unit Overview".gray, ""],
-				["IELTSx - Reading".clas("sub ieltsx"), "Unit Overview".gray, ""],
-				["IELTSx - Writing".clas("sub ieltsx"), "Unit Overview".gray, ""],
+				["IELTSx - Speaking".clas("sub ieltsx"), "Unit 1: Unit Overview".green, ""],
+				["IELTSx - Reading".clas("sub ieltsx"), "Unit 2: Skills and Strategies".green, "".processingL],
+				["IELTSx - Writing".clas("sub ieltsx"), "Unit 1: Unit Overview".green, ""],
 	//			["IT.1.1x", "What is this course about?".gray, ""],
 	//			["Think101x", "A taste of things to come".gray, ""],
 	//			["Louv1.1x", "Sum of digits with communicating vases".gray, ""],
