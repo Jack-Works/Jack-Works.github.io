@@ -7,21 +7,23 @@ var conf = {
 		+ "——Jack Works, Jan 8, 2016".right
 		+ "<br>Wow！我发现我有了一个延迟选择的绝妙借口！<br>"
 		+ "——Jack Works, Jan 20, 2016".right
-	},{title: "哥德尔艾舍尔巴赫".id("book_geb") + "与其他类型思维的联系".comment, progress: [872, 982], group: "books"},{
+	}, {
+		title: "玩物丧志"
+	}, {title: "哥德尔艾舍尔巴赫".id("book_geb") + "第 20 章 - 怪圈，或缠结的层次结构".comment, progress: [904, 982], group: "books"},{
 	//		title: "失控".link("https://github.com/programthink/books/blob/master/README.wiki#107-其它"), progress: [404, 1027], group: "books"},{
 	//		title: "Borland 传奇".link("https://github.com/programthink/books/blob/master/README.wiki#106-it-公司"), progress: [331, 507], group: "books"},{
 	//		title: "猜想与反驳".link("https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学"), progress: [10, 62, 722], group: "books"},{
 	//		title: "Doom 启示录", progress: [7, 30, 433], group: "books"},{
-			title: "怎样阅读一本书" + "第五章 如何做一个自我要求的读者".comment, progress: [17, 114], group: "books"},
-	{
-		title: "哈利波特与理性之道" + " - 读书笔记整理".italic,
-		content: [
-			"重读" + "".done.green,
-			"添加笔记" + "".done.green,
-			"整理笔记".gray + "我猜我会寒假开始后的过一段时间做这件事".comment,
-			"整理书单".gray,
-			"发到理性刻奇".gray
-		]
+	//		title: "怎样阅读一本书" + "第五章 如何做一个自我要求的读者".comment, progress: [17, 114], group: "books"},
+	//}, {
+	//	title: "哈利波特与理性之道" + " - 读书笔记整理".italic,
+	//	content: [
+	//		"重读" + "".done.green,
+	//		"添加笔记" + "".done.green,
+	//		"整理笔记".gray + "我猜我会寒假开始后的过一段时间做这件事".comment,
+	//		"整理书单".gray,
+	//		"发到理性刻奇".gray
+	//	]
 	}, // {
 	//	title: "魔戒",
 	//	content: ["霍比特人".done.green,
@@ -42,15 +44,15 @@ var conf = {
 	//	progress: [11, 17, 39],
 	//	group: "netease"
 	//},
-	{
-		title: "edX 课程",
-		content: {
-			headers: [["课程", "进度", "状态"]], 
-			body: [
-				["IELTSx - Listening", "Unit 2: Listening Strategies".green, "".processingL],
-				["IELTSx - Speaking".clas("sub ieltsx"), "Unit 1: Unit Overview".green, ""],
-				["IELTSx - Reading".clas("sub ieltsx"), "Unit 2: Skills and Strategies".green, "".processingL],
-				["IELTSx - Writing".clas("sub ieltsx"), "Unit 1: Unit Overview".green, ""],
+	//{
+	//	title: "edX 课程",
+	//	content: {
+	//		headers: [["课程", "进度", "状态"]], 
+	//		body: [
+	//			["IELTSx - Listening", "Unit 2: Listening Strategies".green, "".processingL],
+	//			["IELTSx - Speaking".clas("sub ieltsx"), "Unit 1: Unit Overview".green, ""],
+	//			["IELTSx - Reading".clas("sub ieltsx"), "Unit 2: Skills and Strategies".green, "".processingL],
+	//			["IELTSx - Writing".clas("sub ieltsx"), "Unit 1: Unit Overview".green, ""],
 	//			["IT.1.1x", "What is this course about?".gray, ""],
 	//			["Think101x", "A taste of things to come".gray, ""],
 	//			["Louv1.1x", "Sum of digits with communicating vases".gray, ""],
@@ -69,9 +71,9 @@ var conf = {
 	//			["M101x", "Introduction to the Course", ""],
 	//			["Code101x", "Pre-Course Survey".gray, ""],
 	//			["CS50x3", "Important Pre-Course Survey".gray + "我以前上过这课".comment, ""]
-			]
-		}
-	}, //{
+	//		]
+	//	}
+	//}, //{
 	//	title: "网易云课堂 - CS 大一".link("http://study.163.com/curricula/cs/grade-1.htm"),
 	//	content: [
 	//		"程序设计入门 - Python",
