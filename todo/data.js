@@ -8,12 +8,12 @@ var conf = {
 	//		title: 'Doom 启示录', progress: [7, 30, 433], group: 'books'},{
 	//		title: '怎样阅读一本书' + '第五章 如何做一个自我要求的读者'.comment, progress: [17, 114], group: 'books'},
 	}, {
-		title: '哈利波特与理性之道' + ' - 读书笔记整理'.italic + 'Almost done!'.comment,
-		group: 'book_review'
-	}, {
 		title: '哥德尔、埃舍尔、巴赫——集异璧之大成' + ' - 重读'.italic + '尚未开始'.comment,
 		group: 'book_review'
-	}, // {
+	}, {
+		title: 'Ingress 清明上河图系列任务' + '30 / 654'.comment,
+		progress: [30, 654]
+	},  // {
 	//	title: '魔戒',
 	//	content: ['霍比特人'.done.green,
 	//		'魔戒同盟'.processing.orange,
@@ -138,7 +138,7 @@ var conf = {
 			'黑客与画家'.done.green.id('book_hackers_and_painters'),
 	//		'批判性思维工具',
 			'哥德尔、埃舍尔、巴赫——集异璧之大成'.done.green.id('book_geb'),
-			'不确定状况下的判断'.processing,
+	//		'不确定状况下的判断'.processing,
 	//		'影响力:科学与实践',
 	//		'给大家看的设计书',
 	//		'可笑的思维谬误：批判性思考与查错神经',
@@ -151,7 +151,7 @@ var conf = {
 		title: '一些奇怪的东西',
 		content: [
 	//		'魔戒'.processing,
-			'DND规则'.processing,
+	//		'DND规则'.processing,
 	//		'1984',
 	//		'美丽新世界',
 			'三体'.done.green
