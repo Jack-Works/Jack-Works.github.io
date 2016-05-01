@@ -1,6 +1,6 @@
 var conf = {
 	article_title: 'Todo list of Jack Works',
-	weekMsg: 'Erised stra ehym tah wwonk tonodi'.replace(/;/g, '<br>'),
+	weekMsg: '文明一出天地灭'.replace(/;/g, '<br>'),
 	items: [{
 	//		title: '失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), progress: [404, 1027], group: 'books'},{
 	//		title: 'Borland 传奇'.link('https://github.com/programthink/books/blob/master/README.wiki#106-it-公司'), progress: [331, 507], group: 'books'},{
@@ -13,6 +13,9 @@ var conf = {
 	}, {
 		title: 'Ingress 清明上河图系列任务' + '30 / 654'.comment,
 		progress: [30, 654]
+	}, ,{
+		title: 'Wow! Such plan, so amazing',
+		progress: [15.45, 150000]
 	},  // {
 	//	title: '魔戒',
 	//	content: ['霍比特人'.done.green,
