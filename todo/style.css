@@ -1,62 +1,41 @@
 a {text-decoration: none;}
-h3, h4, h6 {font-family: "Noto Sans CJK SC Light", "Microsoft Yahei Light", sans-serif;}
-.page-main {
-	margin-top: 2.5vh;
-	flex-shrink: 0;
-}
-.page-container {
-	max-width: 1600px;
-	width: calc(100% - 16px);
-	margin: 0 auto;
-}
-.page-content {
+main {
+	margin-top: 60px !important;
+	margin-bottom: 60px !important;
 	border-radius: 2px;
-	padding: 80px 56px 20px;
-	margin-bottom: 40px;
-	background-color: rgba(255, 255, 255, 0.1) !important;
+	padding: 40px 50px 60px;
+	background-color: rgba(255, 255, 255, 0.1);
 }
-.page-content h3 {
-	margin-top: 0px;
+.page-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
 	color: white;
+	margin-bottom: 24px;
 }
-.item {
-	margin-bottom: 2em;
-	min-height: 0px;
+.progress {
+	position: absolute;
+	margin-top: 16px;
+	margin-left: -20px;
 }
-.item-example {
-	display: none;
-}
-.full-width {
-	width: 100%;
-	background-color: rgba(255, 255, 255, 0.9) !important;
-}
-.item-content, .item-content li {
-	color: #333;
+.motto {
 	font-size: 16px;
-}
-.item-title h4 {
-	margin: 0;
-}
-.item-title h4 a {
-	color: black;
-}
-#motto, #weekMsg {
+	margin-bottom: -14px;
 	color: white;
-	float: right;
-	margin-top: 0px;
 }
 
-.green {color: green;} .orange {color: orange;} .red {color: red;} .gray {color: gray;}
-.right {float:right;} .del {text-decoration: line-through;} .italic {font-style: italic;}
-.leftAlign td, .leftAlign th {text-align: left;}
-td {font-size: 18px;}
+.s-green {color: green;}
+.s-orange {color: orange;}
+.s-red {color: red;}
+.s-gray {color: gray;}
+.right {float:right;}
+.del {text-decoration: line-through;}
+.italic {font-style: italic;}
 
-.sub {padding-left: 1em;}
 @media screen and (max-width: 560px) {
-	.page-content {
+	main {
 		padding-left: 0px;
 		padding-right: 0px;
 		background-color: transparent !important;
 	}
-	.sub {padding-left: 0.5em;}
 }

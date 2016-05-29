@@ -4,38 +4,37 @@
 		<meta charset="utf-8">
 		<title>Jack Works's Todo List</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
-		<link rel="stylesheet" href="../res/css/material.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="../res/css/base.css" rel="stylesheet">
 		<link href="style.css" rel="stylesheet">
 	</head>
 	<body>
-		<div class="mdl-layout">
-			<div id="bg"></div>
-			<div class="page-ribbon"></div>
-			<main class="page-main mdl-layout__content">
-				<div class="page-container mdl-grid">
-					<div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-					<div class="page-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-						<h3 class="title" id="article_title"></h3>
-						<h6 id="weekMsg" class="italic gray"></h6>
-						<div class="item-container"></div>
-						<h6 id="motto" class="italic"></h3>
+		<main class="container">
+			<h3 class="page-title">
+				<span>{{article_title}}</span>
+				<span class="italic gray motto">{{weekMsg}}</span>
+			</h3>
+			<div class="item-container">
+				<div class="card" v-for="item in items">
+					<div class="card-content">
+						<span class="card-title item-title" v-if="item.title">
+							{{{item.title}}}
+							{{{item.progress | progressHelper}}}
+						</span>
+						<p v-if="item.content">{{{item.content | drawer}}}</p>
+						<div class="progress" v-if="item.progress && item.progress.length == 0"><div class="indeterminate"></div></div>
+						<div class="progress" v-if="item.progress && item.progress.length >= 1">
+							<div class="determinate" style="width: {{item.progress | progressCalc}}%;"></div>
+						</div>
 					</div>
 				</div>
-			</main>
-		</div>
-			
-		<div class="mdl-card mdl-shadow--2dp item-example item full-width">
-			<div class="mdl-card__title mdl-card--expand item-title"><h4></h4></div>
-			<div class="mdl-card__supporting-text item-content"><p></p></div>
-			<div class="mdl-progress mdl-js-progress item-progress full-width"></div>
-		</div>
-		
-		<script src="../res/js/material.min.js"></script>
-		<script src="../res/js/jquery.js"></script>
+			</div>
+			<h6 class="motto italic right">{{{motto}}}</h3>
+		</main>
+		<script src="https://cdn.bootcss.com/vue/1.0.24/vue.min.js"></script>
 		<script src="types.js"></script>
 		<script src="data.js"></script>
-		<script src="bind.js"></script>
+		<!--script src="bind.js"></script-->
 	</body>
 </html>

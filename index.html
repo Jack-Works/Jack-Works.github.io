@@ -13,7 +13,7 @@
 			<header>
 				<h2>Jack-Works</h2>
 				<h4>.github.io</h4>
-				<h5>随意吧</h5>
+				<h5>十七年过去了 脑袋空空<br>所以我还不敢成年 还有 <span id="days"></span> 天</h5>
 			</header>
 			<nav>
 				<a href="todo/index.html"><div>Todo List</div><div class="hiddenAni right">/ 待办事项</div></a>
@@ -24,6 +24,7 @@
 				<div>Owner: <a href="https://plus.google.com/+JackWorks">+Jack Works</a></div>
 				<div>Background belong to <a href="https://plus.google.com/+AustinClark1">+AustinClark1</a></div>
 			</footer>
+			<script>document.getElementById('days').innerText = Math.floor((new Date('2016/12/28') - new Date()) / 1000 / 60 / 60 / 24)</script>
 		</main>
 	</body>
 </html>
