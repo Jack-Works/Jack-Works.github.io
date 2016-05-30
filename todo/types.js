@@ -20,10 +20,10 @@ var table = ({headers, body, classes = ''}) => `
 	</table>`
 
 var list = data => `<ul class="collection">${data.map(v => `<li class="collection-item">${v}</li>`).join('')}</ul>`
+
 /* generator name::String param::String||Function => generator
  *           name::Array param::String||Function  => generator(name[x], param)
  */
-
 ;(function generator(name, param){
 	if(Array.isArray(name)) name.forEach(v => generator(v, param))
 	else if(param instanceof Function) String.prototype[name] = param
@@ -47,7 +47,6 @@ var list = data => `<ul class="collection">${data.map(v => `<li class="collectio
 			</div>
 		</div>
 	</div>`)
-('processingL', 'This<div style="zoom: 0.8;" class="mdl-spinner mdl-js-spinner is-active"></div>')
 ('comment', ' - This'.gray.italic)
 ('id', function (id) {return `<span id="${id}">${this}</span>`})
 ('clas', function (clas) {return `<span class="${clas}">${this}</span>`})

@@ -1,33 +1,36 @@
 var conf = {
 	article_title: 'Todo list of Jack Works',
-	weekMsg: '脑袋空空的我'.replace(/;/g, '<br>'),
-	items: [//{
-	//		title: '失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), progress: [404, 1027], group: 'books'},{
-	//		title: 'Borland 传奇'.link('https://github.com/programthink/books/blob/master/README.wiki#106-it-公司'), progress: [331, 507], group: 'books'},{
-	//		title: '猜想与反驳'.link('https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学'), progress: [10, 62, 722], group: 'books'},{
-	//		title: 'Doom 启示录', progress: [7, 30, 433], group: 'books'},{
-	//		title: '怎样阅读一本书' + '第五章 如何做一个自我要求的读者'.comment, progress: [17, 114], group: 'books'},
-	//}, 
+	weekMsg: '时间紧凑！赶快行动！',
+	items: [
+		{title: '失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), progress: [429, 1027]},
+		//{title: 'Borland 传奇'.link('https://github.com/programthink/books/blob/master/README.wiki#106-it-公司'), progress: [331, 507]},
+		//{title: '猜想与反驳'.link('https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学'), progress: [10, 62, 722]},
+		//{title: 'Doom 启示录', progress: [7, 30, 433]},
+		//{title: '怎样阅读一本书' + '第五章 如何做一个自我要求的读者'.comment, progress: [17, 114]}, 
+	//{
+	//	title: '哥德尔、埃舍尔、巴赫——集异璧之大成' + ' - 重读'.italic + '尚未开始'.comment,
+	//	progress: []
+	//},
 	{
-		title: '哥德尔、埃舍尔、巴赫——集异璧之大成' + ' - 重读'.italic + '尚未开始'.comment,
-		group: 'book_review',
-		progress: []
-	}, {
 		title: 'Ingress 清明上河图系列任务',
 		progress: [30, 654]
-	},{
-		title: 'Wow! Such plan, so amazing',
-		progress: [15.45, 20655]
-	},  // {
+	},
+	{
+		title: `第一阶段：预计完成日期：${
+			new Date(new Date().getTime() + (150000 / (15.45 + 96)) / 12 * 365 * 24 * 60 * 60 * 1000).toLocaleDateString()
+		}`,
+		progress: [15.45 + 96, 20655]
+	},
+	// {
 	//	title: '魔戒',
 	//	content: ['霍比特人'.done.green,
 	//		'魔戒同盟'.processing.orange,
 	//		'王者归来',
 	//		'精灵宝钻'
 	//	],
-	//	progress: [217, 2004],
-	//	group: 'books_details'
-	//},{
+	//	progress: [217, 2004]
+	//},
+	//{
 	//	title: '网易云课堂 - 计算机网络之网尽其用'.link('http://mooc.study.163.com/course/HIT-1000002010?tid=1000003008'),
 	//	content: [
 	//		'第 1 章: 计算机网络概述 (上)'.done.green,
@@ -35,8 +38,7 @@ var conf = {
 	//		'第 2 章: 计算机网络应用 (上)'.gray,
 	//		'第 2 章: 计算机网络应用 (下)'.gray
 	//	],
-	//	progress: [11, 39],
-	//	group: 'netease'
+	//	progress: [11, 39]
 	//},
 	//{
 	//	title: 'edX 课程',
@@ -67,7 +69,8 @@ var conf = {
 	//			['CS50x3', 'Important Pre-Course Survey'.gray + '我以前上过这课'.comment, '']
 	//		]
 	//	}
-	//}, //{
+	//},
+	//{
 	//	title: '网易云课堂 - CS 大一'.link('http://study.163.com/curricula/cs/grade-1.htm'),
 	//	content: [
 	//		'程序设计入门 - Python',
@@ -79,7 +82,8 @@ var conf = {
 	//		'工科数学分析(1) > ' + ' 工科数学分析(2)'.gray.processing
 	//	],
 	//	progress: [0, 10]
-	//},{
+	//},
+	//{
 	//	title: '计算机科学',
 	//	content: [
 	//		'计算机体系结构',
@@ -94,23 +98,24 @@ var conf = {
 	//		'操作系统',
 	//		'网络协议'
 	//	]
-	//}, {
-	{	title: '数学',
-		content: [
+	//},
+	//{
+	//	title: '数学',
+	//	content: [
 	//		'微积分',
 	//		'线性代数',
 	//		'数值分析',
 	//		'概率统计',
 	//		'复变函数',
-			'高等数学',
-			'离散数学'.red,
+	//		'高等数学',
+	//		'离散数学'.red,
 	//		'抽象代數',
 	//		'拓扑',
 	//		'《什么是数学》',
 	//		'《数学之美》'
-		],
-		progress: []
-	}, //{
+	//	]
+	//},
+	//{
 	//	title: '语言',
 	//	content: [
 	//		'English'.processing.orange,
@@ -118,7 +123,8 @@ var conf = {
 	//		'Latin',
 	//		'昆雅语的书写'
 	//	]
-	//}, {
+	//},
+	//{
 	//	title: '计算机语言',
 	//	content: [
 	//		'Python',
@@ -151,7 +157,8 @@ var conf = {
 	//		'浪潮之巅'
 		],
 	//	progress: [2, 10]
-	}, {
+	},
+	{
 		title: '一些奇怪的东西',
 		content: [
 	//		'魔戒'.processing,
@@ -160,7 +167,8 @@ var conf = {
 	//		'美丽新世界',
 			'三体'.done.green
 		]
-	}, {
+	},
+	//{
 	//	title: '听起来很厉害的样子，说不定会去拜读',
 	//	content: [
 	//		'重构',
@@ -179,7 +187,8 @@ var conf = {
 	//		'JavaScript DOM编程艺术'
 	//	],
 	//	progress: [0, 14]
-	//}, */, {
+	//},
+	{
 		title: '2016年',
 		content: {
 			headers: [['有趣的事物', '新鲜的评语', '恰好的时间']],
@@ -188,7 +197,8 @@ var conf = {
 				['万万没想到——用理工科思维理解世界'.link('https://www.amazon.cn/gp/product/B015DLP55A'), '相信我，这真的只是一本博客集', '2016/05/20']
 			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
 		}
-	}, {
+	},
+	{
 		title: '2015年',
 		content: {
 			headers: [['有趣的事物', '新鲜的评语', '恰好的时间']],
