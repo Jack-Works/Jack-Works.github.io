@@ -9,7 +9,7 @@ header h2, header h4 {font-weight: lighter; display: inline-flex; margin: 0;}
 header h4 {color: lightgray;}
 header h5 {font-weight: lighter; color: gray; margin-top: 0; font-style: italic; transition-duration: 0.5s;}
 
-nav a {padding: 12px; width: 500px; display: block; text-decoration: none; color: white; max-width: 100%;}
+nav a {padding: 12px 30px; display: block; text-decoration: none; color: white; max-width: 100%;}
 nav a.disabled {color: gray;}
 nav a:hover {background: rgba(255, 255, 255, 0.2);}
 nav a div {height: 26px; display: inline-block; vertical-align: bottom;}
@@ -29,13 +29,12 @@ footer a {color: rgba(255, 255, 255, 0.8);}
 	overflow: hidden;
 	animation-name: slide;
 	animation-duration: 0.5s;
-	animation-delay: 2s;
+	animation-delay: 2.5s;
 	animation-fill-mode: forwards;
 }
 .hiddenAni.left {margin-right: 5px;}
 .hiddenAni.right {margin-left: 5px;}
 @media screen and (max-width:760px) {
-	nav div {width: 300px;}
 	nav h5, .hiddenAni, footer {display: none;}
 }
 @keyframes slide {

@@ -32,8 +32,16 @@
 			</div>
 			<h6 class="motto italic right">{{{motto}}}</h3>
 		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+		<script>
+			try {new Function('let [a, b] = [\'\', (a = 1) => 0]; `${a}`')()} catch (e) {
+				Materialize.toast('Your browser does not support ES6, get a update!', Infinity)
+				$('.container').remove()
+			}
+		</script>
 		<script src="https://cdn.bootcss.com/vue/1.0.24/vue.min.js"></script>
-		<script src="types.min.js"></script>
-		<script src="data.min.js"></script>
+		<script src="types.js"></script>
+		<script src="data.js"></script>
 	</body>
 </html>
