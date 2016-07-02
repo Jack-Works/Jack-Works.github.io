@@ -1,3 +1,9 @@
+var msADay = 1000 * 60 * 60 * 24
+var progressed = 195.72
+//150, 000 is total
+//20655 is 1st stage
+var need = (20655 - progressed) / (progressed / ((new Date() - new Date('May 25 2016')) / msADay))
+
 var conf = {
 	article_title: 'Todo list of Jack Works',
 	weekMsg: '时间紧凑！赶快行动！',
@@ -17,9 +23,9 @@ var conf = {
 	},
 	{
 		title: `第一阶段：预计完成日期：${
-			new Date(new Date().getTime() + (150000 / (15.45 + 96)) / 12 * 365 * 24 * 60 * 60 * 1000).toLocaleDateString()
+			new Date(new Date().getTime() + need * msADay).toLocaleDateString()
 		}`,
-		progress: [15.45 + 96, 20655]
+		progress: [progressed, 20655]
 	},
 	// {
 	//	title: '魔戒',
@@ -195,7 +201,8 @@ var conf = {
 			body: [
 				['哥德尔、埃舍尔、巴赫——集异璧之大成'.link('#book_geb'), '这句话没有在自指', '2016/03/06'],
 				['万万没想到——用理工科思维理解世界'.link('https://www.amazon.cn/gp/product/B015DLP55A'), '相信我，这真的只是一本博客集', '2016/05/20'],
-				['拆掉思维里的墙'.link('https://www.amazon.cn/gp/product/B009P4OW6U'), '基本全是鸡汤 建议别看', '2016/06/15']
+				['拆掉思维里的墙'.link('https://www.amazon.cn/gp/product/B009P4OW6U'), '基本全是鸡汤 建议别看', '2016/06/15'],
+				['果壳中的宇宙', '', '2016/07/02']
 			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
 		}
 	},
