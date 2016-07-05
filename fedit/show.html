@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                background: #eee;
+                display: flex;
+                justify-content: space-around;
+                font-family: "Microsoft Yahei UI Light", "Noto Sans CJK SC", "华文细黑", serif;
+                font-size: 22px;
+            }
+            main {
+                width: 718px;
+                background: white;
+                margin: 40px;
+                padding: 68px;
+                min-height: 900px;
+                box-shadow: 0px 0px 5px gray;
+            }
+            h1 {
+                text-align: center;
+                font-weight: 100;
+                margin-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Your article</h1>
+            <article></article>
+        </main>
+        <script>
+            document.getElementsByTagName('article')[0].innerText = localStorage.getItem('editorcache')
+        </script>
+    </body>
+</html>
