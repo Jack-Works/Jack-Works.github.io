@@ -41,3 +41,18 @@ main {
 		background-color: transparent !important;
 	}
 }
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 400px, 0);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+.fadeInUp-transition {
+	animation-duration: .4s;
+	animation-name: fadeInUp;
+}

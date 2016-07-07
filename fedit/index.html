@@ -62,7 +62,7 @@
             </div>
         </main>
         <script>
-            var written = localStorage.getItem('editorcache')
+            var written = localStorage.getItem('editorcache') || ''
             var input = document.getElementsByTagName('input')[0]
             var hide = document.getElementsByTagName('div')[0]
             var i = document.getElementById('i')

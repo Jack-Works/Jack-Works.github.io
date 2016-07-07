@@ -5,10 +5,8 @@ var progressed = 195.72
 var need = (20655 - progressed) / (progressed / ((new Date() - new Date('May 25 2016')) / msADay))
 
 var conf = {
-	article_title: 'Todo list of Jack Works',
-	weekMsg: '时间紧凑！赶快行动！',
 	items: [
-		{title: '失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), progress: [429, 1027]},
+		{title: '失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), progress: [541, 1027]},
 		//{title: 'Borland 传奇'.link('https://github.com/programthink/books/blob/master/README.wiki#106-it-公司'), progress: [331, 507]},
 		//{title: '猜想与反驳'.link('https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学'), progress: [10, 62, 722]},
 		//{title: 'Doom 启示录', progress: [7, 30, 433]},
@@ -202,7 +200,8 @@ var conf = {
 				['哥德尔、埃舍尔、巴赫——集异璧之大成'.link('#book_geb'), '这句话没有在自指', '2016/03/06'],
 				['万万没想到——用理工科思维理解世界'.link('https://www.amazon.cn/gp/product/B015DLP55A'), '相信我，这真的只是一本博客集', '2016/05/20'],
 				['拆掉思维里的墙'.link('https://www.amazon.cn/gp/product/B009P4OW6U'), '基本全是鸡汤 建议别看', '2016/06/15'],
-				['果壳中的宇宙'.link('https://www.amazon.cn/gp/product/B01931SPYE'), '', '2016/07/02']
+				['果壳中的宇宙'.link('https://www.amazon.cn/gp/product/B01931SPYE'), '"宇宙的目的是什么？"', '2016/07/02'],
+				['CS 50'.link('http://open.163.com/special/opencourse/cs50.html'), '极好的入门课程'.bold() + '， 我很后悔 5 年前有人推荐我去看而我没有看完', '2016/07/07']
 			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
 		}
 	},
@@ -222,7 +221,14 @@ var conf = {
 				['A Very Potter Musical'.link('http://www.bilibili.com/video/av1409326/'), 'CP 有毒', '2015/12/14'],
 			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
 		}
-	}],
-	motto: '——在一群出色的人中间，常常误以为自己也是其中一员，然后忘了努力'
+	}]
 }
-new Vue({el: 'body', data: conf})
+var vm = new Vue({el: 'body', data: {
+	article_title: '测绘文明',
+	weekMsg: 'Hello, world!',
+	motto: '——在一群出色的人中间，常常误以为自己也是其中一员，然后忘了努力',
+	hitokoto: null,
+	items: []
+}})
+conf.items.forEach((v, i) => setTimeout(() => vm.items.push(v), i * 150))
+$.get('https://apis.vola.xyz/hitokoto', title => conf.items.unshift({title: title.replace(/\n/g, '<br>'), content: 'Hitokoto from hitokoto service'}))

@@ -33,6 +33,7 @@ var list = data => `<ul class="collection">${data.map(v => `<li class="collectio
 (['right', 'del' ,'italic'], '<span class="Rep">This</span>')
 (['gray', 'red', 'green', 'orange'], '<span class="s-Rep">This</span>')
 (['done' ,'clear'], 'This<i class="material-icons right">Rep</i>')
+(['left'], '<span class="left">This</span>')
 ('processing', `This
 	<div class="preloader-wrapper small active" style="zoom: 0.5;float: right;margin-top: 6px;">
 		<div class="spinner-layer spinner-blue-only">

@@ -16,7 +16,7 @@
 				<span class="italic gray motto">{{weekMsg}}</span>
 			</h3>
 			<div class="item-container">
-				<div class="card" v-for="item in items">
+				<div class="card" v-for="item in items" transition="fadeInUp">
 					<div class="card-content">
 						<span class="card-title item-title" v-if="item.title">
 							{{{item.title}}}
