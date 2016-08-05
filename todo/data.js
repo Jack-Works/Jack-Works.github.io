@@ -1,12 +1,11 @@
 var msADay = 1000 * 60 * 60 * 24
-var progressed = 195.72
+var progressed = 601
 //150, 000 is total
 //20655 is 1st stage
 var need = (20655 - progressed) / (progressed / ((new Date() - new Date('May 25 2016')) / msADay))
 
 var conf = {
 	items: [
-		{title: '失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), progress: [541, 1027]},
 		//{title: 'Borland 传奇'.link('https://github.com/programthink/books/blob/master/README.wiki#106-it-公司'), progress: [331, 507]},
 		//{title: '猜想与反驳'.link('https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学'), progress: [10, 62, 722]},
 		//{title: 'Doom 启示录', progress: [7, 30, 433]},
@@ -17,7 +16,7 @@ var conf = {
 	//},
 	{
 		title: 'Ingress 清明上河图系列任务',
-		progress: [30, 654]
+		progress: [42, 654]
 	},
 	{
 		title: `第一阶段：预计完成日期：${
@@ -125,7 +124,6 @@ var conf = {
 	//		'English'.processing.orange,
 	//		'Esperanto',
 	//		'Latin',
-	//		'昆雅语的书写'
 	//	]
 	//},
 	//{
@@ -157,7 +155,8 @@ var conf = {
 	//		'可笑的思维谬误：批判性思考与查错神经',
 	//		'乌合之众',
 			'提问的智慧'.done.green.id('book_smart_questions'),
-			'万万没想到——用理工科思维理解世界'.done.green
+			'万万没想到——用理工科思维理解世界'.done.green,
+			'失控'.done.green,			
 	//		'浪潮之巅'
 		],
 	//	progress: [2, 10]
@@ -166,7 +165,7 @@ var conf = {
 		title: '一些奇怪的东西',
 		content: [
 	//		'魔戒'.processing,
-	//		'DND规则'.processing,
+			'DND规则'.processing,
 	//		'1984',
 	//		'美丽新世界',
 			'三体'.done.green
@@ -182,7 +181,6 @@ var conf = {
 	//		'Rework中文版',
 	//		'高效程序员的45个习惯'.gray.del,
 	//		'自私的基因',
-	//		'失控'.processing.green,
 	//		'万物由来',
 	//		'黑客攻防技术宝典（Web实战篇）'.processing.red,
 	//		'白帽子讲Web安全',
@@ -195,20 +193,21 @@ var conf = {
 	{
 		title: '2016年',
 		content: {
-			headers: [['有趣的事物', '新鲜的评语', '恰好的时间']],
+			headers: [['有趣的事物', '评判一番', '恰好的时间']],
 			body: [
 				['哥德尔、埃舍尔、巴赫——集异璧之大成'.link('#book_geb'), '这句话没有在自指', '2016/03/06'],
 				['万万没想到——用理工科思维理解世界'.link('https://www.amazon.cn/gp/product/B015DLP55A'), '相信我，这真的只是一本博客集', '2016/05/20'],
 				['拆掉思维里的墙'.link('https://www.amazon.cn/gp/product/B009P4OW6U'), '基本全是鸡汤 建议别看', '2016/06/15'],
 				['果壳中的宇宙'.link('https://www.amazon.cn/gp/product/B01931SPYE'), '"宇宙的目的是什么？"', '2016/07/02'],
-				['CS 50'.link('http://open.163.com/special/opencourse/cs50.html'), '极好的入门课程'.bold() + '， 我很后悔 5 年前有人推荐我去看而我没有看完', '2016/07/07']
+				['CS 50'.link('http://open.163.com/special/opencourse/cs50.html'), '极好的入门课程'.bold() + '， 我很后悔 5 年前有人推荐我去看而我没有看完', '2016/07/07'],
+				['失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), '凯文凯利精准的预见了十余年之后的今日，强烈推荐', '2016/08/05']
 			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
 		}
 	},
 	{
 		title: '2015年',
 		content: {
-			headers: [['有趣的事物', '新鲜的评语', '恰好的时间']],
+			headers: [['有趣的事物', '评判一番', '恰好的时间']],
 			body: [
 				['提问的智慧'.link('#book_smart_questions'), 'https://google.com/', '2015/??/??'],
 				['黑客与画家'.link('#book_hackers_and_painters'), '2015/??/??'],
@@ -230,5 +229,14 @@ var vm = new Vue({el: 'body', data: {
 	hitokoto: null,
 	items: []
 }})
-conf.items.forEach((v, i) => setTimeout(() => vm.items.push(v), i * 150))
-$.get('https://apis.vola.xyz/hitokoto', title => conf.items.unshift({title: title.replace(/\n/g, '<br>'), content: 'Hitokoto from hitokoto service'}))
+var final
+conf.items.forEach((v, i) => {
+	final = i * 150
+	setTimeout(() => vm.items.push(v), final)
+})
+$.get('https://apis.vola.xyz/hitokoto', title => 
+	setTimeout(
+		() => vm.items.unshift({title: title.replace(/\n/g, '<br>'), content: 'Hitokoto powered by hitokoto service'}),
+		150//final
+	)
+)
