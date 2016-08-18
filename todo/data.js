@@ -10,6 +10,7 @@ var conf = {
 		//{title: '猜想与反驳'.link('https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学'), progress: [10, 62, 722]},
 		//{title: 'Doom 启示录', progress: [7, 30, 433]},
 		//{title: '怎样阅读一本书' + '第五章 如何做一个自我要求的读者'.comment, progress: [17, 114]}, 
+		{title: '哈利波特与被诅咒的孩子' + 'Act 1 Scene 9'.comment, progress: [45, 307]},
 	//{
 	//	title: '哥德尔、埃舍尔、巴赫——集异璧之大成' + ' - 重读'.italic + '尚未开始'.comment,
 	//	progress: []
@@ -24,15 +25,24 @@ var conf = {
 		}`,
 		progress: [progressed, 20655]
 	},
-	// {
-	//	title: '魔戒',
-	//	content: ['霍比特人'.done.green,
-	//		'魔戒同盟'.processing.orange,
-	//		'王者归来',
-	//		'精灵宝钻'
-	//	],
-	//	progress: [217, 2004]
-	//},
+	{
+		title: 'Coursera',
+		content: {
+			headers: [['名称', '进度', '状态']], 
+			body: [
+				['Programming Languages', 'Week 4'.green, ''.processing.left]
+			]
+		}
+	},
+	{
+		title: '魔戒',
+		content: ['霍比特人'.done.green,
+			'魔戒同盟'.processing.orange,
+			'王者归来',
+			'精灵宝钻'
+		],
+		progress: [179, 2004]
+	},
 	//{
 	//	title: '网易云课堂 - 计算机网络之网尽其用'.link('http://mooc.study.163.com/course/HIT-1000002010?tid=1000003008'),
 	//	content: [
@@ -43,36 +53,31 @@ var conf = {
 	//	],
 	//	progress: [11, 39]
 	//},
-	//{
-	//	title: 'edX 课程',
-	//	content: {
-	//		headers: [['课程', '进度', '状态']], 
-	//		body: [
+	{
+		title: 'edX',
+		content: {
+			headers: [['名称', '进度', '状态']], 
+			body: [
 	//			['IELTSx - Listening', 'Unit 2: Listening Strategies'.green, ''.processingL],
 	//			['IELTSx - Speaking'.clas('sub ieltsx'), 'Unit 1: Unit Overview'.green, ''],
 	//			['IELTSx - Reading'.clas('sub ieltsx'), 'Unit 2: Skills and Strategies'.green, ''.processingL],
 	//			['IELTSx - Writing'.clas('sub ieltsx'), 'Unit 1: Unit Overview'.green, ''],
 	//			['IT.1.1x', 'What is this course about?'.gray, ''],
-	//			['Think101x', 'A taste of things to come'.gray, ''],
+				['Think101x', 'Ep.3 Know Thyself', ''.processing.left],
 	//			['Louv1.1x', 'Sum of digits with communicating vases'.gray, ''],
 	//			['Louv1.2x', 'Motivation for concurrency'.green, ''.processingL],
-	//			['CloudIntro.x', '计划谬误'.red, icon('clear').red],
 	//			['HTML5.1x', 'Course syllabus'.green, ''],
 	//			['HTML5.2x', ''.red, ''],
-	//			['LFS101x.2', 'Introduction/ Learning Objectives'.gray, ''],
+				['LFS101x.2', 'Chap.5 Sys conf from GUI', ''.processing.left],
 	//			['DEV204x', 'Introducing C#'.gray, ''],
 	//			['FP101', '计划谬误'.red, icon('clear').red],
 	//			['PH525.1x', 'Getting Started'.gray, ''],
 	//			['RTSIx', 'Part 1 What are Real-Time Systems'.gray, ''],
 	//			['60240013x', 'Homework of Week 3'.red + '真的看不懂了……'.comment, icon('clear').red],
-	//			['6.004.1x', '已退选'.red + '不明觉厉'.comment, icon('clear').red],
-	//			['6.004.2x', '已退选'.red + '……真的。'.comment, icon('clear').red],
 	//			['M101x', 'Introduction to the Course', ''],
-	//			['Code101x', 'Pre-Course Survey'.gray, ''],
-	//			['CS50x3', 'Important Pre-Course Survey'.gray + '我以前上过这课'.comment, '']
-	//		]
-	//	}
-	//},
+			]
+		}
+	},
 	//{
 	//	title: '网易云课堂 - CS 大一'.link('http://study.163.com/curricula/cs/grade-1.htm'),
 	//	content: [
@@ -109,7 +114,6 @@ var conf = {
 	//		'线性代数',
 	//		'数值分析',
 	//		'概率统计',
-	//		'复变函数',
 	//		'高等数学',
 	//		'离散数学'.red,
 	//		'抽象代數',
@@ -134,12 +138,7 @@ var conf = {
 	//		'C++',
 	//		'Bash',
 	//		'HTML 5 API'.processing,
-	//		'Go',
-	//		'Dart',
-	//		'Swift',
 	//		'C#'.processing,
-	//		'Lisp',
-	//		'R',
 	//		'Haskell'.processing
 	//	]
 	//},
@@ -158,13 +157,12 @@ var conf = {
 			'万万没想到——用理工科思维理解世界'.done.green,
 			'失控'.done.green,			
 	//		'浪潮之巅'
-		],
-	//	progress: [2, 10]
+		]
 	},
 	{
 		title: '一些奇怪的东西',
 		content: [
-	//		'魔戒'.processing,
+			'魔戒'.processing,
 			'DND规则'.processing,
 	//		'1984',
 	//		'美丽新世界',
@@ -187,8 +185,7 @@ var conf = {
 	//		'Web前端黑客技术揭秘',
 	//		'SQL注入攻击与防御',
 	//		'JavaScript DOM编程艺术'
-	//	],
-	//	progress: [0, 14]
+	//	]
 	//},
 	{
 		title: '2016年',
@@ -200,7 +197,8 @@ var conf = {
 				['拆掉思维里的墙'.link('https://www.amazon.cn/gp/product/B009P4OW6U'), '基本全是鸡汤 建议别看', '2016/06/15'],
 				['果壳中的宇宙'.link('https://www.amazon.cn/gp/product/B01931SPYE'), '"宇宙的目的是什么？"', '2016/07/02'],
 				['CS 50'.link('http://open.163.com/special/opencourse/cs50.html'), '极好的入门课程'.bold() + '， 我很后悔 5 年前有人推荐我去看而我没有看完', '2016/07/07'],
-				['失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), '凯文凯利精准的预见了十余年之后的今日，强烈推荐', '2016/08/05']
+				['失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), '凯文凯利精准的预见了十余年之后的今日，强烈推荐', '2016/08/05'],
+				['LAHW@Coursera'.link('https://www.coursera.org/learn/ruhe-xuexi/home/welcome'), '至少我现在知道好好睡觉的重要性了', '2016/08/18']
 			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
 		}
 	},
