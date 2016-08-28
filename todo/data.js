@@ -1,5 +1,5 @@
 var msADay = 1000 * 60 * 60 * 24
-var progressed = 601
+var progressed = 755
 //150, 000 is total
 //20655 is 1st stage
 var need = (20655 - progressed) / (progressed / ((new Date() - new Date('May 25 2016')) / msADay))
@@ -10,7 +10,7 @@ var conf = {
 		//{title: '猜想与反驳'.link('https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学'), progress: [10, 62, 722]},
 		//{title: 'Doom 启示录', progress: [7, 30, 433]},
 		//{title: '怎样阅读一本书' + '第五章 如何做一个自我要求的读者'.comment, progress: [17, 114]}, 
-		{title: '哈利波特与被诅咒的孩子' + 'Act 1 Scene 9'.comment, progress: [45, 307]},
+		{title: '哈利波特与被诅咒的孩子' + 'Act 1 Scene 16'.comment, progress: [67, 307]},
 	//{
 	//	title: '哥德尔、埃舍尔、巴赫——集异璧之大成' + ' - 重读'.italic + '尚未开始'.comment,
 	//	progress: []
@@ -30,7 +30,8 @@ var conf = {
 		content: {
 			headers: [['名称', '进度', '状态']], 
 			body: [
-				['Programming Languages', 'Week 4'.green, ''.processing.left]
+				['Programming Languages A', '完成', ''.done.left],
+				['LAHW', '完成', ''.done.left]
 			]
 		}
 	},
@@ -198,7 +199,8 @@ var conf = {
 				['果壳中的宇宙'.link('https://www.amazon.cn/gp/product/B01931SPYE'), '"宇宙的目的是什么？"', '2016/07/02'],
 				['CS 50'.link('http://open.163.com/special/opencourse/cs50.html'), '极好的入门课程'.bold() + '， 我很后悔 5 年前有人推荐我去看而我没有看完', '2016/07/07'],
 				['失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), '凯文凯利精准的预见了十余年之后的今日，强烈推荐', '2016/08/05'],
-				['LAHW@Coursera'.link('https://www.coursera.org/learn/ruhe-xuexi/home/welcome'), '至少我现在知道好好睡觉的重要性了', '2016/08/18']
+				['LAHW@Coursera'.link('https://www.coursera.org/learn/ruhe-xuexi/home/welcome'), '至少我现在知道好好睡觉的重要性了', '2016/08/18'],
+				['Programming Languages Part A'.link('https://www.coursera.org/learn/programming-languages/'), 'Hooray！是函数式！', '2016/08/28']
 			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
 		}
 	},
