@@ -1,5 +1,5 @@
 var msADay = 1000 * 60 * 60 * 24
-var progressed = 755
+var progressed = 955
 //150, 000 is total
 //20655 is 1st stage
 var need = (20655 - progressed) / (progressed / ((new Date() - new Date('May 25 2016')) / msADay))
@@ -10,14 +10,14 @@ var conf = {
 		//{title: '猜想与反驳'.link('https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学'), progress: [10, 62, 722]},
 		//{title: 'Doom 启示录', progress: [7, 30, 433]},
 		//{title: '怎样阅读一本书' + '第五章 如何做一个自我要求的读者'.comment, progress: [17, 114]}, 
-		{title: '哈利波特与被诅咒的孩子' + 'Act 1 Scene 16'.comment, progress: [67, 307]},
+		{title: '哈利波特与被诅咒的孩子' + 'Act 2 Scene 1'.comment, progress: [87, 307]},
 	//{
 	//	title: '哥德尔、埃舍尔、巴赫——集异璧之大成' + ' - 重读'.italic + '尚未开始'.comment,
 	//	progress: []
 	//},
 	{
 		title: 'Ingress 清明上河图系列任务',
-		progress: [42, 654]
+		progress: [67, 654]
 	},
 	{
 		title: `第一阶段：预计完成日期：${
@@ -31,6 +31,7 @@ var conf = {
 			headers: [['名称', '进度', '状态']], 
 			body: [
 				['Programming Languages A', '完成', ''.done.left],
+				['Programming Languages B', '重修'.red],
 				['LAHW', '完成', ''.done.left]
 			]
 		}
@@ -42,7 +43,7 @@ var conf = {
 			'王者归来',
 			'精灵宝钻'
 		],
-		progress: [179, 2004]
+		progress: [233, 2004]
 	},
 	//{
 	//	title: '网易云课堂 - 计算机网络之网尽其用'.link('http://mooc.study.163.com/course/HIT-1000002010?tid=1000003008'),
@@ -69,7 +70,7 @@ var conf = {
 	//			['Louv1.2x', 'Motivation for concurrency'.green, ''.processingL],
 	//			['HTML5.1x', 'Course syllabus'.green, ''],
 	//			['HTML5.2x', ''.red, ''],
-				['LFS101x.2', 'Chap.5 Sys conf from GUI', ''.processing.left],
+				['LFS101x.2', 'Chap.7 Section 4', ''.processing.left],
 	//			['DEV204x', 'Introducing C#'.gray, ''],
 	//			['FP101', '计划谬误'.red, icon('clear').red],
 	//			['PH525.1x', 'Getting Started'.gray, ''],
@@ -129,6 +130,7 @@ var conf = {
 	//		'English'.processing.orange,
 	//		'Esperanto',
 	//		'Latin',
+	//  	'French'
 	//	]
 	//},
 	//{
@@ -224,8 +226,8 @@ var conf = {
 }
 var vm = new Vue({el: 'body', data: {
 	article_title: '测绘文明',
-	weekMsg: 'Hello, world!',
-	motto: '——在一群出色的人中间，常常误以为自己也是其中一员，然后忘了努力',
+	weekMsg: '人类正跌跌撞撞走在一个不祥的梦里，永远不会醒来。',
+	motto: '——探索，继续前行',
 	hitokoto: null,
 	items: []
 }})
