@@ -58,7 +58,7 @@ var drawer = data => typeChecker(Array.isArray(data), data instanceof Object && 
 Vue.filter('drawer', drawer)
 Vue.filter('progressHelper', arr => {
 	if(!arr) return ''
-	if(arr.length == 1) return `进度: ${arr[0]}%`.comment
-	if(arr.length == 2) return `进度: ${arr[0]} / ${arr[1]}`.comment
+	if(arr.length == 1) return `${arr[0]}%`.comment
+	if(arr.length == 2) return `${arr[0]} / ${arr[1]}`.comment
 })
 Vue.filter('progressCalc', arr => 100 * arr[0] / (arr[1] || 100))
