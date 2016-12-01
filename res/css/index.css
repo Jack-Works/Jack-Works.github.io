@@ -5,9 +5,9 @@ body {
 	color: white;
 	text-align: center;
 }
-header h2, header h4 {font-weight: lighter; display: inline-flex; margin: 0;}
+header h2, header h4 {font-weight: 500; display: inline-flex; margin: 0;}
 header h4 {color: lightgray;}
-header h5 {font-weight: lighter; color: gray; margin-top: 0; font-style: italic; transition-duration: 0.5s;}
+header h5 {font-weight: 500; color: gray; margin-top: 0; font-style: italic; transition-duration: 0.5s;}
 
 nav a {padding: 12px 30px; display: block; text-decoration: none; color: white; max-width: 100%;}
 nav a.disabled {color: gray;}
