@@ -19,15 +19,6 @@ var conf = {
 	{title: 'Ingress 清明上河图系列任务', progress: [78, 654]},
 	{title: `Part 1：预计于 ${Math.ceil(need * 3)} 回合后完成；已贡献点数`, progress: [progressed, 20655]},
 	/*{
-		title: '魔戒',
-		content: ['霍比特人'.done.green,
-			'魔戒同盟'.done.green,
-			'王者归来'.done.green,
-			'精灵宝钻'.progressing.oragnge
-		],
-		progress: [233, 2004]
-	},*/
-	/*{
 		title: '思维、逻辑、社会、设计、玄学',
 		content: [
 			'黑客与画家'.done.green.id('book_hackers_and_painters'),
@@ -47,11 +38,9 @@ var conf = {
 	{
 		title: '一些奇怪的东西',
 		content: [
-			'魔戒'.processing,
 			'DND规则'.processing,
 	//		'1984',
 	//		'美丽新世界',
-			'三体'.done.green
 		]
 	},*/
 	//{
@@ -82,10 +71,12 @@ var conf = {
 	//			['万万没想到——用理工科思维理解世界'.link('https://www.amazon.cn/gp/product/B015DLP55A'), '相信我，这真的只是一本博客集', '2016/05/20'],
 	//			['拆掉思维里的墙'.link('https://www.amazon.cn/gp/product/B009P4OW6U'), '基本全是鸡汤 建议别看', '2016/06/15'],
 	//			['果壳中的宇宙'.link('https://www.amazon.cn/gp/product/B01931SPYE'), '"宇宙的目的是什么？"', '2016/07/02'],
-	//			['CS 50'.link('http://open.163.com/special/opencourse/cs50.html'), '极好的入门课程'.bold() + '， 我很后悔 5 年前有人推荐我去看而我没有看完', '2016/07/07'],
+				['CS 50'.link('http://open.163.com/special/opencourse/cs50.html'), '极好的入门课程'.bold() + '， 我很后悔 5 年前有人推荐我去看而我没有看完', '2016/07/07'],
 				['失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), '凯文凯利精准的预见了十余年之后的今日，强烈推荐', '2016/08/05'],
 	//			['LAHW@Coursera'.link('https://www.coursera.org/learn/ruhe-xuexi/home/welcome'), '至少我现在知道好好睡觉的重要性了', '2016/08/18'],
-	//			['Programming Languages Part A'.link('https://www.coursera.org/learn/programming-languages/'), 'Hooray！是函数式！', '2016/08/28']
+	//			['Programming Languages Part A'.link('https://www.coursera.org/learn/programming-languages/'), 'Hooray！是函数式！', '2016/08/28'],
+				['魔戒', '有两种人，看过的，和准备看的', '2016/12/05'],
+				['霍比特人：意外之旅', '咕噜。', '2016/12/05']
 			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
 		}
 	},
