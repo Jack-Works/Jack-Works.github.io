@@ -16,8 +16,8 @@ var conf = {
 	//	progress: []
 	//},
 	{title: '一张空白的地图不等于一块空白的地域', content: '一本空白的日记不等于一段空白的人生<br>"我庄严宣誓我没干好事"'},
-	{title: 'Ingress 清明上河图系列任务', progress: [78, 654]},
-	{title: `Part 1：预计于 ${Math.ceil(need * 3)} 回合后完成；已贡献点数`, progress: [progressed, 20655]},
+	//{title: 'Ingress 清明上河图系列任务', progress: [78, 654]},
+	//{title: `Part 1：预计于 ${Math.ceil(need * 3)} 回合后完成；已贡献点数`, progress: [progressed, 20655]},
 	/*{
 		title: '思维、逻辑、社会、设计、玄学',
 		content: [
@@ -66,7 +66,6 @@ var conf = {
 		content: {
 			headers: [['有趣的事物', '评判一番', '恰好的时间']],
 			body: [
-				['Hamilton (Musical)'.link('http://www.bilibili.com/video/av4891480'), '谁人来讲述我们的故事？', '2016/11/19'],
 				['哥德尔、埃舍尔、巴赫——集异璧之大成'.link('#book_geb'), '这句话没有在自指', '2016/03/06'],
 	//			['万万没想到——用理工科思维理解世界'.link('https://www.amazon.cn/gp/product/B015DLP55A'), '相信我，这真的只是一本博客集', '2016/05/20'],
 	//			['拆掉思维里的墙'.link('https://www.amazon.cn/gp/product/B009P4OW6U'), '基本全是鸡汤 建议别看', '2016/06/15'],
@@ -75,8 +74,10 @@ var conf = {
 				['失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), '凯文凯利精准的预见了十余年之后的今日，强烈推荐', '2016/08/05'],
 	//			['LAHW@Coursera'.link('https://www.coursera.org/learn/ruhe-xuexi/home/welcome'), '至少我现在知道好好睡觉的重要性了', '2016/08/18'],
 	//			['Programming Languages Part A'.link('https://www.coursera.org/learn/programming-languages/'), 'Hooray！是函数式！', '2016/08/28'],
+				['Hamilton (Musical)'.link('http://www.bilibili.com/video/av4891480'), '谁人来讲述我们的故事？', '2016/11/19'],
 				['魔戒', '有两种人，看过的，和准备看的', '2016/12/05'],
-				['霍比特人：意外之旅', '咕噜。', '2016/12/05']
+				['霍比特人：意外之旅', '咕噜。', '2016/12/05'],
+				['清醒思考的艺术', '不如看维基百科的相关条目', '2016/12/28']
 			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
 		}
 	},
