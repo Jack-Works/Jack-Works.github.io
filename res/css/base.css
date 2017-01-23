@@ -1,7 +1,7 @@
 html, body {
 	width: 100%;
 	height: 100%;
-	font-family: 'Noto Sans CJK SC Light', 'Microsoft Yahei Light', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Noto Sans CJK SC', 'Microsoft Yahei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
 	background: fixed;
@@ -11,4 +11,7 @@ body {
 	background-position: 50% 100%;
 	background-repeat: no-repeat;
 	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, h7, th {
+	font-family: 'Noto Sans CJK SC Light', 'Microsoft Yahei Light', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

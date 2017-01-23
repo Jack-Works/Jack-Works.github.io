@@ -12,7 +12,7 @@ var conf = {
 		//{title: '怎样阅读一本书' + '第五章 如何做一个自我要求的读者'.comment, progress: [17, 114]}, 
 		//{title: '哈利波特与被诅咒的孩子' + 'Act 2 Scene 1'.comment, progress: [87, 307]},
 	//{
-	//	title: '哥德尔、埃舍尔、巴赫——集异璧之大成' + ' - 重读'.italic + '尚未开始'.comment,
+	//	title: '哥德尔、埃舍尔、巴赫——集异璧之大成' + ' - 重读'.italic,
 	//	progress: []
 	//},
 	{title: '一张空白的地图不等于一块空白的地域', content: '一本空白的日记不等于一段空白的人生<br>"我庄严宣誓我没干好事"'},
@@ -62,6 +62,17 @@ var conf = {
 	//	]
 	//},
 	{
+		title: '2017年',
+		content: {
+			headers: [['有趣的事物', '评判一番', '恰好的时间']],
+			body: [
+				['大设计', '人择原理'.link('https://zh.wikipedia.org/wiki/%E4%BA%BA%E6%8B%A9%E5%8E%9F%E7%90%86'), '2017/1/4'],
+				['吉屋出租 (Rent)'.link('http://www.bilibili.com/video/av1882979/'), '525, 600 minutes, how do we measure, measure a year', '2017/1/16'],
+				['图利的猫：史上最著名的116个思想悖论', '最后一个，我要报警了', '2017/1/23']
+			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
+		}
+	},
+	{
 		title: '2016年',
 		content: {
 			headers: [['有趣的事物', '评判一番', '恰好的时间']],
@@ -70,8 +81,8 @@ var conf = {
 	//			['万万没想到——用理工科思维理解世界'.link('https://www.amazon.cn/gp/product/B015DLP55A'), '相信我，这真的只是一本博客集', '2016/05/20'],
 	//			['拆掉思维里的墙'.link('https://www.amazon.cn/gp/product/B009P4OW6U'), '基本全是鸡汤 建议别看', '2016/06/15'],
 	//			['果壳中的宇宙'.link('https://www.amazon.cn/gp/product/B01931SPYE'), '"宇宙的目的是什么？"', '2016/07/02'],
-				['CS 50'.link('http://open.163.com/special/opencourse/cs50.html'), '极好的入门课程'.bold() + '， 我很后悔 5 年前有人推荐我去看而我没有看完', '2016/07/07'],
-				['失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), '凯文凯利精准的预见了十余年之后的今日，强烈推荐', '2016/08/05'],
+				['CS 50'.link('http://open.163.com/special/opencourse/cs50.html'), '极好的入门课程'.bold() + '<br>我很后悔 5 年前有人推荐我去看而我没有看完', '2016/07/07'],
+				['失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), '凯文凯利精准的预见了十余年之后的今日', '2016/08/05'],
 	//			['LAHW@Coursera'.link('https://www.coursera.org/learn/ruhe-xuexi/home/welcome'), '至少我现在知道好好睡觉的重要性了', '2016/08/18'],
 	//			['Programming Languages Part A'.link('https://www.coursera.org/learn/programming-languages/'), 'Hooray！是函数式！', '2016/08/28'],
 				['Hamilton (Musical)'.link('http://www.bilibili.com/video/av4891480'), '谁人来讲述我们的故事？', '2016/11/19'],
@@ -89,7 +100,7 @@ var conf = {
 				['提问的智慧'.link('#book_smart_questions'), 'https://google.com/', '2015'],
 				['黑客与画家'.link('#book_hackers_and_painters'), '2015'],
 				['我们的征途，是星辰大海！ - Bilibili 专题'.link('http://www.bilibili.com/topic/245.html'), '2015/10/04'],
-				['平面国', '2015/11/08'],
+				['平面国', '怎么想象高维空间？', '2015/11/08'],
 				['三体', '消灭人类暴政，世界属于三体!!', '2015/11/09'],
 				['暗时间', '2015/12/03'],
 				['哈利波特与理性之道'.link('http://hpmor.lofter.com/'), '严肃地对待荒谬，荒谬地对待严肃', '2015/12/10'],
@@ -100,7 +111,7 @@ var conf = {
 }
 var vm = new Vue({el: 'body', data: {
 	article_title: '测绘文明',
-	weekMsg: '快要 2017 年了。',
+	weekMsg: 'Running out of time',
 	motto: '——探索，继续前行',
 	hitokoto: null,
 	items: []
