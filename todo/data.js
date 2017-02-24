@@ -10,7 +10,6 @@ var conf = {
 		//{title: '猜想与反驳'.link('https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学'), progress: [10, 62, 722]},
 		//{title: 'Doom 启示录', progress: [7, 30, 433]},
 		//{title: '怎样阅读一本书' + '第五章 如何做一个自我要求的读者'.comment, progress: [17, 114]}, 
-		//{title: '哈利波特与被诅咒的孩子' + 'Act 2 Scene 1'.comment, progress: [87, 307]},
 	//{
 	//	title: '哥德尔、埃舍尔、巴赫——集异璧之大成' + ' - 重读'.italic,
 	//	progress: []
@@ -68,7 +67,13 @@ var conf = {
 			body: [
 				['大设计', '人择原理'.link('https://zh.wikipedia.org/wiki/%E4%BA%BA%E6%8B%A9%E5%8E%9F%E7%90%86'), '2017/1/4'],
 				['吉屋出租 (Rent)'.link('http://www.bilibili.com/video/av1882979/'), '525, 600 minutes, how do we measure, measure a year', '2017/1/16'],
-				['图利的猫：史上最著名的116个思想悖论', '最后一个，我要报警了', '2017/1/23']
+				['图利的猫：史上最著名的116个思想悖论', '最后一个，我要报警了', '2017/1/23'],
+				['你一生的故事', '', '2017/1/27'],
+				['Arrival (2016)', '本来就没有自由意志', '2017/1/25'],
+				['魔鬼的牧师', '', '2017/1/26'],
+				['图解 HTTP', '适合初学者，不适合我', '2017/2/13'],
+				['哈利波特与被诅咒的孩子', '情怀！', '2017/2/23'],
+				['漫画数据库', '很有意思，感觉和图解 HTTP 差不多', '2017/2/24']
 			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
 		}
 	},
