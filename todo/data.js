@@ -1,9 +1,3 @@
-var msADay = 1000 * 60 * 60 * 24
-var progressed = 1389
-//150, 000 is total
-//20655 is 1st stage
-var need = (20655 - progressed) / (progressed / ((new Date() - new Date('May 25 2016')) / msADay))
-
 var conf = {
 	items: [
 		//{title: 'Borland 传奇'.link('https://github.com/programthink/books/blob/master/README.wiki#106-it-公司'), progress: [331, 507]},
@@ -14,23 +8,17 @@ var conf = {
 	//	title: '哥德尔、埃舍尔、巴赫——集异璧之大成' + ' - 重读'.italic,
 	//	progress: []
 	//},
-	{title: '一张空白的地图不等于一块空白的地域', content: '一本空白的日记不等于一段空白的人生<br>"我庄严宣誓我没干好事"'},
-	//{title: 'Ingress 清明上河图系列任务', progress: [78, 654]},
-	//{title: `Part 1：预计于 ${Math.ceil(need * 3)} 回合后完成；已贡献点数`, progress: [progressed, 20655]},
+	{title: '"我庄严宣誓我没干好事"'},
+	{title: 'Ingress 清明上河图系列任务', progress: [120, 654]},
 	/*{
 		title: '思维、逻辑、社会、设计、玄学',
 		content: [
-			'黑客与画家'.done.green.id('book_hackers_and_painters'),
 	//		'批判性思维工具',
-			'哥德尔、埃舍尔、巴赫——集异璧之大成'.done.green.id('book_geb'),
 	//		'不确定状况下的判断'.processing,
 	//		'影响力:科学与实践',
 	//		'给大家看的设计书',
 	//		'可笑的思维谬误：批判性思考与查错神经',
 	//		'乌合之众',
-			'提问的智慧'.done.green.id('book_smart_questions'),
-			'万万没想到——用理工科思维理解世界'.done.green,
-			'失控'.done.green,			
 	//		'浪潮之巅'
 		]
 	},
@@ -51,7 +39,6 @@ var conf = {
 	//		'数学之美',
 	//		'Rework中文版',
 	//		'高效程序员的45个习惯'.gray.del,
-	//		'自私的基因',
 	//		'万物由来',
 	//		'黑客攻防技术宝典（Web实战篇）'.processing.red,
 	//		'白帽子讲Web安全',
@@ -67,14 +54,19 @@ var conf = {
 			body: [
 				['大设计', '人择原理'.link('https://zh.wikipedia.org/wiki/%E4%BA%BA%E6%8B%A9%E5%8E%9F%E7%90%86'), '2017/1/4'],
 				['吉屋出租 (Rent)'.link('http://www.bilibili.com/video/av1882979/'), '525, 600 minutes, how do we measure, measure a year', '2017/1/16'],
-				['图利的猫：史上最著名的116个思想悖论', '最后一个，我要报警了', '2017/1/23'],
-				['你一生的故事', '', '2017/1/27'],
+				['图利的猫：史上最著名的116个思想悖论', '“不要总是用难以抉择的道德问题刁难别人，<br>因为当他在此类问题下积累了足够的经验，<br>你会发现他变得毫无道德可言”<br>—— Giles Lee', '2017/1/23'],
+				['你一生的故事', '← 强烈推荐', '2017/1/27'],
 				['Arrival (2016)', '本来就没有自由意志', '2017/1/25'],
-				['魔鬼的牧师', '', '2017/1/26'],
-				['图解 HTTP', '适合初学者，不适合我', '2017/2/13'],
-				['哈利波特与被诅咒的孩子', '情怀！', '2017/2/23'],
-				['漫画数据库', '很有意思，感觉和图解 HTTP 差不多', '2017/2/24']
-			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
+				['魔鬼的牧师', '书信集？', '2017/1/26'],
+				['图解 HTTP', '的确解释了 HTTP 协议，但……<br>是这本书太浅显了还是 HTTP 协议本来就这么简单？', '2017/2/13'],
+				['Harry Potter And The Cursed Child', '熊孩子们真会玩！<br>' + '另外心疼 HPMOR 作者关于时间转换器和变形术的二设'.gray.del, '2017/2/23'],
+				['漫画数据库', '对我这个数据库恐惧者好像很不错<br>' + '虽然还是没完全明白'.gray.del, '2017/2/24'],
+				['哈利波特与被诅咒的孩子', '翻译爆炸！', '2017/3/8'],
+				['计算机文化', '好像不适合我，看了一百页，弃了', '2017/10/3'],
+				['点石成金(Don\'t make me think)', '虽然有点太老，但是说的有道理', '2017/3/10'],
+				['语言学的邀请', '有道理，但是感觉略水，主要观点在最后几页重新概括了一下', '2017/3/15'],
+				['自私的基因', '2017/3/21']
+			].map(([a, b, c]) => c ? [a, b, c] : [a, '', b])
 		}
 	},
 	{
@@ -91,10 +83,10 @@ var conf = {
 	//			['LAHW@Coursera'.link('https://www.coursera.org/learn/ruhe-xuexi/home/welcome'), '至少我现在知道好好睡觉的重要性了', '2016/08/18'],
 	//			['Programming Languages Part A'.link('https://www.coursera.org/learn/programming-languages/'), 'Hooray！是函数式！', '2016/08/28'],
 				['Hamilton (Musical)'.link('http://www.bilibili.com/video/av4891480'), '谁人来讲述我们的故事？', '2016/11/19'],
-				['魔戒', '有两种人，看过的，和准备看的', '2016/12/05'],
+				['魔戒', '有两种人，看过魔戒的，和准备看魔戒的', '2016/12/05'],
 				['霍比特人：意外之旅', '咕噜。', '2016/12/05'],
-				['清醒思考的艺术', '不如看维基百科的相关条目', '2016/12/28']
-			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
+				['清醒思考的艺术', '此书介绍的思维谬误的数量让我觉得不如看维基百科的相关条目', '2016/12/28']
+			].map(([a, b, c]) => c ? [a, b, c] : [a, '', b])
 		}
 	},
 	{
@@ -102,21 +94,21 @@ var conf = {
 		content: {
 			headers: [['有趣的事物', '评判一番', '恰好的时间']],
 			body: [
-				['提问的智慧'.link('#book_smart_questions'), 'https://google.com/', '2015'],
+				['提问的智慧'.link('#book_smart_questions'), '2015'],
 				['黑客与画家'.link('#book_hackers_and_painters'), '2015'],
 				['我们的征途，是星辰大海！ - Bilibili 专题'.link('http://www.bilibili.com/topic/245.html'), '2015/10/04'],
 				['平面国', '怎么想象高维空间？', '2015/11/08'],
 				['三体', '消灭人类暴政，世界属于三体!!', '2015/11/09'],
 				['暗时间', '2015/12/03'],
 				['哈利波特与理性之道'.link('http://hpmor.lofter.com/'), '严肃地对待荒谬，荒谬地对待严肃', '2015/12/10'],
-				['A Very Potter Musical'.link('http://www.bilibili.com/video/av1409326/'), 'CP 有毒', '2015/12/14'],
-			].map(v => v.length == 3 ? [v[0], v[1], v[2]] : [v[0], '', v[1]])
+				['A Very Potter Musical'.link('http://www.bilibili.com/video/av1409326/'), '2015/12/14'],
+			].map(([a, b, c]) => c ? [a, b, c] : [a, '', b])
 		}
 	}]
 }
 var vm = new Vue({el: 'body', data: {
 	article_title: '测绘文明',
-	weekMsg: 'Running out of time',
+	weekMsg: '哪怕是霍格沃茨最小的学生，他也不会叫他们做出错误的选择。',
 	motto: '——探索，继续前行',
 	hitokoto: null,
 	items: []

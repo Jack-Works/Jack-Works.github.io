@@ -39,5 +39,5 @@ footer a {color: rgba(255, 255, 255, 0.8);}
 }
 @keyframes slide {
 	from {opacity: 1; width: 150px;}
-	to {opacity: 0; width: 0px;}
+	to {opacity: 0; width: 0px; margin: 0;}
 }
