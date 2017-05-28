@@ -5,6 +5,7 @@ body {
 	color: white;
 	text-align: center;
 }
+a{color: white;}
 header h2, header h4 {font-weight: 500; display: inline-flex; margin: 0;}
 header h4 {color: lightgray;}
 header h5 {font-weight: 500; color: gray; margin-top: 0; font-style: italic; transition-duration: 0.5s;}
@@ -41,3 +42,30 @@ footer a {color: rgba(255, 255, 255, 0.8);}
 	from {opacity: 1; width: 150px;}
 	to {opacity: 0; width: 0px; margin: 0;}
 }
+
+
+[blue]::before,
+[yellow]::before,
+[red]::before {
+	content: ' ';
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	display: inline-block;
+	position: relative;
+	top: 0.25em;
+	float: left;
+}
+
+[red]::before {
+	background: #C62828;
+}
+
+[yellow]::before {
+	background: #FFEB3B;
+}
+
+[blue]::before {
+	background: #2196F3;
+}
+footer nav {text-align: left;}
