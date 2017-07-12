@@ -9,7 +9,7 @@ var conf = {
 		//	progress: []
 		//},
 		{ title: '"我庄严宣誓我没干好事"' },
-		{ title: 'Ingress 清明上河图系列任务', progress: [120, 654] },
+		{ title: 'Ingress 清明上河图系列任务', progress: [156, 654] },
 		/*{
 			title: '思维、逻辑、社会、设计、玄学',
 			content: [
@@ -26,7 +26,6 @@ var conf = {
 			title: '一些奇怪的东西',
 			content: [
 				'DND规则'.processing,
-		//		'1984',
 		//		'美丽新世界',
 			]
 		},*/
@@ -50,7 +49,7 @@ var conf = {
 		{
 			title: '2017年',
 			content: {
-				headers: [['有趣的事物', '评判一番', '恰好的时间']],
+				headers: [['有趣的事物', '', '']],
 				body: [
 					['大设计', '人择原理'.link('https://zh.wikipedia.org/wiki/%E4%BA%BA%E6%8B%A9%E5%8E%9F%E7%90%86'), '2017/1/4'],
 					['吉屋出租 (Rent)'.link('http://www.bilibili.com/video/av1882979/'), '525, 600 minutes, how do we measure, measure a year', '2017/1/16'],
@@ -72,14 +71,15 @@ var conf = {
 					['魔鬼出没的世界', '正是科学的光芒告诉了我们并不是人类大众生来便背着枷锁', '2017/6/9'],
 					['设计心理学', '----', '2017/6/19'],
 					['星际穿越', '好棒啊啊啊啊啊啊啊啊', '2017/6/27'],
-					['自控力', '一个朋友推荐我去看的，好像没什么用？', '2017/7/4']
+					['自控力', '一个朋友推荐我去看的，好像没什么用？', '2017/7/4'],
+					['1984', '自由就是二加二等于四，承认了此理，其他便会迎刃而解。', '2017/7/5']
 				].map(([a, b, c]) => c ? [a, b, c] : [a, '', b])
 			}
 		},
 		{
 			title: '2016年',
 			content: {
-				headers: [['有趣的事物', '评判一番', '恰好的时间']],
+				headers: [['有趣的事物', '', '']],
 				body: [
 					['哥德尔、埃舍尔、巴赫——集异璧之大成'.link('#book_geb'), '这句话没有在自指', '2016/03/06'],
 					//			['万万没想到——用理工科思维理解世界'.link('https://www.amazon.cn/gp/product/B015DLP55A'), '相信我，这真的只是一本博客集', '2016/05/20'],
@@ -99,7 +99,7 @@ var conf = {
 		{
 			title: '2015年',
 			content: {
-				headers: [['有趣的事物', '评判一番', '恰好的时间']],
+				headers: [['有趣的事物', '', '']],
 				body: [
 					['提问的智慧'.link('#book_smart_questions'), '2015'],
 					['黑客与画家'.link('#book_hackers_and_painters'), '2015'],
