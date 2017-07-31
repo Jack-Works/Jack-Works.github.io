@@ -3,13 +3,15 @@ var conf = {
 		//{title: 'Borland 传奇'.link('https://github.com/programthink/books/blob/master/README.wiki#106-it-公司'), progress: [331, 507]},
 		//{title: '猜想与反驳'.link('https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学'), progress: [10, 62, 722]},
 		//{title: 'Doom 启示录', progress: [7, 30, 433]},
-		//{title: '怎样阅读一本书' + '第五章 如何做一个自我要求的读者'.comment, progress: [17, 114]}, 
-		//{
-		//	title: '哥德尔、埃舍尔、巴赫——集异璧之大成' + ' - 重读'.italic,
-		//	progress: []
-		//},
+		//{title: '怎样阅读一本书' + '第五章 如何做一个自我要求的读者'.comment, progress: [17, 114]},
+		(([title, content]) => {
+			return {
+				title: `“${title.replace(/\n/g, '<br>')}”`,
+				content: ("——" + content).right + '<br>'
+			}
+		})(getRand()),
 		{ title: '"我庄严宣誓我没干好事"' },
-		{ title: 'Ingress 清明上河图系列任务', progress: [156, 654] },
+		{ title: 'Ingress 清明上河图系列任务', progress: [174, 654] },
 		/*{
 			title: '思维、逻辑、社会、设计、玄学',
 			content: [
@@ -71,8 +73,10 @@ var conf = {
 					['魔鬼出没的世界', '正是科学的光芒告诉了我们并不是人类大众生来便背着枷锁', '2017/6/9'],
 					['设计心理学', '----', '2017/6/19'],
 					['星际穿越', '好棒啊啊啊啊啊啊啊啊', '2017/6/27'],
+					['人类群星闪耀时', '2017/6/?'],
 					['自控力', '一个朋友推荐我去看的，好像没什么用？', '2017/7/4'],
-					['1984', '自由就是二加二等于四，承认了此理，其他便会迎刃而解。', '2017/7/5']
+					['1984', '自由就是二加二等于四，承认了此理，其他便会迎刃而解。', '2017/7/5'],
+					['悖论：思维的魔方'.link('https://www.coursera.org/learn/bei-lun'), '很有意思，可惜学了之后记住的不多', '2017/7/31']
 				].map(([a, b, c]) => c ? [a, b, c] : [a, '', b])
 			}
 		},
@@ -116,7 +120,7 @@ var conf = {
 var vm = new Vue({
 	el: 'body', data: {
 		article_title: '测绘文明',
-		weekMsg: '哪怕是霍格沃茨最小的学生，他也不会叫他们做出错误的选择。',
+		weekMsg: '长夜才开始，黑暗中请记得太阳的模样，沉默中不要为魔鬼歌唱。',
 		motto: '——探索，继续前行',
 		hitokoto: null,
 		items: []
@@ -127,9 +131,3 @@ conf.items.forEach((v, i) => {
 	final = i * 150
 	setTimeout(() => vm.items.push(v), final)
 })
-/*$.get('https://apis.vola.xyz/hitokoto', title => 
-	setTimeout(
-		() => vm.items.unshift({title: title.replace(/\n/g, '<br>'), content: 'Hitokoto powered by hitokoto service'}),
-		150//final
-	)
-)*/
