@@ -10,8 +10,10 @@ var conf = {
 				content: ("——" + content).right + '<br>'
 			}
 		})(getRand()),
-		{ title: '"我庄严宣誓我没干好事"' },
-		{ title: 'Ingress 清明上河图系列任务', progress: [174, 654] },
+		{
+			title: 'Ingress 清明上河图系列任务',
+			progress: [174, 654]
+		},
 		/*{
 			title: '思维、逻辑、社会、设计、玄学',
 			content: [
@@ -20,7 +22,6 @@ var conf = {
 		//		'影响力:科学与实践',
 		//		'给大家看的设计书',
 		//		'可笑的思维谬误：批判性思考与查错神经',
-		//		'乌合之众',
 		//		'浪潮之巅'
 			]
 		},
@@ -51,7 +52,9 @@ var conf = {
 		{
 			title: '2017年',
 			content: {
-				headers: [['有趣的事物', '', '']],
+				headers: [
+					['有趣的事物', '', '']
+				],
 				body: [
 					['大设计', '人择原理'.link('https://zh.wikipedia.org/wiki/%E4%BA%BA%E6%8B%A9%E5%8E%9F%E7%90%86'), '2017/1/4'],
 					['吉屋出租 (Rent)'.link('http://www.bilibili.com/video/av1882979/'), '525, 600 minutes, how do we measure, measure a year', '2017/1/16'],
@@ -70,28 +73,31 @@ var conf = {
 					['哥德尔、埃舍尔、巴赫——集异璧之大成', '第二遍看，还是会觉得是神书呢', '2017/3/26'],
 					['盲眼的钟表匠', '2017/5/11'],
 					['精灵宝钻', '迷人的神话故事', '2017/5/19'],
-					['魔鬼出没的世界', '正是科学的光芒告诉了我们并不是人类大众生来便背着枷锁', '2017/6/9'],
+					['魔鬼出没的世界', '“正是科学的光芒告诉了我们并不是人类大众生来便背着枷锁”', '2017/6/9'],
 					['设计心理学', '----', '2017/6/19'],
 					['星际穿越', '好棒啊啊啊啊啊啊啊啊', '2017/6/27'],
 					['人类群星闪耀时', '2017/6/?'],
 					['自控力', '一个朋友推荐我去看的，好像没什么用？', '2017/7/4'],
-					['1984', '自由就是二加二等于四，承认了此理，其他便会迎刃而解。', '2017/7/5'],
-					['悖论：思维的魔方'.link('https://www.coursera.org/learn/bei-lun'), '很有意思，可惜学了之后记住的不多', '2017/7/31']
+					['1984', '“自由就是二加二等于四，承认了此理，其他便会迎刃而解。”', '2017/7/5'],
+					['悖论：思维的魔方'.link('https://www.coursera.org/learn/bei-lun'), '很有意思，可惜学了之后记住的不多', '2017/7/31'],
+					['巫师、外星人与星舰', '一本非常棒的书，有空的人可以去看看', '2017/8/19'],
+					['星际穿越(基普·索恩)'.link('https://www.amazon.cn/gp/product/B010N3J626'), '看过星际穿越电影的人一定要去看这本书', '2017/9/8'],
+					['你的灯亮着吗？发现问题的真正所在', '完全不得要领，我可能需要过段时间重新读', '2017/9/9'],
+					['美丽新世界', '“我不要舒适。我要神，我要诗，我要真实的危险，我要自由，我要善良，我要罪孽”', '2017/9/10']
 				].map(([a, b, c]) => c ? [a, b, c] : [a, '', b])
 			}
 		},
 		{
 			title: '2016年',
 			content: {
-				headers: [['有趣的事物', '', '']],
+				headers: [
+					['有趣的事物', '', '']
+				],
 				body: [
 					['哥德尔、埃舍尔、巴赫——集异璧之大成'.link('#book_geb'), '这句话没有在自指', '2016/03/06'],
-					//			['万万没想到——用理工科思维理解世界'.link('https://www.amazon.cn/gp/product/B015DLP55A'), '相信我，这真的只是一本博客集', '2016/05/20'],
-					//			['拆掉思维里的墙'.link('https://www.amazon.cn/gp/product/B009P4OW6U'), '基本全是鸡汤 建议别看', '2016/06/15'],
 					//			['果壳中的宇宙'.link('https://www.amazon.cn/gp/product/B01931SPYE'), '"宇宙的目的是什么？"', '2016/07/02'],
 					['CS 50'.link('http://open.163.com/special/opencourse/cs50.html'), '极好的入门课程'.bold() + '<br>我很后悔 5 年前有人推荐我去看而我没有看完', '2016/07/07'],
 					['失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), '凯文凯利精准的预见了十余年之后的今日', '2016/08/05'],
-					//			['LAHW@Coursera'.link('https://www.coursera.org/learn/ruhe-xuexi/home/welcome'), '至少我现在知道好好睡觉的重要性了', '2016/08/18'],
 					//			['Programming Languages Part A'.link('https://www.coursera.org/learn/programming-languages/'), 'Hooray！是函数式！', '2016/08/28'],
 					['Hamilton (Musical)'.link('http://www.bilibili.com/video/av4891480'), '谁人来讲述我们的故事？', '2016/11/19'],
 					['魔戒', '有两种人，看过魔戒的，和准备看魔戒的', '2016/12/05'],
@@ -103,7 +109,9 @@ var conf = {
 		{
 			title: '2015年',
 			content: {
-				headers: [['有趣的事物', '', '']],
+				headers: [
+					['有趣的事物', '', '']
+				],
 				body: [
 					['提问的智慧'.link('#book_smart_questions'), '2015'],
 					['黑客与画家'.link('#book_hackers_and_painters'), '2015'],
@@ -115,10 +123,12 @@ var conf = {
 					['A Very Potter Musical'.link('http://www.bilibili.com/video/av1409326/'), '2015/12/14'],
 				].map(([a, b, c]) => c ? [a, b, c] : [a, '', b])
 			}
-		}]
+		}
+	]
 }
 var vm = new Vue({
-	el: 'body', data: {
+	el: 'body',
+	data: {
 		article_title: '测绘文明',
 		weekMsg: '长夜才开始，黑暗中请记得太阳的模样，沉默中不要为魔鬼歌唱。',
 		motto: '——探索，继续前行',
