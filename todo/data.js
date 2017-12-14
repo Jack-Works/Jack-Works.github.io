@@ -1,9 +1,10 @@
+/// <reference path="./global.d.ts" />
 var conf = {
 	items: [
-		//{title: 'Borland 传奇'.link('https://github.com/programthink/books/blob/master/README.wiki#106-it-公司'), progress: [331, 507]},
-		//{title: '猜想与反驳'.link('https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学'), progress: [10, 62, 722]},
-		//{title: 'Doom 启示录', progress: [7, 30, 433]},
-		//{title: '怎样阅读一本书' + '第五章 如何做一个自我要求的读者'.comment, progress: [17, 114]},
+		// {title: 'Borland 传奇'.link('https://github.com/programthink/books/blob/master/README.wiki#106-it-公司'), progress: [331, 507]},
+		// {title: '猜想与反驳'.link('https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学'), progress: [10, 62, 722]},
+		// {title: 'Doom 启示录', progress: [7, 30, 433]},
+		// {title: '怎样阅读一本书' + '第五章 如何做一个自我要求的读者'.comment, progress: [17, 114]},
 		(([title, content]) => {
 			return {
 				title: `“${title.replace(/\n/g, '<br>')}”`,
@@ -14,24 +15,16 @@ var conf = {
 			title: 'Ingress 清明上河图系列任务',
 			progress: [250, 654]
 		},
-		/*{
-			title: '思维、逻辑、社会、设计、玄学',
-			content: [
-		//		'批判性思维工具',
-		//		'不确定状况下的判断'.processing,
-		//		'影响力:科学与实践',
-		//		'给大家看的设计书',
-		//		'可笑的思维谬误：批判性思考与查错神经',
-		//		'浪潮之巅'
-			]
-		},
-		{
-			title: '一些奇怪的东西',
-			content: [
-				'DND规则'.processing,
-		//		'美丽新世界',
-			]
-		},*/
+		// {
+		// 	title: '思维、逻辑、社会、设计、玄学',
+		// 	content: [
+		// 		'不确定状况下的判断',
+		// 		'影响力:科学与实践',
+		// 		'给大家看的设计书',
+		// 		'可笑的思维谬误：批判性思考与查错神经',
+		// 		'浪潮之巅'
+		// 	]
+		// },
 		//{
 		//	title: '听起来很厉害的样子，说不定会去拜读',
 		//	content: [
@@ -74,8 +67,8 @@ var conf = {
 					['盲眼的钟表匠', '2017/5/11'],
 					['精灵宝钻', '迷人的神话故事', '2017/5/19'],
 					['魔鬼出没的世界', '“正是科学的光芒告诉了我们并不是人类大众生来便背着枷锁”', '2017/6/9'],
-					['设计心理学', '----', '2017/6/19'],
-					['星际穿越', '好棒啊啊啊啊啊啊啊啊', '2017/6/27'],
+					['设计心理学', '2017/6/19'],
+					['星际穿越', '2017/6/27'],
 					['人类群星闪耀时', '2017/6/?'],
 					['自控力', '一个朋友推荐我去看的，好像没什么用？', '2017/7/4'],
 					['1984', '“自由就是二加二等于四，承认了此理，其他便会迎刃而解。”', '2017/7/5'],
@@ -87,7 +80,9 @@ var conf = {
 					['弹丸论破 3', '', '2017/9/23'],
 					['未来简史', '这本书对未来的预测在我看来过于乐观，后半本提出的人文主义的发展和它的未来很有意思', '2017/10/6'],
 					['计算进化史', '从希尔伯特开始，一段精彩的历史', '2017/10/16'],
-					['我们', '“然而，在第 40 跨镇大道上，我们已经成功建立起了高压电墙。不止如此，我确信我们会胜利。因为理性必胜。”', '2017/10/17']
+					['我们', '“然而，在第 40 跨镇大道上，我们已经成功建立起了高压电墙。不止如此，我确信我们会胜利。因为理性必胜。”', '2017/10/17'],
+					['寻梦环游记 (Coco)', '“然后第三次死亡来的比第一次早。”', '2017/12/9'],
+					['CS173'.link('https://courses.engr.illinois.edu/cs173/fa2017/'), '2017/12/14']
 				].map(([a, b, c]) => c ? [a, b, c] : [a, '', b])
 			}
 		},
@@ -99,10 +94,10 @@ var conf = {
 				],
 				body: [
 					['哥德尔、埃舍尔、巴赫——集异璧之大成'.link('#book_geb'), '这句话没有在自指', '2016/03/06'],
-					//			['果壳中的宇宙'.link('https://www.amazon.cn/gp/product/B01931SPYE'), '"宇宙的目的是什么？"', '2016/07/02'],
+					// ['果壳中的宇宙'.link('https://www.amazon.cn/gp/product/B01931SPYE'), '"宇宙的目的是什么？"', '2016/07/02'],
 					['CS 50'.link('http://open.163.com/special/opencourse/cs50.html'), '极好的入门课程'.bold() + '<br>我很后悔 5 年前有人推荐我去看而我没有看完', '2016/07/07'],
 					['失控'.link('https://github.com/programthink/books/blob/master/README.wiki#107-其它'), '凯文凯利精准的预见了十余年之后的今日', '2016/08/05'],
-					//			['Programming Languages Part A'.link('https://www.coursera.org/learn/programming-languages/'), 'Hooray！是函数式！', '2016/08/28'],
+					// ['Programming Languages Part A'.link('https://www.coursera.org/learn/programming-languages/'), 'Hooray！是函数式！', '2016/08/28'],
 					['Hamilton (Musical)'.link('http://www.bilibili.com/video/av4891480'), '谁人来讲述我们的故事？', '2016/11/19'],
 					['魔戒', '有两种人，看过魔戒的，和准备看魔戒的', '2016/12/05'],
 					['霍比特人：意外之旅', '咕噜。', '2016/12/05'],
@@ -134,7 +129,7 @@ var vm = new Vue({
 	el: 'body',
 	data: {
 		article_title: '测绘文明',
-		weekMsg: '长夜才开始，黑暗中请记得太阳的模样，沉默中不要为魔鬼歌唱。',
+		weekMsg: '"因为理性必胜。"',
 		motto: '——探索，继续前行',
 		hitokoto: null,
 		items: []
