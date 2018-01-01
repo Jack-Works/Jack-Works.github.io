@@ -1,0 +1,20 @@
+{
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 120,
+    "overrides": [
+        {
+            "files": ["*.css.d.ts", "*.scss.d.ts", "*.less.d.ts"],
+            "options": {
+                "semi": true
+            }
+        },
+        {
+            "files": ["package.json"],
+            "options": {
+                "printWidth": 999999
+            }
+        }
+    ]
+}

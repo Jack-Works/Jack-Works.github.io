@@ -1,0 +1,19 @@
+{
+  "name": "jack-works.github.io",
+  "scripts": {
+    "start": "serve | tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jack-Works/Jack-Works.github.io.git"
+  },
+  "author": "Jack Works",
+  "homepage": "https://Jack-Works.github.io",
+  "dependencies": {
+    "@types/marked": "^0.3.0",
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3",
+    "material-ui": "^1.0.0-beta.26",
+    "typescript": "^2.7.0-dev.20171230"
+  }
+}
