@@ -67,8 +67,13 @@ class TheCard extends React.Component {
         const child = this.props.content || this.props.children || this.props.captionTitle;
         if (!child)
             return null;
-        if (typeof child === 'string')
-            return child;
+        if (typeof child === 'string') {
+            const result = [];
+            for (const t of child.split('\n')) {
+                result.push(t, React.createElement("br", { key: t }));
+            }
+            return result;
+        }
         if (Array.isArray(child)) {
             // List
             return null;
@@ -107,8 +112,10 @@ class Page extends React.Component {
                 Data.motto)));
     }
     get Hitokoto() {
-        const hitokoto = getHitokoto();
-        return React.createElement(TheCard, { captionTitle: "Hitokoto", content: hitokoto[0], reference: hitokoto[1] });
+        let [text, by, link] = getHitokoto();
+        text = text.replace(new RegExp(`
+        `, 'g'), '\n');
+        return React.createElement(TheCard, { captionTitle: "Hitokoto", content: text, reference: by });
     }
     get Media() {
         return null;

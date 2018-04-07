@@ -1,5 +1,4 @@
 /// <reference path="./global.d.ts" />
-/** @type{IData} */
 function getDayOfYear() {
     var now = new Date()
     var start = new Date(now.getFullYear(), 0, 0).getTime()
@@ -8,9 +7,10 @@ function getDayOfYear() {
     var day = Math.floor(diff / oneDay)
     return day
 }
+/** @type{IData} */
 const Data = {
     title: '测绘文明',
-    weekMessage: 'There is no utopia',
+    weekMessage: '是谁？想做什么？',
     motto: '探索，继续前行',
     data: [
         {
@@ -19,7 +19,13 @@ const Data = {
         },
         {
             title: `2018 年 - ??、?? 与 ?? 之年 - ${getDayOfYear()} of 365`,
-            content: { head: ['有趣的事物', '', ''], body: [] },
+            content: {
+                head: ['有趣的事物', '', ''],
+                body: [
+                    ['追踪引力波：寻找时空的涟漪', '2018/03/02'],
+                    ['目隐都市的演绎者', "Let's「daze」 心を消さないで", '2018/04/01'],
+                ],
+            },
         },
         {
             title: '2017年 - 幻想、魔法与冷静之年',
