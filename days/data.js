@@ -7,10 +7,12 @@ function getDayOfYear() {
     var day = Math.floor(diff / oneDay)
     return day
 }
+/** @type{(arr: string[][]) => string[][]} */
+const fill = arr => arr.map(([a, b, c]) => (c ? [a, b, c] : [a, '', b]))
 /** @type{IData} */
 const Data = {
     title: '测绘文明',
-    weekMessage: '是谁？想做什么？',
+    weekMessage: '八月无数次的过去 / 互相笑著说「明年见」 / 如果是那样的未来？',
     motto: '探索，继续前行',
     data: [
         {
@@ -18,20 +20,27 @@ const Data = {
             progress: { max: 654, current: 250 },
         },
         {
-            title: `2018 年 - ??、?? 与 ?? 之年 - ${getDayOfYear()} of 365`,
+            title: `2018 年 - 解离、?? 与 ?? 之年 - ${getDayOfYear()} of 365`,
             content: {
                 head: ['有趣的事物', '', ''],
-                body: [
+                body: fill([
                     ['追踪引力波：寻找时空的涟漪', '2018/03/02'],
                     ['目隐都市的演绎者', "Let's「daze」 心を消さないで", '2018/04/01'],
-                ],
+                    [
+                        'Ready Player One',
+                        '不了解圈子文化的人因为利益入侵一个圈子，只能带来毁灭。现实世界已经见过不少了吧。',
+                        '2018/04/14',
+                    ],
+                    ['海上钢琴师', '2018/04/18'],
+                    ['阳炎炫乱 1-7', '「来吧。 KAGAROU DAZE」', '2018/05/09'],
+                ]),
             },
         },
         {
             title: '2017年 - 幻想、魔法与冷静之年',
             content: {
                 head: ['有趣的事物', '', ''],
-                body: [
+                body: fill([
                     [
                         '大设计',
                         '[人择原理](https://zh.wikipedia.org/wiki/%E4%BA%BA%E6%8B%A9%E5%8E%9F%E7%90%86)',
@@ -106,14 +115,14 @@ const Data = {
                     ],
                     ['寻梦环游记 (Coco)', '“然后第三次死亡来的比第一次早。”', '2017/12/9'],
                     ['[CS173](https://courses.engr.illinois.edu/cs173/fa2017/)', '2017/12/14'],
-                ].map(([a, b, c]) => (c ? [a, b, c] : [a, '', b])),
+                ]),
             },
         },
         {
             title: '2016年 - 艺术、科学与平淡之年',
             content: {
                 head: ['有趣的事物', '', ''],
-                body: [
+                body: fill([
                     ['哥德尔、埃舍尔、巴赫——集异璧之大成', '这句话没有在自指', '2016/03/06'],
                     // ['果壳中的宇宙'.link('https://www.amazon.cn/gp/product/B01931SPYE'), '"宇宙的目的是什么？"', '2016/07/02'],
                     [
@@ -135,14 +144,14 @@ const Data = {
                     ['魔戒', '有两种人，看过魔戒的，和准备看魔戒的', '2016/12/05'],
                     ['霍比特人：意外之旅', '咕噜。', '2016/12/05'],
                     ['清醒思考的艺术', '此书介绍的思维谬误的数量让我觉得不如看维基百科的相关条目', '2016/12/28'],
-                ].map(([a, b, c]) => (c ? [a, b, c] : [a, '', b])),
+                ]),
             },
         },
         {
             title: '2015年 - 懵懂、失望与觉醒之年',
             content: {
                 head: ['有趣的事物', '', ''],
-                body: [
+                body: fill([
                     ['提问的智慧'.link('#book_smart_questions'), '2015'],
                     ['黑客与画家'.link('#book_hackers_and_painters'), '2015'],
                     [
@@ -158,7 +167,7 @@ const Data = {
                         '2015/12/10',
                     ],
                     ['A Very Potter Musical'.link('http://www.bilibili.com/video/av1409326/'), '2015/12/14'],
-                ].map(([a, b, c]) => (c ? [a, b, c] : [a, '', b])),
+                ]),
             },
         },
     ],

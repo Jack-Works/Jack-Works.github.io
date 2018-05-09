@@ -1,75 +1,100 @@
-body, html {
+body,
+html {
     width: 100%;
-    height: 100%;    
+    height: 100%;
 }
 body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
 }
-a{color: white;}
-header h2, header h4 {font-weight: 500; display: inline-flex; margin: 0;}
-header h4 {color: lightgray;}
-header h5 {font-weight: 500; color: gray; margin-top: 0; font-style: italic; transition-duration: 0.5s;}
+a {
+    color: white;
+}
+header h2,
+header h4 {
+    font-weight: 500;
+    display: inline-flex;
+    margin: 0;
+}
+header h4 {
+    color: lightgray;
+}
+header h5 {
+    font-weight: 500;
+    color: gray;
+    margin-top: 0;
+    font-style: italic;
+    transition-duration: 0.5s;
+}
 
-nav a {transition: 400ms;padding: 12px 30px; display: block; text-decoration: none; color: white; max-width: 100%;}
-nav a.disabled {color: gray;}
-nav a:hover {background: rgba(255, 255, 255, 0.2);}
-nav a div {height: 26px; display: inline-block; vertical-align: bottom;}
+nav a {
+    transition: 400ms;
+    padding: 12px 30px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    max-width: 100%;
+}
+nav a.disabled {
+    color: gray;
+}
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+nav a div {
+    height: 26px;
+    display: inline-block;
+    vertical-align: bottom;
+}
 
 footer {
-	position: fixed;
-	right: 2em;
-	bottom: 2em;
-	
-	text-align: right;
-	font-size: 14px;
-	color: rgba(255, 255, 255, 0.4);
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+
+    text-align: right;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
 }
-footer a {color: rgba(255, 255, 255, 0.8);}
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+}
 
 .hiddenAni {
-	overflow: hidden;
-	animation-name: slide;
-	animation-duration: 0.5s;
-	animation-delay: 2.5s;
-	animation-fill-mode: forwards;
+    overflow: hidden;
+    animation-name: slide;
+    animation-duration: 0.5s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
 }
-.hiddenAni.left {margin-right: 5px;}
-.hiddenAni.right {margin-left: 5px;}
-@media screen and (max-width:760px) {
-	nav h5, .hiddenAni, footer {display: none;}
+.hiddenAni.left {
+    margin-right: 5px;
+}
+.hiddenAni.right {
+    margin-left: 5px;
+}
+@media screen and (max-width: 760px) {
+    nav h5,
+    .hiddenAni,
+    footer {
+        display: none;
+    }
 }
 @keyframes slide {
-	from {opacity: 1; width: 150px;}
-	to {opacity: 0; width: 0px; margin: 0;}
+    from {
+        opacity: 1;
+        width: 150px;
+    }
+    to {
+        opacity: 0;
+        width: 0px;
+        margin: 0;
+    }
 }
 
-
-[blue]::before,
-[yellow]::before,
-[red]::before {
-	content: ' ';
-	width: 12px;
-	height: 12px;
-	border-radius: 100%;
-	display: inline-block;
-	position: relative;
-	top: 0.25em;
-	float: left;
+footer nav {
+    text-align: left;
 }
-
-[red]::before {
-	background: #C62828;
-}
-
-[yellow]::before {
-	background: #FFEB3B;
-}
-
-[blue]::before {
-	background: #2196F3;
-}
-footer nav {text-align: left;}
