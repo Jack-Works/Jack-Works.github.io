@@ -17,10 +17,10 @@ const Data = {
     data: [
         {
             title: 'Ingress / 清明上河图',
-            progress: { max: 654, current: 250 },
+            progress: { max: 654, current: 286 },
         },
         {
-            title: `2018 年 - 解离、?? 与 ?? 之年 - ${getDayOfYear()} of 365`,
+            title: `2018 年 - 解离、叹息与 ?? 之年 - ${getDayOfYear()} of 365`,
             content: {
                 head: ['有趣的事物', '', ''],
                 body: fill([
