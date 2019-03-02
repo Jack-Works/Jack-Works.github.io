@@ -20,7 +20,18 @@ const Data = {
             progress: { max: 654, current: 286 },
         },
         {
-            title: `2018 年 - 解离、叹息与 ?? 之年 - ${getDayOfYear()} of 365`,
+            title: `2019 年 - ??、?? 与 ?? 之年 - ${getDayOfYear()} of 365`,
+            content: {
+                head: ['', '', ''],
+                body: fill([
+                    //
+                    ['流浪地球', '2019/02/09'],
+                    ['数学也荒唐', '2019/02/26'],
+                ]),
+            },
+        },
+        {
+            title: '2018 年 - 解离、叹息与终结之年',
             content: {
                 head: ['有趣的事物', '', ''],
                 body: fill([
