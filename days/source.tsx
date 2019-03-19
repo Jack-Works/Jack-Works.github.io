@@ -66,7 +66,7 @@ class TheCard extends React.Component<{
     get MakeProgress() {
         if (!this.props.progress) return null
         const p = this.props.progress
-        return <Material.LinearProgress mode="determinate" value={p.current / (p.max || 100) * 100} />
+        return <Material.LinearProgress mode="determinate" value={(p.current / (p.max || 100)) * 100} />
     }
     get MakeCaption() {
         const progress = this.props.progress
@@ -159,7 +159,32 @@ class Page extends React.Component {
             ),
             '\n',
         )
-        return <TheCard captionTitle="Hitokoto" content={text} reference={by} />
+        let using = false
+        const result = text.split('\n').map(x => {
+            const text = x.match(/(?<original>.+) \/ (?<translated>.+)/)
+            if (text) {
+                using = true
+                return (
+                    <>
+                        <ruby>
+                            <span lang="jp">{text.groups!.original}</span>
+                            <rp> / </rp>
+                            <rt>
+                                <div>{text.groups!.translated}</div>
+                            </rt>
+                        </ruby>
+                        <br />
+                    </>
+                )
+            }
+            return x
+        })
+        if (!using) return <TheCard captionTitle="Hitokoto" content={text} reference={by} />
+        return (
+            <TheCard captionTitle="Hitokoto" reference={by}>
+                <>{result}</>
+            </TheCard>
+        )
     }
     state = { playing: false }
     get Media() {

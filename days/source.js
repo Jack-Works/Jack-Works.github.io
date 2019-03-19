@@ -40,7 +40,7 @@ class TheCard extends React.Component {
         if (!this.props.progress)
             return null;
         const p = this.props.progress;
-        return React.createElement(Material.LinearProgress, { mode: "determinate", value: p.current / (p.max || 100) * 100 });
+        return React.createElement(Material.LinearProgress, { mode: "determinate", value: (p.current / (p.max || 100)) * 100 });
     }
     get MakeCaption() {
         const progress = this.props.progress;
@@ -115,7 +115,25 @@ class Page extends React.Component {
         let [text, by, link] = getHitokoto();
         text = text.replace(new RegExp(`
         `, 'g'), '\n');
-        return React.createElement(TheCard, { captionTitle: "Hitokoto", content: text, reference: by });
+        let using = false;
+        const result = text.split('\n').map(x => {
+            const text = x.match(/(?<original>.+) \/ (?<translated>.+)/);
+            if (text) {
+                using = true;
+                return (React.createElement(React.Fragment, null,
+                    React.createElement("ruby", null,
+                        React.createElement("span", { lang: "jp" }, text.groups.original),
+                        React.createElement("rp", null, " / "),
+                        React.createElement("rt", null,
+                            React.createElement("div", null, text.groups.translated))),
+                    React.createElement("br", null)));
+            }
+            return x;
+        });
+        if (!using)
+            return React.createElement(TheCard, { captionTitle: "Hitokoto", content: text, reference: by });
+        return (React.createElement(TheCard, { captionTitle: "Hitokoto", reference: by },
+            React.createElement(React.Fragment, null, result)));
     }
     get Media() {
         return null;

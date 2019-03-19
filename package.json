@@ -14,6 +14,6 @@
     "@types/react": "^16.0.31",
     "@types/react-dom": "^16.0.3",
     "material-ui": "^1.0.0-beta.26",
-    "typescript": "^2.7.0-dev.20171230"
+    "typescript": "^3.3.3"
   }
 }

@@ -5,11 +5,10 @@
     "moduleResolution": "node",
     "strict": true,
     "sourceMap": true,
-    "target": "es2017",
+    "target": "es2018",
     "watch": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "keyofStringsOnly": true
   },
-  "include": [
-    "./days"
-  ]
+  "include": ["./days"]
 }
