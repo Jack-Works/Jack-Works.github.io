@@ -10,7 +10,6 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 /// <reference path="./global.d.ts" />
 const { Typography } = Material;
-const { IconButton, Icon } = Material;
 const { Card, CardContent, CardActions, CardHeader, CardMedia } = Material;
 const { Table, TableBody, TableCell, TableHead, TableRow } = Material;
 //#region Styles
@@ -35,12 +34,12 @@ class TheCard extends React.Component {
     render() {
         return (React.createElement(Card, { style: { flex: 1 } },
             React.createElement(CardContent, null,
-                React.createElement(Typography, { type: "caption" },
+                React.createElement(Typography, { variant: "caption" },
                     React.createElement(Markdown, null, this.MakeCaption)),
-                React.createElement(Typography, { type: "headline", component: "h2" },
+                React.createElement(Typography, { variant: "headline", component: "h2" },
                     React.createElement(Markdown, null, this.MakeBody)),
                 this.props.reference && (React.createElement(Typography, { align: "right" },
-                    "\u2015",
+                    "\u2E3A",
                     React.createElement(Markdown, { style: { marginLeft: 6 } }, this.props.reference)))),
             this.MakeProgress));
     }
@@ -48,7 +47,7 @@ class TheCard extends React.Component {
         if (!this.props.progress)
             return null;
         const p = this.props.progress;
-        return React.createElement(Material.LinearProgress, { mode: "determinate", value: (p.current / (p.max || 100)) * 100 });
+        return React.createElement(Material.LinearProgress, { variant: "determinate", value: (p.current / (p.max || 100)) * 100 });
     }
     get MakeCaption() {
         const progress = this.props.progress;
@@ -66,7 +65,7 @@ class TheCard extends React.Component {
         }
         else {
             if (caption)
-                return caption + (progress ? ' ― ' + MakeProgressText(progress) : '');
+                return caption + (progress ? ' ⸺ ' + MakeProgressText(progress) : '');
             else
                 return MakeProgressText(progress);
         }
@@ -106,17 +105,17 @@ class Page extends React.Component {
     }
     get MakeTitle() {
         return (React.createElement("div", { style: { display: 'flex' } },
-            React.createElement(Typography, { type: "display2" }, Data.title),
+            React.createElement(Typography, { variant: "display1", style: { color: 'white' } }, Data.title),
             React.createElement(Flex, null),
-            React.createElement(Typography, { type: "subheading", style: { alignSelf: 'flex-end' } },
-                "\u2015",
+            React.createElement(Typography, { variant: "subheading", style: { alignSelf: 'flex-end' } },
+                "\u2E3A",
                 Data.weekMessage)));
     }
     get MakeFooter() {
         return (React.createElement("div", { style: { display: 'flex' } },
             React.createElement(Flex, null),
-            React.createElement(Typography, { type: "subheading" },
-                "\u2015",
+            React.createElement(Typography, { variant: "subheading" },
+                "\u2E3A",
                 Data.motto)));
     }
     get Hitokoto() {

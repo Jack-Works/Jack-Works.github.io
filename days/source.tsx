@@ -4,7 +4,6 @@ declare const Data: IData
 declare const hitokoto: string[][]
 declare function getHitokoto(): string[]
 const { Typography } = Material
-const { IconButton, Icon } = Material
 const { Card, CardContent, CardActions, CardHeader, CardMedia } = Material
 const { Table, TableBody, TableCell, TableHead, TableRow } = Material
 
@@ -45,15 +44,15 @@ class TheCard extends React.Component<{
         return (
             <Card style={{ flex: 1 }}>
                 <CardContent>
-                    <Typography type="caption">
+                    <Typography variant="caption">
                         <Markdown>{this.MakeCaption}</Markdown>
                     </Typography>
-                    <Typography type="headline" component="h2">
+                    <Typography variant="headline" component="h2">
                         <Markdown>{this.MakeBody}</Markdown>
                     </Typography>
                     {this.props.reference && (
                         <Typography align="right">
-                            ―<Markdown style={{ marginLeft: 6 }}>{this.props.reference}</Markdown>
+                            ⸺<Markdown style={{ marginLeft: 6 }}>{this.props.reference}</Markdown>
                         </Typography>
                     )}
                 </CardContent>
@@ -64,7 +63,7 @@ class TheCard extends React.Component<{
     get MakeProgress() {
         if (!this.props.progress) return null
         const p = this.props.progress
-        return <Material.LinearProgress mode="determinate" value={(p.current / (p.max || 100)) * 100} />
+        return <Material.LinearProgress variant="determinate" value={(p.current / (p.max || 100)) * 100} />
     }
     get MakeCaption() {
         const progress = this.props.progress
@@ -78,7 +77,7 @@ class TheCard extends React.Component<{
         if (!body) {
             return MakeProgressText(progress)
         } else {
-            if (caption) return caption + (progress ? ' ― ' + MakeProgressText(progress) : '')
+            if (caption) return caption + (progress ? ' ⸺ ' + MakeProgressText(progress) : '')
             else return MakeProgressText(progress)
         }
     }
@@ -131,10 +130,12 @@ class Page extends React.Component {
     get MakeTitle() {
         return (
             <div style={{ display: 'flex' }}>
-                <Typography type="display2">{Data.title}</Typography>
+                <Typography variant="display1" style={{ color: 'white' }}>
+                    {Data.title}
+                </Typography>
                 <Flex />
-                <Typography type="subheading" style={{ alignSelf: 'flex-end' }}>
-                    ―{Data.weekMessage}
+                <Typography variant="subheading" style={{ alignSelf: 'flex-end' }}>
+                    ⸺{Data.weekMessage}
                 </Typography>
             </div>
         )
@@ -143,7 +144,7 @@ class Page extends React.Component {
         return (
             <div style={{ display: 'flex' }}>
                 <Flex />
-                <Typography type="subheading">―{Data.motto}</Typography>
+                <Typography variant="subheading">⸺{Data.motto}</Typography>
             </div>
         )
     }

@@ -1,15 +1,11 @@
-import * as libreact from 'react'
-import * as libreactdom from 'react-dom'
-import * as libmaterial from 'material-ui'
-import * as libmarked from 'marked'
-
+import react from 'react'
 declare global {
     interface Window {
-        readonly React: typeof libreact
-        readonly ReactDOM: typeof libreactdom
-        readonly 'material-ui': typeof libmaterial
-        readonly Material: typeof libmaterial
-        readonly marked: typeof libmarked
+        readonly React: typeof import('react')
+        readonly ReactDOM: typeof import('react-dom')
+        readonly 'material-ui': typeof import('@material-ui/core')
+        readonly Material: typeof import('@material-ui/core')
+        readonly marked: typeof import('marked')
         Data: IData
     }
     interface IData {
