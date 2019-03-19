@@ -25,14 +25,12 @@ const theme = Material.createMuiTheme({
 //#endregion
 
 //#region Page
-class Markdown extends React.Component {
-    render() {
-        return typeof this.props.children === 'string' ? (
-            <span className="null" dangerouslySetInnerHTML={{ __html: marked(this.props.children) }} />
-        ) : (
-            this.props.children
-        )
-    }
+const Markdown: React.SFC<React.HtmlHTMLAttributes<HTMLSpanElement>> = ({ children, ...props }) => {
+    return typeof children === 'string' ? (
+        <span {...props} className="null" dangerouslySetInnerHTML={{ __html: marked(children) }} />
+    ) : (
+        <span {...props} children={children} />
+    )
 }
 class TheCard extends React.Component<{
     captionTitle?: string
@@ -55,7 +53,7 @@ class TheCard extends React.Component<{
                     </Typography>
                     {this.props.reference && (
                         <Typography align="right">
-                            ——<Markdown>{this.props.reference}</Markdown>
+                            ―<Markdown style={{ marginLeft: 6 }}>{this.props.reference}</Markdown>
                         </Typography>
                     )}
                 </CardContent>
@@ -80,7 +78,7 @@ class TheCard extends React.Component<{
         if (!body) {
             return MakeProgressText(progress)
         } else {
-            if (caption) return caption + (progress ? ' - ' + MakeProgressText(progress) : '')
+            if (caption) return caption + (progress ? ' ― ' + MakeProgressText(progress) : '')
             else return MakeProgressText(progress)
         }
     }
@@ -136,7 +134,7 @@ class Page extends React.Component {
                 <Typography type="display2">{Data.title}</Typography>
                 <Flex />
                 <Typography type="subheading" style={{ alignSelf: 'flex-end' }}>
-                    ——{Data.weekMessage}
+                    ―{Data.weekMessage}
                 </Typography>
             </div>
         )
@@ -145,7 +143,7 @@ class Page extends React.Component {
         return (
             <div style={{ display: 'flex' }}>
                 <Flex />
-                <Typography type="subheading">——{Data.motto}</Typography>
+                <Typography type="subheading">―{Data.motto}</Typography>
             </div>
         )
     }

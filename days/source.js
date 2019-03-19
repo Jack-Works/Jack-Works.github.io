@@ -1,4 +1,13 @@
 "use strict";
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+};
 /// <reference path="./global.d.ts" />
 const { Typography } = Material;
 const { IconButton, Icon } = Material;
@@ -18,11 +27,10 @@ const theme = Material.createMuiTheme({
 });
 //#endregion
 //#region Page
-class Markdown extends React.Component {
-    render() {
-        return typeof this.props.children === 'string' ? (React.createElement("span", { className: "null", dangerouslySetInnerHTML: { __html: marked(this.props.children) } })) : (this.props.children);
-    }
-}
+const Markdown = (_a) => {
+    var { children } = _a, props = __rest(_a, ["children"]);
+    return typeof children === 'string' ? (React.createElement("span", Object.assign({}, props, { className: "null", dangerouslySetInnerHTML: { __html: marked(children) } }))) : (React.createElement("span", Object.assign({}, props, { children: children })));
+};
 class TheCard extends React.Component {
     render() {
         return (React.createElement(Card, { style: { flex: 1 } },
@@ -32,8 +40,8 @@ class TheCard extends React.Component {
                 React.createElement(Typography, { type: "headline", component: "h2" },
                     React.createElement(Markdown, null, this.MakeBody)),
                 this.props.reference && (React.createElement(Typography, { align: "right" },
-                    "\u2014\u2014",
-                    React.createElement(Markdown, null, this.props.reference)))),
+                    "\u2015",
+                    React.createElement(Markdown, { style: { marginLeft: 6 } }, this.props.reference)))),
             this.MakeProgress));
     }
     get MakeProgress() {
@@ -58,7 +66,7 @@ class TheCard extends React.Component {
         }
         else {
             if (caption)
-                return caption + (progress ? ' - ' + MakeProgressText(progress) : '');
+                return caption + (progress ? ' ― ' + MakeProgressText(progress) : '');
             else
                 return MakeProgressText(progress);
         }
@@ -101,14 +109,14 @@ class Page extends React.Component {
             React.createElement(Typography, { type: "display2" }, Data.title),
             React.createElement(Flex, null),
             React.createElement(Typography, { type: "subheading", style: { alignSelf: 'flex-end' } },
-                "\u2014\u2014",
+                "\u2015",
                 Data.weekMessage)));
     }
     get MakeFooter() {
         return (React.createElement("div", { style: { display: 'flex' } },
             React.createElement(Flex, null),
             React.createElement(Typography, { type: "subheading" },
-                "\u2014\u2014",
+                "\u2015",
                 Data.motto)));
     }
     get Hitokoto() {
