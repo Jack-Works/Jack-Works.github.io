@@ -8,7 +8,7 @@ function getDayOfYear() {
     return day
 }
 /** @type{(arr: string[][]) => string[][]} */
-const fill = arr => arr.map(([a, b, c]) => (c ? [a, b, c] : [a, '', b]))
+const fill = arr => arr.map(([a, b, c]) => ((c ? [a, b, c] : [a, '', b])))
 /** @type{IData} */
 const Data = {
     title: '测绘文明',
@@ -27,6 +27,9 @@ const Data = {
                     //
                     ['流浪地球', '2019/02/09'],
                     ['数学也荒唐', '2019/02/26'],
+                    ['夏目友人帐 ～缘结空蝉～', '2019/03/08'],
+                    ['企鹅公路', '2019/05/19', '暴风雨、噩梦、发烧'],
+                    ['罗小黑战记', '2019/09/07', '又是一个神秘的大球'],
                 ]),
             },
         },
