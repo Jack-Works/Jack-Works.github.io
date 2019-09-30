@@ -3,8 +3,7 @@ declare global {
     interface Window {
         readonly React: typeof import('react')
         readonly ReactDOM: typeof import('react-dom')
-        readonly 'material-ui': typeof import('@material-ui/core')
-        readonly Material: typeof import('@material-ui/core')
+        readonly MaterialUI: typeof import('@material-ui/core')
         readonly marked: typeof import('marked')
         Data: IData
     }

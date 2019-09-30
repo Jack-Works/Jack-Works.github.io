@@ -1,24 +1,16 @@
 "use strict";
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
-            t[p[i]] = s[p[i]];
-    return t;
-};
 /// <reference path="./global.d.ts" />
-const { Typography } = Material;
-const { Card, CardContent, CardActions, CardHeader, CardMedia } = Material;
-const { Table, TableBody, TableCell, TableHead, TableRow } = Material;
+const { Typography } = MaterialUI;
+const { Card, CardContent, CardActions, CardHeader, CardMedia } = MaterialUI;
+const { Table, TableBody, TableCell, TableHead, TableRow } = MaterialUI;
+const { styled } = MaterialUI;
 //#region Styles
-const Flex = () => React.createElement("span", { style: { flex: 1 } });
-const Magrin = () => React.createElement("div", { style: { marginTop: 24 } });
-const theme = Material.createMuiTheme({
+const Flex = styled('span')({ flex: 1 });
+const Margin = styled('div')({ marginTop: 24 });
+const theme = MaterialUI.createMuiTheme({
     palette: {
         type: 'dark',
-        primary: Material.colors.teal,
+        primary: MaterialUI.colors.teal,
     },
     typography: {
         fontFamily: `'Noto Sans CJK SC Light', 'Microsoft Yahei Light', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`,
@@ -26,17 +18,16 @@ const theme = Material.createMuiTheme({
 });
 //#endregion
 //#region Page
-const Markdown = (_a) => {
-    var { children } = _a, props = __rest(_a, ["children"]);
+const Markdown = ({ children, ...props }) => {
     return typeof children === 'string' ? (React.createElement("span", Object.assign({}, props, { className: "null", dangerouslySetInnerHTML: { __html: marked(children) } }))) : (React.createElement("span", Object.assign({}, props, { children: children })));
 };
 class TheCard extends React.Component {
     render() {
-        return (React.createElement(Card, { style: { flex: 1 } },
+        return (React.createElement(Card, null,
             React.createElement(CardContent, null,
                 React.createElement(Typography, { variant: "caption" },
                     React.createElement(Markdown, null, this.MakeCaption)),
-                React.createElement(Typography, { variant: "headline", component: "h2" },
+                React.createElement(Typography, { variant: "h5", component: "h2" },
                     React.createElement(Markdown, null, this.MakeBody)),
                 this.props.reference && (React.createElement(Typography, { align: "right" },
                     "\u2E3A",
@@ -47,7 +38,7 @@ class TheCard extends React.Component {
         if (!this.props.progress)
             return null;
         const p = this.props.progress;
-        return React.createElement(Material.LinearProgress, { variant: "determinate", value: (p.current / (p.max || 100)) * 100 });
+        return React.createElement(MaterialUI.LinearProgress, { variant: "determinate", value: (p.current / (p.max || 100)) * 100 });
     }
     get MakeCaption() {
         const progress = this.props.progress;
@@ -92,29 +83,25 @@ class TheCard extends React.Component {
                 React.createElement(TableHead, null,
                     React.createElement(TableRow, null, head.map((x, i) => (React.createElement(TableCell, { key: i },
                         React.createElement(Markdown, null, x)))))),
-                React.createElement(TableBody, null, body.map((line, n) => (React.createElement(TableRow, { key: n }, line.map((row, j) => (React.createElement(TableCell, { key: j, numeric: typeof row === 'number' },
+                React.createElement(TableBody, null, body.map((line, n) => (React.createElement(TableRow, { key: n }, line.map((row, j) => (React.createElement(TableCell, { align: typeof row === 'number' ? 'right' : 'left', key: j },
                     React.createElement(Markdown, null, row))))))))));
         }
         return child;
     }
 }
 class Page extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.state = { playing: false };
-    }
     get MakeTitle() {
         return (React.createElement("div", { style: { display: 'flex' } },
-            React.createElement(Typography, { variant: "display1", style: { color: 'white' } }, Data.title),
+            React.createElement(Typography, { variant: "h4" }, Data.title),
             React.createElement(Flex, null),
-            React.createElement(Typography, { variant: "subheading", style: { alignSelf: 'flex-end' } },
+            React.createElement(Typography, { variant: "subtitle1", style: { alignSelf: 'flex-end' } },
                 "\u2E3A",
                 Data.weekMessage)));
     }
     get MakeFooter() {
         return (React.createElement("div", { style: { display: 'flex' } },
             React.createElement(Flex, null),
-            React.createElement(Typography, { variant: "subheading" },
+            React.createElement(Typography, { variant: "subtitle1" },
                 "\u2E3A",
                 Data.motto)));
     }
@@ -142,21 +129,16 @@ class Page extends React.Component {
         return (React.createElement(TheCard, { captionTitle: "Hitokoto", reference: by },
             React.createElement(React.Fragment, null, result)));
     }
-    get Media() {
-        return null;
-    }
     render() {
-        return (React.createElement(Material.MuiThemeProvider, { theme: theme },
+        return (React.createElement(MaterialUI.MuiThemeProvider, { theme: theme },
             this.MakeTitle,
-            React.createElement(Magrin, null),
-            React.createElement("div", { style: { display: 'flex' } },
-                this.Hitokoto,
-                this.Media),
-            React.createElement(Magrin, null),
+            React.createElement(Margin, null),
+            this.Hitokoto,
+            React.createElement(Margin, null),
             Data.data.map((datum, i) => {
                 return (React.createElement(React.Fragment, { key: i },
                     React.createElement(TheCard, { captionTitle: datum.title, reference: datum.reference, content: datum.content, progress: datum.progress }),
-                    React.createElement(Magrin, null)));
+                    React.createElement(Margin, null)));
             }),
             this.MakeFooter));
     }

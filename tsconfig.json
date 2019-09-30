@@ -7,8 +7,7 @@
     "sourceMap": true,
     "target": "es2018",
     "watch": true,
-    "allowSyntheticDefaultImports": true,
-    "keyofStringsOnly": true
+    "allowSyntheticDefaultImports": true
   },
   "include": ["./days"]
 }

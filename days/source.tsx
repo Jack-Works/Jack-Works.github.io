@@ -1,20 +1,21 @@
 /// <reference path="./global.d.ts" />
-declare const Material: typeof window.Material
+declare const MaterialUI: typeof window.MaterialUI
 declare const Data: IData
 declare const hitokoto: string[][]
 declare function getHitokoto(): string[]
-const { Typography } = Material
-const { Card, CardContent, CardActions, CardHeader, CardMedia } = Material
-const { Table, TableBody, TableCell, TableHead, TableRow } = Material
+const { Typography } = MaterialUI
+const { Card, CardContent, CardActions, CardHeader, CardMedia } = MaterialUI
+const { Table, TableBody, TableCell, TableHead, TableRow } = MaterialUI
+const { styled } = MaterialUI
 
 //#region Styles
 
-const Flex = () => <span style={{ flex: 1 }} />
-const Magrin = () => <div style={{ marginTop: 24 }} />
-const theme = Material.createMuiTheme({
+const Flex = styled('span')({ flex: 1 })
+const Margin = styled('div')({ marginTop: 24 })
+const theme = MaterialUI.createMuiTheme({
     palette: {
         type: 'dark',
-        primary: Material.colors.teal,
+        primary: MaterialUI.colors.teal,
     },
     typography: {
         fontFamily: `'Noto Sans CJK SC Light', 'Microsoft Yahei Light', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`,
@@ -42,12 +43,12 @@ class TheCard extends React.Component<{
 }> {
     render() {
         return (
-            <Card style={{ flex: 1 }}>
+            <Card>
                 <CardContent>
                     <Typography variant="caption">
                         <Markdown>{this.MakeCaption}</Markdown>
                     </Typography>
-                    <Typography variant="headline" component="h2">
+                    <Typography variant="h5" component="h2">
                         <Markdown>{this.MakeBody}</Markdown>
                     </Typography>
                     {this.props.reference && (
@@ -63,7 +64,7 @@ class TheCard extends React.Component<{
     get MakeProgress() {
         if (!this.props.progress) return null
         const p = this.props.progress
-        return <Material.LinearProgress variant="determinate" value={(p.current / (p.max || 100)) * 100} />
+        return <MaterialUI.LinearProgress variant="determinate" value={(p.current / (p.max || 100)) * 100} />
     }
     get MakeCaption() {
         const progress = this.props.progress
@@ -113,7 +114,7 @@ class TheCard extends React.Component<{
                         {body.map((line, n) => (
                             <TableRow key={n}>
                                 {line.map((row, j) => (
-                                    <TableCell key={j} numeric={typeof row === 'number'}>
+                                    <TableCell align={typeof row === 'number' ? 'right' : 'left'} key={j}>
                                         <Markdown>{row}</Markdown>
                                     </TableCell>
                                 ))}
@@ -130,11 +131,9 @@ class Page extends React.Component {
     get MakeTitle() {
         return (
             <div style={{ display: 'flex' }}>
-                <Typography variant="display1" style={{ color: 'white' }}>
-                    {Data.title}
-                </Typography>
+                <Typography variant="h4">{Data.title}</Typography>
                 <Flex />
-                <Typography variant="subheading" style={{ alignSelf: 'flex-end' }}>
+                <Typography variant="subtitle1" style={{ alignSelf: 'flex-end' }}>
                     ⸺{Data.weekMessage}
                 </Typography>
             </div>
@@ -144,7 +143,7 @@ class Page extends React.Component {
         return (
             <div style={{ display: 'flex' }}>
                 <Flex />
-                <Typography variant="subheading">⸺{Data.motto}</Typography>
+                <Typography variant="subtitle1">⸺{Data.motto}</Typography>
             </div>
         )
     }
@@ -185,20 +184,13 @@ class Page extends React.Component {
             </TheCard>
         )
     }
-    state = { playing: false }
-    get Media() {
-        return null
-    }
     render() {
         return (
-            <Material.MuiThemeProvider theme={theme}>
+            <MaterialUI.MuiThemeProvider theme={theme}>
                 {this.MakeTitle}
-                <Magrin />
-                <div style={{ display: 'flex' }}>
-                    {this.Hitokoto}
-                    {this.Media}
-                </div>
-                <Magrin />
+                <Margin />
+                {this.Hitokoto}
+                <Margin />
                 {Data.data.map((datum, i) => {
                     return (
                         <React.Fragment key={i}>
@@ -208,12 +200,12 @@ class Page extends React.Component {
                                 content={datum.content}
                                 progress={datum.progress}
                             />
-                            <Magrin />
+                            <Margin />
                         </React.Fragment>
                     )
                 })}
                 {this.MakeFooter}
-            </Material.MuiThemeProvider>
+            </MaterialUI.MuiThemeProvider>
         )
     }
 }
