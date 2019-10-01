@@ -14,6 +14,7 @@
     "@types/marked": "^0.6.3",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "csstype": "^2.6.6",
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2",
     "typescript": "^3.6.1"
