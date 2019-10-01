@@ -34,6 +34,7 @@
         <script>
             window.$docsify = {
                 themeColor: '#47b6ff',
+                autoHeader: true,
                 markdown: {
                     renderer: {
                         link: (link, title, text) => {
@@ -46,6 +47,13 @@
                         },
                     },
                 },
+                plugins: [
+                    function(hook, vm) {
+                        hook.doneEach(function() {
+                            document.title = document.querySelector('#main h1').innerText
+                        })
+                    },
+                ],
             }
         </script>
         <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
@@ -63,6 +71,10 @@
                 admin: ['Jack-Works'],
                 distractionFreeMode: true,
                 id: location.hash.slice(1),
+                language: 'en',
+                get title() {
+                    return `comment for: ${document.title}`
+                },
             })
         </script>
         <script type="module" src="./custom-elements/index.js"></script>
