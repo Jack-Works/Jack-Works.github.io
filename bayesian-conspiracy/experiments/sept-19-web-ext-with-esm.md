@@ -63,7 +63,7 @@ There are some nature ideas to resolve this problem.
 -   Other module loaders like AMD (😕Nah, like living in the 19th century)
 -   ESModule.
 
-## (✔) ESModule YES!
+## (✔️) ESModule YES!
 
 First, checkout the browser compatibility.
 
@@ -74,7 +74,7 @@ First, checkout the browser compatibility.
 
 Nice. But that's for the normal webpage. Let's try it in WebExtension.
 
-## (✔) Background page
+## (✔️) Background page
 
 Firstly I tried the following code.
 
@@ -101,8 +101,8 @@ Browser supporting:
 
 |                      | Chrome | Firefox | Firefox for Android |
 | -------------------- | ------ | ------- | ------------------- |
-| `import { } from ''` | ✔\*    | ✔\*     | ❓                  |
-| `import('')`         | ✔\*    | ✔\*     | ❓                  |
+| `import { } from ''` | ✔️\*    | ✔️\*     | ❓                  |
+| `import('')`         | ✔️\*    | ✔️\*     | ❓                  |
 
 \*: Need to use a HTML file
 
@@ -147,11 +147,11 @@ Browser supporting:
 |                      | Chrome | Firefox | Firefox for Android |
 | -------------------- | ------ | ------- | ------------------- |
 | `import { } from ''` | ❌     | ❌      | ❓                  |
-| `import('')`         | ✔\*    | ❌      | ❓                  |
+| `import('')`         | ✔️\*    | ❌      | ❓                  |
 
 \*: Need to wrap with `chrome.runtime.getURL()`
 
-## (✔❌ partly works) Use npm modules in the browser
+## (✔️❌ partly works) Use npm modules in the browser
 
 A GitHub organization `@pika/` has already made a solution for this.
 

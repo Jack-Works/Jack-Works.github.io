@@ -3,7 +3,7 @@ import { LitElement, html } from 'https://unpkg.com/lit-element@2.2.1/lit-elemen
 import { recommendStyle } from './shared-css.js'
 const status = {
     active: '👀 This experiment is active.',
-    success: '✔ This experiment is successful.',
+    success: '✔️ This experiment is successful.',
     fail: '❌ This experiment has failed.',
 }
 class Archived extends LitElement {
