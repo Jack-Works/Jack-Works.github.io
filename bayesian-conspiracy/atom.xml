@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>The Bayesian Conspiracy of City of Science</title>
+        <link>https://jack-works.github.io/bayesian-conspiracy/#/</link>
+        <description>Welcome to the Bayesian Conspiracy!</description>
+        <item>
+            <title>Experiment: WebExtension with ESModule</title>
+            <link>https://jack-works.github.io/bayesian-conspiracy/#/./experiments/2019/sept-web-ext-with-esm.md</link>
+            <guid>https://jack-works.github.io/bayesian-conspiracy/#/./experiments/2019/sept-web-ext-with-esm.md</guid>
+            <pubDate>Tue, 01 Oct 2019 12:00:00 GMT</pubDate>
+            <description>How can we use ESModules in WebExtension today.</description>
+        </item>
+    </channel>
+</rss>

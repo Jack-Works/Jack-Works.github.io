@@ -101,8 +101,8 @@ Browser supporting:
 
 |                      | Chrome | Firefox | Firefox for Android |
 | -------------------- | ------ | ------- | ------------------- |
-| `import { } from ''` | ✔️\*    | ✔️\*     | ❓                  |
-| `import('')`         | ✔️\*    | ✔️\*     | ❓                  |
+| `import { } from ''` | ✔️\*   | ✔️\*    | ❓                  |
+| `import('')`         | ✔️\*   | ✔️\*    | ❓                  |
 
 \*: Need to use a HTML file
 
@@ -140,14 +140,14 @@ By [globalThis in WebExtension content script doesn't implements Window](https:/
 
 I'm not familiar with C++ so I'm not able to debug it to confirm my hypothesis or fix it.
 
-Now I'm blocked by [dynamic module import doesn't work in web extension content scripts][firefox content script import] now.
+Now I'm blocked by [dynamic module import doesn't work in web extension content scripts][firefox content script import].
 
 Browser supporting:
 
 |                      | Chrome | Firefox | Firefox for Android |
 | -------------------- | ------ | ------- | ------------------- |
 | `import { } from ''` | ❌     | ❌      | ❓                  |
-| `import('')`         | ✔️\*    | ❌      | ❓                  |
+| `import('')`         | ✔️\*   | ❌      | ❓                  |
 
 \*: Need to wrap with `chrome.runtime.getURL()`
 

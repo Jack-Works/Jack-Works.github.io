@@ -6,7 +6,7 @@ const status = {
     success: '✔️ This experiment is successful.',
     fail: '❌ This experiment has failed.',
 }
-class Archived extends LitElement {
+class Experimental extends LitElement {
     render() {
         return html`
             <div>
@@ -33,4 +33,4 @@ class Archived extends LitElement {
     }
 }
 
-customElements.define('i-exp', Archived, {})
+customElements.define('i-exp', Experimental, {})
