@@ -65,7 +65,7 @@ There are some nature ideas to resolve this problem.
 
 ## (✔️) ESModule YES!
 
-First, checkout the browser compatibility.
+First, checkout the browser compatibility
 
 <can-i-use feature="es6-module">
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Browser_compatibility">of import at mdn.io</a>

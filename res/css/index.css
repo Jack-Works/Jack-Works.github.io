@@ -73,8 +73,16 @@ footer a {
 .hiddenAni.left {
     margin-right: 5px;
 }
+.hiddenAni.left::after {
+    content: '/';
+    margin-left: 6px;
+}
 .hiddenAni.right {
     margin-left: 5px;
+}
+.hiddenAni.right::before {
+    content: '/';
+    margin-right: 6px;
 }
 @media screen and (max-width: 760px) {
     nav h5,
