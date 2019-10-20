@@ -11,5 +11,12 @@
             <pubDate>Tue, 01 Oct 2019 12:00:00 GMT</pubDate>
             <description>How can we use ESModules in WebExtension today.</description>
         </item>
+        <item>
+            <title>Experiment: "Loaders" in the browser</title>
+            <link>https://jack-works.github.io/bayesian-conspiracy/#./experiments/2019/sept-loader-in-browser.md</link>
+            <guid>https://jack-works.github.io/bayesian-conspiracy/#./experiments/2019/sept-loader-in-browser.md</guid>
+            <pubDate>Tue, 20 Oct 2019 12:00:00 GMT</pubDate>
+            <description>Import Markdown, CSS, JSON and TypeScript in browser without a server.</description>
+        </item>
     </channel>
 </rss>

@@ -10,6 +10,8 @@
         <style>
             body {
                 font-size: 18px;
+                background: #4f4f4f;
+                color: white;
             }
             .markdown-section figure,
             .markdown-section p,
@@ -20,6 +22,7 @@
             .markdown-section tr:nth-child(2n) {
                 background-color: #4f4f4f;
             }
+            a,
             .markdown-section *:not(.tip) code,
             .markdown-section strong {
                 color: white;
@@ -45,9 +48,6 @@
                                 return `<i-a href="${link}"><a href="${link}">${text}</a></i-a>`
                             }
                         },
-                        // code: (code, lang) => {
-                        //     return `<code lang=${lang}>${code}</code>`
-                        // },
                     },
                 },
                 plugins: [
