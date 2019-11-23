@@ -1,11 +1,10 @@
 # WebExtension with ESModule
 
-?> Last updated: 10/1/2019
+Last updated: 10/1/2019
 
 <i-exp status="active"></i-exp>
 
-> Demo: [WebExtension ESModule test](https://github.com/Jack-Works/web-extension-esmodule-test)
-
+> Demo: [WebExtension ESModule test](https://github.com/Jack-Works/web-extension-esmodule-test)<br />
 > In production: [DimensionDev/Maskbook: Experiment: ESModule: A future without webpack](https://github.com/DimensionDev/Maskbook/issues/221)
 
 ## This experiment is currently blocked by

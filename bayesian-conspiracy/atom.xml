@@ -18,5 +18,12 @@
             <pubDate>Tue, 20 Oct 2019 12:00:00 GMT</pubDate>
             <description>Import Markdown, CSS, JSON and TypeScript in browser without a server.</description>
         </item>
+        <item>
+            <title>Experiment: Angular + React with Custom elements as the glue</title>
+            <link>https://jack-works.github.io/bayesian-conspiracy/#./experiments/2019/may-angular-react-custom-element.md</link>
+            <guid>https://jack-works.github.io/bayesian-conspiracy/#./experiments/2019/may-angular-react-custom-element.md</guid>
+            <pubDate>Sat, Nov 23 2019 14:15:48 GMT</pubDate>
+            <description>Use React as a pure UI library and use Angular to manage the project.</description>
+        </item>
     </channel>
 </rss>

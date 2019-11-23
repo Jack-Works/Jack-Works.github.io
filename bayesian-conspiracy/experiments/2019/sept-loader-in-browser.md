@@ -1,6 +1,6 @@
 # Loaders in the browser
 
-?> Last updated: 10/20/2019
+Last updated: 10/20/2019
 
 <i-exp status="success"></i-exp>
 
