@@ -10,6 +10,11 @@
 -   ✔️ ["Loaders" in the browser](#./experiments/2019/sept-loader-in-browser.md)
 -   👀 [WebExtension with ESModule](#./experiments/2019/sept-web-ext-with-esm.md)
 
+### 💭 Proposals
+
+-   ⏳ [Proposal: Number.range and BigInt.range](#./proposals/2019/tc39-number.range.md)
+-   ⏳ [Proposal: ECMAScript parser](#./proposals/2019/tc39-ecmascript-parser.md)
+
 #### ⚙ Projects
 
 #### 📝 Notes

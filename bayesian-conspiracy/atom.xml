@@ -25,5 +25,19 @@
             <pubDate>Sat, Nov 23 2019 14:15:48 GMT</pubDate>
             <description>Use React as a pure UI library and use Angular to manage the project.</description>
         </item>
+        <item>
+            <title>Proposal: Number.range and BigInt.range</title>
+            <link>https://jack-works.github.io/bayesian-conspiracy/#./proposals/2019/tc39-number.range.md</link>
+            <guid>https://jack-works.github.io/bayesian-conspiracy/#./proposals/2019/tc39-number.range.md</guid>
+            <pubDate>Sun, Nov 24 2019 08:16:48 GMT</pubDate>
+            <description>A proposal for adding Number.range and BigInt.range to ECMAScript spec.</description>
+        </item>
+        <item>
+            <title>Proposal: ECMAScript parser</title>
+            <link>https://jack-works.github.io/bayesian-conspiracy/#./proposals/2019/tc39-ecmascript-parser.md</link>
+            <guid>https://jack-works.github.io/bayesian-conspiracy/#./proposals/2019/tc39-ecmascript-parser.md</guid>
+            <pubDate>Sun, Nov 24 2019 08:16:49 GMT</pubDate>
+            <description>A proposal for adding a built-in ECMAScript parser in the ECMAScript itself.</description>
+        </item>
     </channel>
 </rss>
