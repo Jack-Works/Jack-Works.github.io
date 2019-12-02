@@ -18,7 +18,7 @@ const theme = MaterialUI.createMuiTheme({
         primary: MaterialUI.colors.teal,
     },
     typography: {
-        fontFamily: `'Noto Sans CJK SC Light', 'Microsoft Yahei Light', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`,
+        fontFamily: `system-ui`,
     },
 })
 
@@ -159,8 +159,11 @@ class Page extends React.Component {
         )
         let using = false
         const result = text.split('\n').map(x => {
-            const text = x.match(/(?<original>.+) \/ (?<translated>.+)/)
+            const text = x.match(/(.+) \/ (.+)/)
+            // Firefox does not support named capture group yet.
+            // const text = x.match(/(?<original>.+) \/ (?<translated>.+)/)
             if (text) {
+                text.groups = { original: text[1], translated: text[2] }
                 using = true
                 return (
                     <>
