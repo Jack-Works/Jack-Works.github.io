@@ -14,6 +14,7 @@
 
 -   ⏳ [Proposal: Number.range and BigInt.range](#./proposals/2019/tc39-number.range.md)
 -   ⏳ [Proposal: ECMAScript parser](#./proposals/2019/tc39-ecmascript-parser.md)
+-   ⏳ [Proposal: Strict built-in functions](#./proposals/2019/tc39-strict-built-in-functions.md)
 
 #### ⚙ Projects
 
