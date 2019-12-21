@@ -1,4 +1,4 @@
-/// <reference path="./global.d.ts" />
+/// <reference path="../global.d.ts" />
 function getDayOfYear() {
     var now = new Date()
     var start = new Date(now.getFullYear(), 0, 0).getTime()
@@ -12,19 +12,29 @@ const fill = arr => arr.map(([a, b, c]) => ((c ? [a, b, c] : [a, '', b])))
 /** @type{IData} */
 const Data = {
     title: '测绘文明',
-    weekMessage: "Yeah so, watching the sun go down, Til the day comes again, I guess it's bye bye bye",
-    motto: '探索，继续前行',
+    weekMessage: '我们不能活在尚未来临的日子里，为了追求自身构想的幻想而丧失了现在。',
+    motto: '【那你为什么不现在就去做呢？】',
     data: [
         {
             title: 'Ingress / 清明上河图',
             progress: { max: 654, current: 286 },
         },
+        (new Date().getFullYear()) > 2019
+            ? {
+                  title: `2020 年 ⸺ ?? 、?? 与 ?? 之年 ⸺ ${getDayOfYear()} of 365`,
+                  content: {
+                      head: ['有趣的事物', '', ''],
+                      body: fill([
+                          //
+                      ]),
+                  },
+              }
+            : null,
         {
-            title: `2019 年 ⸺ 分布、魔法与 ?? 之年 ⸺ ${getDayOfYear()} of 365`,
+            title: `2019 年 ⸺ 分布、魔术与突变之年 ⸺ ${getDayOfYear()} of 365`,
             content: {
                 head: ['有趣的事物', '', ''],
                 body: fill([
-                    //
                     ['流浪地球', '2019/02/09'],
                     ['数学也荒唐', '2019/02/26'],
                     ['夏目友人帐 ～缘结空蝉～', '2019/03/08'],
@@ -185,8 +195,9 @@ const Data = {
                 ]),
             },
         },
-    ],
+    ].filter(x => x),
 }
+export default Data
 
 // Rest of old data
 // {title: 'Borland 传奇'.link('https://github.com/programthink/books/blob/master/README.wiki#106-it-公司'), progress: [331, 507]},

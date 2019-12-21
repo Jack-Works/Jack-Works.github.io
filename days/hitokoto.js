@@ -1,4 +1,3 @@
-/// <reference path="./global.d.ts" />
 // 人名 (书名) 代表虚拟人物
 // 《书名》，人名 代表作品作者
 const hitokoto = [
@@ -661,7 +660,8 @@ const hitokoto = [
     // Until 9/14/2019
 ]
 
-function getHitokoto() {
+export default hitokoto
+export function getHitokoto() {
     var len = Math.floor(Math.random() * hitokoto.length)
     return hitokoto[len]
 }

@@ -1,5 +1,4 @@
-/// <reference path="./global.d.ts" />
-import { LitElement, html } from 'https://unpkg.com/lit-element@2.2.1/lit-element.js?module'
+import { LitElement, html } from '../../resources/deps.js'
 import { warningStyle } from './shared-css.js'
 class Outdated extends LitElement {
     render() {

@@ -1,5 +1,4 @@
-/// <reference path="./global.d.ts" />
-import { css } from 'https://unpkg.com/lit-element@2.2.1/lit-element.js?module'
+import { css } from '../../resources/deps.js'
 
 export const sharedBlockStyle = css`
     padding: 12px;

@@ -1,5 +1,4 @@
-/// <reference path="./global.d.ts" />
-import { LitElement, html } from 'https://unpkg.com/lit-element@2.2.1/lit-element.js?module'
+import { LitElement, html } from '../../resources/deps.js'
 import { recommendStyle } from './shared-css.js'
 const status = {
     active: '👀 This experiment is active.',

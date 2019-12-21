@@ -3,28 +3,30 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Jack Works'</title>
+        <title>测绘文明</title>
         <meta
             name="viewport"
             content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"
         />
-        <link rel="stylesheet" type="text/css" media="screen" href="../res/css/base.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <script src="https://unpkg.com/react@16.10.1/umd/react.production.min.js"></script>
-        <script src="https://unpkg.com/react-dom@16.10.1/umd/react-dom.production.min.js"></script>
-        <script src="https://unpkg.com/@material-ui/core@4.4.3/umd/material-ui.production.min.js"></script>
-        <script src="https://unpkg.com/marked@0.6.1/marked.min.js"></script>
-        <!-- <script src="https://unpkg.com/react@16.10.1/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@16.10.1/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@material-ui/core@3.9.2/umd/material-ui.production.min.js"></script>
-    <script src="https://unpkg.com/marked@0.6.1/lib/marked.js"></script> -->
+        <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /> -->
     </head>
 
     <body>
         <main class="container"></main>
-        <script src="./data.js"></script>
-        <script src="./hitokoto.js"></script>
-        <script src="./source.js"></script>
+        <script src="https://unpkg.com/react@16.12.0/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@material-ui/core@4.8.0/umd/material-ui.production.min.js"></script>
+        <script src="https://unpkg.com/marked@0.6.1/marked.min.js"></script>
+        <!-- <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@material-ui/core@4.8.0/umd/material-ui.production.min.js"></script>
+        <script src="https://unpkg.com/marked@0.6.1/lib/marked.js"></script> -->
+        <script async type="module">
+            import data from './data.js'
+            import { getHitokoto } from './hitokoto.js'
+            import render from './source.js'
+            render(data, getHitokoto)
+        </script>
     </body>
 </html>
