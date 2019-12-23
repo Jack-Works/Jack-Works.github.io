@@ -48,10 +48,17 @@
         </item>
         <item>
             <title>Project: Async Call</title>
-            <link>http://localhost:3000/bayesian-conspiracy/#/./projects/2019/async-call.md</link>
-            <guid>http://localhost:3000/bayesian-conspiracy/#/./projects/2019/async-call.md</guid>
+            <link>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/async-call.md</link>
+            <guid>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/async-call.md</guid>
             <pubDate>Mon, Dec 23 2019 12:38:44 GMT</pubDate>
-            <description>A light JSON RPC server & client with 0 dependency.</description>
+            <description>A light JSON RPC server and client with 0 dependency.</description>
+        </item>
+        <item>
+            <title>Project: @holoflows/kit</title>
+            <link>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/holoflows-kit.md</link>
+            <guid>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/holoflows-kit.md</guid>
+            <pubDate>Mon, Dec 23 2019 12:38:44 GMT</pubDate>
+            <description>A toolbox for browser extension developing.</description>
         </item>
     </channel>
 </rss>

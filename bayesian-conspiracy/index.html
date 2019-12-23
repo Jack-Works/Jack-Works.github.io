@@ -85,6 +85,7 @@
                 const result = location.hash.match(/#\/.\/([a-zA-Z0-9-\/]+)(\.md)?(\?.+)?/)
                 const result2 = result ? result[1].slice(0, 49) : ''
                 if (result2.startsWith('projects/')) return ''
+                if (result2.startsWith('proposals/')) return ''
                 return result2
             }
             window.gitalk = new Gitalk({

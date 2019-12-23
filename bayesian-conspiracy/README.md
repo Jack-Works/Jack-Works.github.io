@@ -16,8 +16,9 @@
 -   ⏳ [Proposal: ECMAScript parser](./proposals/2019/tc39-ecmascript-parser.md)
 -   ⏳ [Proposal: Strict built-in functions](./proposals/2019/tc39-strict-built-in-functions.md)
 
-### ⚙ Projects
+### ⚙ Libraries
 
 -   ⚡ [Async Call](./projects/2019/async-call.md), a light JSON RPC server & client with 0 dependency.
+-   🧰 [@holoflows/kit](./projects/2019/holoflows-kit.md), a toolbox for browser extension developing.
 
 ### 📝 Notes
