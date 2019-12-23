@@ -1,4 +1,5 @@
-start python -m http.server 12000
+start docsify serve
 start yarn tsc -p ./tsconfig.json
-start http://localhost:12000/
+start http://localhost:3000/
+code .
 

@@ -35,5 +35,26 @@ declare namespace JSX {
         //     React.HtmlHTMLAttributes<HTMLPreElement>,
         //     HTMLPreElement
         // >
+        /**
+         * For archived projects
+         */
+        'i-arch': {
+            from: string
+            to: string
+            working: boolean
+        } & IntrinsicElements['div']
+        /**
+         * For special links
+         */
+        'i-a': IntrinsicElements['a']
+        'can-i-use': { feature: string } & IntrinsicElements['div']
+        /**
+         * For experimental projects
+         */
+        'i-exp': { status: 'active' | 'success' | 'fail' } & IntrinsicElements['div']
+        /**
+         * Outdated
+         */
+        'i-dep': { from: string; to: string } & IntrinsicElements['div']
     }
 }
