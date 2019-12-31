@@ -60,5 +60,12 @@
             <pubDate>Mon, Dec 23 2019 12:38:44 GMT</pubDate>
             <description>A toolbox for browser extension developing.</description>
         </item>
+        <item>
+            <title>Project: Sync Watch</title>
+            <link>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/sync-watch.md</link>
+            <guid>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/sync-watch.md</guid>
+            <pubDate>Tue, Dec 23 2019 15:44:02 GMT</pubDate>
+            <description>Watch video with your friend and sync the progress.</description>
+        </item>
     </channel>
 </rss>

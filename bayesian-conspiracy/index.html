@@ -56,7 +56,7 @@
                             if (link.startsWith('.') && link.endsWith('.md')) link = '#' + link
                             try {
                                 if (new URL(link).protocol === 'about:') throw ''
-                                return `<i-a href="${link}"><a target="_blank" href="${link}">${text}</a></i-a>`
+                                return `<i-a href="${link}"><a target="_blank" referrerpolicy="no-referrer" href="${link}">${text}</a></i-a>`
                             } catch (e) {
                                 return `<i-a href="${link}"><a href="${link}">${text}</a></i-a>`
                             }

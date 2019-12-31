@@ -42,6 +42,7 @@ declare namespace JSX {
             from: string
             to: string
             working: boolean
+            badge?: boolean
         } & IntrinsicElements['div']
         /**
          * For special links
@@ -55,6 +56,8 @@ declare namespace JSX {
         /**
          * Outdated
          */
-        'i-dep': { from: string; to: string } & IntrinsicElements['div']
+        'i-dep': { to: string } & IntrinsicElements['div']
+        /** Inline badges */
+        'i-badge': { type: 'arch' } & IntrinsicElements['div']
     }
 }

@@ -21,4 +21,8 @@
 -   ⚡ [Async Call](./projects/2019/async-call.md), a light JSON RPC server & client with 0 dependency.
 -   🧰 [@holoflows/kit](./projects/2019/holoflows-kit.md), a toolbox for browser extension developing.
 
+### 📳 Application
+
+-   📽 [Sync Watch](./projects/2019/sync-watch.md), watch video with your friend and sync the progress. <i-badge type="arch"></i-badge>
+
 ### 📝 Notes
