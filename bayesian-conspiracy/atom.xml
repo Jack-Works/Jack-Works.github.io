@@ -67,5 +67,12 @@
             <pubDate>Tue, Dec 23 2019 15:44:02 GMT</pubDate>
             <description>Watch video with your friend and sync the progress.</description>
         </item>
+        <item>
+            <title>Project: JSX-JSONML-devtools-renderer</title>
+            <link>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/devtools-jsx-render.md</link>
+            <guid>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/devtools-jsx-render.md</guid>
+            <pubDate>Mon, 06 Jan 2020 15:03:55 GMT</pubDate>
+            <description>Write and render JSX in devtools.</description>
+        </item>
     </channel>
 </rss>

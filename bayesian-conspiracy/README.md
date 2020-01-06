@@ -18,8 +18,9 @@
 
 ### ⚙ Libraries
 
--   ⚡ [Async Call](./projects/2019/async-call.md), a light JSON RPC server & client with 0 dependency.
 -   🧰 [@holoflows/kit](./projects/2019/holoflows-kit.md), a toolbox for browser extension developing.
+-   ⚡ [Async Call](./projects/2019/async-call.md), a light JSON RPC server & client with 0 dependency.
+-   🎨 [JSX-JSONML-devtools-renderer](./projects/2019/devtools-jsx-render.md), write and render JSX in devtools.
 
 ### 📳 Application
 
