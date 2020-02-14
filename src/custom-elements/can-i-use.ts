@@ -1,7 +1,7 @@
 import { customElement, LitElement, html, property, css } from 'lit-element'
 @customElement('can-i-use')
 export class CanIUse extends LitElement {
-    @property() feature = ''
+    @property({ type: String }) feature = ''
     render() {
         return html`
             <iframe

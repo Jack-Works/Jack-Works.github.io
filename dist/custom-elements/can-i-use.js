@@ -4,9 +4,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 import { customElement, LitElement, html, property, css } from "https://cdn.pika.dev/lit-element@2.2.1";
 let CanIUse = class CanIUse extends LitElement {
     constructor() {
@@ -42,12 +39,10 @@ let CanIUse = class CanIUse extends LitElement {
     }
 };
 __decorate([
-    property(),
-    __metadata("design:type", Object)
+    property({ type: String })
 ], CanIUse.prototype, "feature", void 0);
 CanIUse = __decorate([
-    customElement('can-i-use'),
-    __metadata("design:paramtypes", [])
+    customElement('can-i-use')
 ], CanIUse);
 export { CanIUse };
 //# sourceMappingURL=can-i-use.js.map

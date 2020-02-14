@@ -3,8 +3,8 @@ import { customElement, LitElement, html, property } from 'lit-element'
 
 @customElement('i-dep')
 export class Outdated extends LitElement {
-    @property() from = ''
-    @property() to = ''
+    @property({ type: String }) from = ''
+    @property({ type: String }) to = ''
     render() {
         return html`
             <div>

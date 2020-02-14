@@ -4,4 +4,6 @@
 
 [TypeScript definition](https://raw.githubusercontent.com/Jack-Works/proposal-Number.range/master/global.d.ts ':include')
 
+# Polyfill
+
 [Polyfill](https://raw.githubusercontent.com/Jack-Works/proposal-Number.range/master/polyfill.js ':include')

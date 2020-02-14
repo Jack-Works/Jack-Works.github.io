@@ -8,7 +8,7 @@ const status = {
 }
 @customElement('i-exp')
 export class Experimental extends LitElement {
-    @property() status: 'active' | 'success' | 'fail' = 'active'
+    @property({ type: String }) status: 'active' | 'success' | 'fail' = 'active'
     render() {
         return html`
             <div>

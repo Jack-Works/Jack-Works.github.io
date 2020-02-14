@@ -3,9 +3,9 @@ import { customElement, LitElement, html, property } from 'lit-element'
 
 @customElement('i-arch')
 export class Archived extends LitElement {
-    @property() working = false
-    @property() to = ''
-    @property() from = ''
+    @property({ type: Boolean }) working = false
+    @property({ type: String }) to = ''
+    @property({ type: String }) from = ''
     render() {
         return html`
             <div>

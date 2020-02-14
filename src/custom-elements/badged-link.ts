@@ -25,7 +25,7 @@ function parseURL(href: string) {
 
 @customElement('i-a')
 export class BadgedLink extends LitElement {
-    @property() href = ''
+    @property({ type: String }) href = ''
     render() {
         const meta = parseURL(this.href)
         if (meta.image === '')
