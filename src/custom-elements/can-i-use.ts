@@ -1,6 +1,7 @@
-import { LitElement, html, css } from '../../resources/deps.js'
-
-class CanIUse extends LitElement {
+import { customElement, LitElement, html, property, css } from 'lit-element'
+@customElement('can-i-use')
+export class CanIUse extends LitElement {
+    @property() feature = ''
     render() {
         return html`
             <iframe
@@ -15,24 +16,18 @@ class CanIUse extends LitElement {
     }
     constructor() {
         super()
-        this.feature = ''
         window.addEventListener(
             'message',
             e => {
                 const data = e.data
                 if (typeof data === 'string' && data.indexOf('ciu_embed') > -1) {
                     const height = parseInt(data.split(':')[2]) + 30
-                    const iframe = this.shadowRoot.querySelector('iframe')
+                    const iframe = this.shadowRoot!.querySelector('iframe')!
                     iframe.height = height + 'px'
                 }
             },
             false,
         )
-    }
-    static get properties() {
-        return {
-            feature: { type: String },
-        }
     }
     static get styles() {
         return css`
@@ -42,5 +37,3 @@ class CanIUse extends LitElement {
         `
     }
 }
-
-customElements.define('can-i-use', CanIUse, {})

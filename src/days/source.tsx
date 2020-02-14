@@ -1,29 +1,24 @@
-/// <reference path="../global.d.ts" />
-export default function(data: IData, hitokotoProvider: () => string[]) {
-    ReactDOM.render(<Page data={data} getHitokoto={hitokotoProvider} />, document.querySelector('.container'))
+import { Theme, styled, Box, makeStyles, createStyles, colors, createMuiTheme, ListItem } from '@material-ui/core'
+import { MuiThemeProvider, useMediaQuery, Card, CardContent, Typography, LinearProgress } from '@material-ui/core'
+import { Table, TableHead, TableRow, TableCell, TableBody, ListItemText, Divider, List } from '@material-ui/core'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+// @ts-ignore wrong typing. { Remarkable } is a private symbol.
+import Remarkable, { Remarkable as RemarkableConstructor } from 'remarkable'
+import { IData, ICard, ITable } from './type.js'
+import Data from './data'
+const render: Remarkable = new RemarkableConstructor({ breaks: true, html: true })
+export default function(hitokotoProvider: () => string[]) {
+    ReactDOM.render(<Page data={Data} getHitokoto={hitokotoProvider} />, document.querySelector('.container'))
 }
-
-import { Theme } from '@material-ui/core'
-// @ts-ignore
-import { Remarkable } from '../resources/deps.js'
-const render = new Remarkable({ breaks: true, html: true })
-
-declare const React: typeof import('react')
-const { Typography } = MaterialUI
-const { Card, CardContent } = MaterialUI
-const { Table, TableBody, TableCell, TableHead, TableRow } = MaterialUI
-const { styled, makeStyles, createStyles } = MaterialUI
-const { List, ListItem, ListItemText } = MaterialUI
-const { Divider, MuiThemeProvider, LinearProgress, Box, useMediaQuery } = MaterialUI
-
 //#region Styles
 
 const Flex = styled('span')({ flex: 1 })
 const Section = styled(Box)({ marginTop: 24 })
-const theme = MaterialUI.createMuiTheme({
+const theme = createMuiTheme({
     palette: {
         type: 'dark',
-        primary: MaterialUI.colors.teal,
+        primary: colors.teal,
     },
     typography: {
         fontFamily: `system-ui`,

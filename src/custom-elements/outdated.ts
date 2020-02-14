@@ -1,6 +1,10 @@
-import { LitElement, html } from '../../resources/deps.js'
 import { warningStyle } from './shared-css.js'
-class Outdated extends LitElement {
+import { customElement, LitElement, html, property } from 'lit-element'
+
+@customElement('i-dep')
+export class Outdated extends LitElement {
+    @property() from = ''
+    @property() to = ''
     render() {
         return html`
             <div>
@@ -11,17 +15,7 @@ class Outdated extends LitElement {
             </div>
         `
     }
-    constructor() {
-        super()
-        this.from = ''
-        this.to = ''
-    }
     static get styles() {
         return warningStyle
     }
-    static get properties() {
-        return { from: { type: String }, to: { type: String } }
-    }
 }
-
-customElements.define('i-dep', Outdated, {})

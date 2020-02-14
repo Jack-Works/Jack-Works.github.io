@@ -1,4 +1,4 @@
-import { css } from '../../resources/deps.js'
+import { customElement, LitElement, html, property, css } from 'lit-element'
 
 export const sharedBlockStyle = css`
     padding: 12px;

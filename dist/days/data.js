@@ -1,15 +1,12 @@
-/// <reference path="../global.d.ts" />
 function getDayOfYear() {
-    var now = new Date()
-    var start = new Date(now.getFullYear(), 0, 0).getTime()
-    var diff = now.getTime() - start
-    var oneDay = 1000 * 60 * 60 * 24
-    var day = Math.floor(diff / oneDay)
-    return day
+    var now = new Date();
+    var start = new Date(now.getFullYear(), 0, 0).getTime();
+    var diff = now.getTime() - start;
+    var oneDay = 1000 * 60 * 60 * 24;
+    var day = Math.floor(diff / oneDay);
+    return day;
 }
-/** @type{(arr: string[][]) => string[][]} */
-const fill = arr => arr.map(([a, b, c]) => ((c ? [a, b, c] : [a, '', b])))
-/** @type{IData} */
+const fill = (arr) => arr.map(([a, b, c]) => (c ? [a, b, c] : [a, '', b]));
 const Data = {
     title: '测绘文明',
     weekMessage: '我们不能活在尚未来临的日子里，为了追求自身构想的幻想而丧失了现在。',
@@ -19,16 +16,16 @@ const Data = {
             title: 'Ingress / 清明上河图',
             progress: { max: 654, current: 286 },
         },
-        (new Date().getFullYear()) > 2019
+        new Date().getFullYear() > 2019
             ? {
-                  title: `2020 年 ⸺ ?? 、?? 与 ?? 之年 ⸺ ${getDayOfYear()} of 365`,
-                  content: {
-                      head: ['有趣的事物', '', ''],
-                      body: fill([
-                          //
-                      ]),
-                  },
-              }
+                title: `2020 年 ⸺ ?? 、?? 与 ?? 之年 ⸺ ${getDayOfYear()} of 365`,
+                content: {
+                    head: ['有趣的事物', '', ''],
+                    body: fill([
+                    //
+                    ]),
+                },
+            }
             : null,
         {
             title: `2019 年 ⸺ 分布、魔术与突变之年 ⸺ ${getDayOfYear()} of 365`,
@@ -196,38 +193,6 @@ const Data = {
             },
         },
     ].filter(x => x),
-}
-export default Data
-
-// Rest of old data
-// {title: 'Borland 传奇'.link('https://github.com/programthink/books/blob/master/README.wiki#106-it-公司'), progress: [331, 507]},
-// {title: '猜想与反驳'.link('https://github.com/programthink/books/blob/master/README.wiki#88-科学哲学'), progress: [10, 62, 722]},
-// {title: 'Doom 启示录', progress: [7, 30, 433]},
-// {title: '怎样阅读一本书' + '第五章 如何做一个自我要求的读者'.comment, progress: [17, 114]},
-// {
-// 	title: '思维、逻辑、社会、设计、玄学',
-// 	content: [
-// 		'不确定状况下的判断',
-// 		'影响力:科学与实践',
-// 		'给大家看的设计书',
-// 		'可笑的思维谬误：批判性思考与查错神经',
-// 		'浪潮之巅'
-// 	]
-// },
-//{
-//	title: '听起来很厉害的样子，说不定会去拜读',
-//	content: [
-//		'重构',
-//		'代码整洁之道',
-//		'代码大全2',
-//		'数学之美',
-//		'Rework中文版',
-//		'高效程序员的45个习惯'.gray.del,
-//		'万物由来',
-//		'黑客攻防技术宝典（Web实战篇）'.processing.red,
-//		'白帽子讲Web安全',
-//		'Web前端黑客技术揭秘',
-//		'SQL注入攻击与防御',
-//		'JavaScript DOM编程艺术'
-//	]
-//},
+};
+export default Data;
+//# sourceMappingURL=data.js.map

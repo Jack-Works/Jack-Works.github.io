@@ -1,11 +1,14 @@
-import { LitElement, html } from '../../resources/deps.js'
 import { recommendStyle } from './shared-css.js'
+import { customElement, LitElement, html, property } from 'lit-element'
+
 const status = {
     active: '👀 This experiment is active.',
     success: '✔️ The experiment has ended successfully.',
     fail: '❌ This experiment has failed.',
 }
-class Experimental extends LitElement {
+@customElement('i-exp')
+export class Experimental extends LitElement {
+    @property() status: 'active' | 'success' | 'fail' = 'active'
     render() {
         return html`
             <div>
@@ -17,19 +20,7 @@ class Experimental extends LitElement {
             </div>
         `
     }
-    constructor() {
-        super()
-        /** @type {'active' | 'success' | 'fail'} */
-        this.status = 'active'
-    }
     static get styles() {
         return recommendStyle
     }
-    static get properties() {
-        return {
-            status: { type: String },
-        }
-    }
 }
-
-customElements.define('i-exp', Experimental, {})

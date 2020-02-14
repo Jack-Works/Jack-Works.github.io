@@ -1,7 +1,11 @@
-import { deprecatedStyle } from './shared-css.js'
-import { LitElement, html } from '../../resources/deps.js'
+import { deprecatedStyle } from './shared-css'
+import { customElement, LitElement, html, property } from 'lit-element'
 
-class Archived extends LitElement {
+@customElement('i-arch')
+export class Archived extends LitElement {
+    @property() working = false
+    @property() to = ''
+    @property() from = ''
     render() {
         return html`
             <div>
@@ -14,22 +18,7 @@ class Archived extends LitElement {
             </div>
         `
     }
-    constructor() {
-        super()
-        this.working = false
-        this.from = ''
-        this.to = ''
-    }
     static get styles() {
         return deprecatedStyle
     }
-    static get properties() {
-        return {
-            from: { type: String },
-            to: { type: String },
-            working: { type: Boolean },
-        }
-    }
 }
-
-customElements.define('i-arch', Archived, {})

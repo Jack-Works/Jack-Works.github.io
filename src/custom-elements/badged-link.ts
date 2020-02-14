@@ -1,9 +1,6 @@
-import { LitElement, html, css } from '../../resources/deps.js'
+import { customElement, LitElement, html, property, css } from 'lit-element'
 
-/**
- * @param {string} href
- */
-function parseURL(href) {
+function parseURL(href: string) {
     const url = new URL(href, location.href)
     const data = {
         image: '',
@@ -26,7 +23,9 @@ function parseURL(href) {
     return data
 }
 
-class BadgedLink extends LitElement {
+@customElement('i-a')
+export class BadgedLink extends LitElement {
+    @property() href = ''
     render() {
         const meta = parseURL(this.href)
         if (meta.image === '')
@@ -38,15 +37,6 @@ class BadgedLink extends LitElement {
             <slot></slot>
         `
     }
-    constructor() {
-        super()
-        this.href = ''
-    }
-    static get properties() {
-        return {
-            href: { type: String },
-        }
-    }
     static get styles() {
         return css`
             img {
@@ -55,5 +45,3 @@ class BadgedLink extends LitElement {
         `
     }
 }
-
-customElements.define('i-a', BadgedLink, {})
