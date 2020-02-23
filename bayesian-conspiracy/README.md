@@ -18,9 +18,10 @@
 
 ### ⚙ Libraries
 
+-   🕸 [ttsc bare import transformer](./projects/2020/ttsc-bare-import.md), use only <sup>t</sup>tsc to emit Web compatible ES Module output.
 -   🧰 [@holoflows/kit](./projects/2019/holoflows-kit.md), a toolbox for browser extension developing.
 -   ⚡ [Async Call](./projects/2019/async-call.md), a light JSON RPC server & client with 0 dependency.
--   🎨 [JSX-JSONML-devtools-renderer](./projects/2019/devtools-jsx-render.md), write and render JSX in devtools.
+-   🎨 [JSX-JSONML-devtools-renderer](./projects/2019/devtools-jsx-render.md), write and render JSX in Chrome devtools.
 
 ### 📳 Application
 

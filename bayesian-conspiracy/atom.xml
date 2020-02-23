@@ -74,5 +74,12 @@
             <pubDate>Mon, 06 Jan 2020 15:03:55 GMT</pubDate>
             <description>Write and render JSX in devtools.</description>
         </item>
+        <item>
+            <title>Project: @magic-works/ttypescript-browser-like-import-transformer</title>
+            <link>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2020/ttsc-bare-import.md</link>
+            <guid>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2020/ttsc-bare-import.md</guid>
+            <pubDate>Sun, 23 Feb 2020 14:42:55 GMT</pubDate>
+            <description>use only ttsc to emit Web compatible ES Module output.</description>
+        </item>
     </channel>
 </rss>
