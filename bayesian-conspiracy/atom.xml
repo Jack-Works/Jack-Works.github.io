@@ -81,5 +81,12 @@
             <pubDate>Sun, 23 Feb 2020 14:42:55 GMT</pubDate>
             <description>use only ttsc to emit Web compatible ES Module output.</description>
         </item>
+        <item>
+            <title>Notes: Generate type definitions for matrix-js-sdk</title>
+            <link>https://jack-works.github.io/bayesian-conspiracy/#/./notes/2019/generate-dts-for-matrix-js-sdk.md</link>
+            <guid>https://jack-works.github.io/bayesian-conspiracy/#/./notes/2019/generate-dts-for-matrix-js-sdk.md</guid>
+            <pubDate>Fri, 01 May 2020 08:13:04 GMT</pubDate>
+            <description>Code gen for a big JSDoc project.</description>
+        </item>
     </channel>
 </rss>

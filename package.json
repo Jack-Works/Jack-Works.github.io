@@ -10,20 +10,20 @@
   "author": "Jack Works",
   "homepage": "https://Jack-Works.github.io",
   "dependencies": {
-    "@material-ui/core": "^4.9.1",
-    "@types/react": "^16.9.19",
-    "@types/react-dom": "^16.9.5",
+    "@material-ui/core": "^4.9.12",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
     "@types/remarkable": "^1.7.4",
-    "csstype": "^2.6.8",
-    "lit-element": "^2.2.1",
-    "lit-html": "^1.1.2",
+    "csstype": "^2.6.10",
+    "lit-element": "^2.3.1",
+    "lit-html": "^1.2.1",
     "remarkable": "^2.0.0"
   },
   "devDependencies": {
-    "@magic-works/ttypescript-browser-like-import-transformer": "^1.4.0",
+    "@magic-works/ttypescript-browser-like-import-transformer": "^2.0.2",
     "docsify-cli": "^4.4.0",
-    "ts-node": "^8.6.2",
+    "ts-node": "^8.9.1",
     "ttypescript": "^1.5.10",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.3"
   }
 }

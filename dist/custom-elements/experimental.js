@@ -5,7 +5,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { recommendStyle } from "./shared-css.js";
-import { customElement, LitElement, html, property } from "https://cdn.pika.dev/lit-element@2.2.1";
+import { customElement, LitElement, html, property } from "https://cdn.pika.dev/lit-element@2.3.1";
 const status = {
     active: '👀 This experiment is active.',
     success: '✔️ The experiment has ended successfully.',

@@ -23,8 +23,10 @@
 -   ⚡ [Async Call](./projects/2019/async-call.md), a light JSON RPC server & client with 0 dependency.
 -   🎨 [JSX-JSONML-devtools-renderer](./projects/2019/devtools-jsx-render.md), write and render JSX in Chrome devtools.
 
+### 📝 Notes
+
+-   🧬 [Generate type definitions for matrix-js-sdk](./notes/2019/generate-dts-for-matrix-js-sdk.md)
+
 ### 📳 Application
 
 -   📽 [Sync Watch](./projects/2019/sync-watch.md), watch video with your friend and sync the progress. <i-badge type="arch"></i-badge>
-
-### 📝 Notes

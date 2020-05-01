@@ -4,13 +4,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { customElement, LitElement, html, property, css } from "https://cdn.pika.dev/lit-element@2.2.1";
+import { customElement, LitElement, html, property, css } from "https://cdn.pika.dev/lit-element@2.3.1";
 function parseURL(href) {
     const url = new URL(href, location.href);
     const data = {
         image: '',
         alt: '',
         href,
+        hideSlot: false,
     };
     if (href.startsWith(`https://bugzilla.mozilla.org/show_bug.cgi`)) {
         const id = url.searchParams.get('id');
@@ -25,6 +26,15 @@ function parseURL(href) {
         data.image = `https://img.shields.io/github/${type}/detail/state/${org}/${repo}/${parseInt(id)}?style=flat-square`;
         data.alt = `Github ${type === 'issues' ? 'issue' : 'pull request'} at ${repo} by ${org}`;
     }
+    else if (href.startsWith(`https://www.npmjs.com/package/`)) {
+        // https://www.npmjs.com/package/@types/matrix-js-sdk
+        // https://www.npmjs.com/package/matrix-js-sdk
+        let [, , scope, name] = url.pathname.split('/');
+        const pkg = scope.startsWith('@') ? `${scope}/${name}` : scope;
+        data.image = `https://img.shields.io/npm/dm/${pkg}?label=${encodeURIComponent(pkg)}&style=flat-square`;
+        data.alt = `Package ${pkg} at npm`;
+        data.hideSlot = true;
+    }
     return data;
 }
 let BadgedLink = class BadgedLink extends LitElement {
@@ -35,12 +45,10 @@ let BadgedLink = class BadgedLink extends LitElement {
     render() {
         const meta = parseURL(this.href);
         if (meta.image === '')
-            return html `
-                <slot></slot>
-            `;
+            return html ` <slot></slot> `;
         return html `
-            <a target="_blank" href="${meta.href}"><img src="${meta.image}" alt="${meta.alt}"/></a>
-            <slot></slot>
+            <a target="_blank" href="${meta.href}"><img src="${meta.image}" alt="${meta.alt}" /></a>
+            <slot style="${meta.hideSlot ? 'display:none' : ''}"></slot>
         `;
     }
     static get styles() {

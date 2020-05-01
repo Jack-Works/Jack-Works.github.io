@@ -6,6 +6,7 @@ function parseURL(href: string) {
         image: '',
         alt: '',
         href,
+        hideSlot: false,
     }
     if (href.startsWith(`https://bugzilla.mozilla.org/show_bug.cgi`)) {
         const id = url.searchParams.get('id')
@@ -19,6 +20,14 @@ function parseURL(href: string) {
             id,
         )}?style=flat-square`
         data.alt = `Github ${type === 'issues' ? 'issue' : 'pull request'} at ${repo} by ${org}`
+    } else if (href.startsWith(`https://www.npmjs.com/package/`)) {
+        // https://www.npmjs.com/package/@types/matrix-js-sdk
+        // https://www.npmjs.com/package/matrix-js-sdk
+        let [, , scope, name] = url.pathname.split('/')
+        const pkg = scope.startsWith('@') ? `${scope}/${name}` : scope
+        data.image = `https://img.shields.io/npm/dm/${pkg}?label=${encodeURIComponent(pkg)}&style=flat-square`
+        data.alt = `Package ${pkg} at npm`
+        data.hideSlot = true
     }
     return data
 }
@@ -28,13 +37,10 @@ export class BadgedLink extends LitElement {
     @property({ type: String }) href = ''
     render() {
         const meta = parseURL(this.href)
-        if (meta.image === '')
-            return html`
-                <slot></slot>
-            `
+        if (meta.image === '') return html` <slot></slot> `
         return html`
-            <a target="_blank" href="${meta.href}"><img src="${meta.image}" alt="${meta.alt}"/></a>
-            <slot></slot>
+            <a target="_blank" href="${meta.href}"><img src="${meta.image}" alt="${meta.alt}" /></a>
+            <slot style="${meta.hideSlot ? 'display:none' : ''}"></slot>
         `
     }
     static get styles() {

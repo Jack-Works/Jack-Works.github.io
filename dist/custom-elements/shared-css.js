@@ -1,4 +1,4 @@
-import { css } from "https://cdn.pika.dev/lit-element@2.2.1";
+import { css } from "https://cdn.pika.dev/lit-element@2.3.1";
 export const sharedBlockStyle = css `
     padding: 12px;
     margin-top: 0.5em;

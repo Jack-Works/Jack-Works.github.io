@@ -1,9 +1,8 @@
-import { __UMDBindCheck as __UMDBindCheck } from "https://cdn.jsdelivr.net/npm/@magic-works/ttypescript-browser-like-import-transformer@1.4.0/es/ttsclib.min.js";
-const { styled, Box, makeStyles, createStyles, colors, createMuiTheme, ListItem } = __UMDBindCheck(globalThis.MaterialUI, ["styled", "Box", "makeStyles", "createStyles", "colors", "createMuiTheme", "ListItem"], "@material-ui/core", "globalThis.MaterialUI", true);
-const { MuiThemeProvider, useMediaQuery, Card, CardContent, Typography, LinearProgress } = __UMDBindCheck(globalThis.MaterialUI, ["MuiThemeProvider", "useMediaQuery", "Card", "CardContent", "Typography", "LinearProgress"], "@material-ui/core", "globalThis.MaterialUI", true);
-const { Table, TableHead, TableRow, TableCell, TableBody, ListItemText, Divider, List } = __UMDBindCheck(globalThis.MaterialUI, ["Table", "TableHead", "TableRow", "TableCell", "TableBody", "ListItemText", "Divider", "List"], "@material-ui/core", "globalThis.MaterialUI", true);
-const React = __UMDBindCheck(globalThis.React, [], "react", "globalThis.React", true);
-const ReactDOM = __UMDBindCheck(globalThis.ReactDOM, [], "react-dom", "globalThis.ReactDOM", true);
+const { styled, Box, makeStyles, createStyles, colors, createMuiTheme, ListItem } = __UMDBindCheck(globalThis["MaterialUI"], ["styled", "Box", "makeStyles", "createStyles", "colors", "createMuiTheme", "ListItem"], "@material-ui/core", "globalThis.MaterialUI", true);
+const { MuiThemeProvider, useMediaQuery, Card, CardContent, Typography, LinearProgress } = __UMDBindCheck(globalThis["MaterialUI"], ["MuiThemeProvider", "useMediaQuery", "Card", "CardContent", "Typography", "LinearProgress"], "@material-ui/core", "globalThis.MaterialUI", true);
+const { Table, TableHead, TableRow, TableCell, TableBody, ListItemText, Divider, List } = __UMDBindCheck(globalThis["MaterialUI"], ["Table", "TableHead", "TableRow", "TableCell", "TableBody", "ListItemText", "Divider", "List"], "@material-ui/core", "globalThis.MaterialUI", true);
+const React = __UMDBindCheck(globalThis["React"], [], "react", "globalThis.React", true);
+const ReactDOM = __UMDBindCheck(globalThis["ReactDOM"], [], "react-dom", "globalThis.ReactDOM", true);
 // @ts-ignore wrong typing. { Remarkable } is a private symbol.
 import { Remarkable as RemarkableConstructor } from "https://cdn.pika.dev/remarkable@2.0.0";
 import Data from "./data.js";
@@ -176,4 +175,5 @@ function Hitokoto(props) {
     return (React.createElement(EnhancedCard, { captionTitle: "Hitokoto", reference: by },
         React.createElement(React.Fragment, null, result)));
 }
+import { __UMDBindCheck as __UMDBindCheck } from "https://cdn.jsdelivr.net/npm/@magic-works/ttypescript-browser-like-import-transformer@2.0.2/es/ttsclib.min.js";
 //# sourceMappingURL=source.js.map
