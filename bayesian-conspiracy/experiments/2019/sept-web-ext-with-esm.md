@@ -1,16 +1,11 @@
 # WebExtension with ESModule
 
-Last updated: 10/1/2019
+Last updated: 05/19/2020
 
 <i-exp status="active"></i-exp>
 
 > Demo: [WebExtension ESModule test](https://github.com/Jack-Works/web-extension-esmodule-test)<br />
-> In production: [DimensionDev/Maskbook: Experiment: ESModule: A future without webpack](https://github.com/DimensionDev/Maskbook/issues/221)
-
-## This experiment is currently blocked by
-
--   [ ] [dynamic module import doesn't work in webextension content scripts][firefox content script import]
--   [ ] @pika/discuss: [Support ignore field in commonjs support][pika web opt deps]
+> In production: [DimensionDev/Maskbook: Experiment: Use ES Module to load scripts](https://github.com/DimensionDev/Maskbook/issues/221)
 
 ## TL;DR
 
@@ -26,9 +21,13 @@ In the content script, use `import(chrome.runtime.getURL('...'))`.
 
 To use ESModule in WebExtension with Firefox🦊, please wait for Firefox to fix [the bug][firefox content script import].
 
+> Update on 05/19/2020: I'm tired of waiting for Mozilla to fix this, and I decided to compile the code into SystemJS. SystemJS is fully compatible with ES Modules (after transform) that supports live binding, `import.meta` and dynamic import. I write a custom SystemJS runtime for Web Extension: [@magic-works/webextension-systemjs](https://www.npmjs.com/package/@magic-works/webextension-systemjs)
+
 ### About node_modules
 
-To use npm packages, notice that `@pika/web` is not strong enough as the webpack to handle so many cases, it may fail to build your dependencies.
+To use npm packages, notice that `snowpack` is not strong enough as the webpack to handle so many cases, it may fail to build your dependencies.
+
+> Update on 05/19/2020: Since `snowpack` is not able to pack all dependencies in our project, I'm going to pack it by webpack and distribute them by UMD. I wrote [a custom typescript transformer](https://www.npmjs.com/package/@magic-works/ttypescript-browser-like-import-transformer) for converting `import`s into a UMD access. [Here is a template project](https://github.com/Jack-Works/ttsc-browser-import-template) to use it with webpack.
 
 ## Background
 
@@ -53,6 +52,8 @@ Then the nightmare comes.
 
 Chunk splitting is designed for normal webpages, not for WebExtension (which have it's own sandbox, protocol, CSP, etc...), and since it cause so many bugs in Maskbook thus decided to totally close the chunk splitting completely.
 But we still need a way to share dependencies.
+
+> Update on 05/19/2020: Please check out [neutrino-webextension](https://www.npmjs.com/package/neutrino-webextension), it's a Web Extension preset for Webpack that support chunk splitting or dynamic import.
 
 ## But how to resolve it?
 
@@ -160,13 +161,15 @@ Experiment in production: [DimensionDev/Maskbook:feature/experiment-pika](https:
 
 ### Import path
 
-Browsers only know how to load an absolute URL or relative URL and the `.js` cannot be omitted. But we already used to `import('lib')` or `import('./code')`. That's an easy problem to resolve. Pika provides a [babel plugin](https://github.com/pikapkg/web#quickstart) to do it but I'm going to use `tsc` to compile Maskbook thus I wrote a [TypeScript custom transformer](https://github.com/DimensionDev/Maskbook/blob/12482c87c307cc06d7d7e63a7938733f3dcbc3d8/scripts/pika-builder.ts)(Notice: Maskbook is license by AGPLv3) and load it by [ttypescript](https://github.com/cevek/ttypescript) to transform the `import` path .
+Browsers only know how to load an absolute URL or relative URL and the `.js` cannot be omitted. But we already used to `import('lib')` or `import('./code')`. That's an easy problem to resolve. Pika provides a [babel plugin](https://github.com/pikapkg/web#quickstart) to do it but I'm going to use `tsc` to compile Maskbook thus I wrote a [TypeScript custom transformer](https://github.com/Jack-Works/ttypescript-browser-like-import-transformer) and load it by [ttypescript](https://github.com/cevek/ttypescript) to transform the `import` path .
 
 #### Note on `import './file.json'`
 
-JSON import is written to `data:application/javascript,export default {"json": "content"}`
+<del>JSON import is rewritten to `data:application/javascript,export default {"json": "content"}`</del>
 
-!> Dangerous! Should use `JSON.stringify` but it's okay for Maskbook.
+JSON import is rewritten to `const json = JSON.parse("JSON file content")`
+
+> Update on 05/19/2020: Sorry for the mistake. The data url import is banned by the CSP in the extension environment. I switch to inline the JSON, see the example at [the document of @magic-works/ttypescript-browser-like-import-transformer](https://jack-works.github.io/ttypescript-browser-like-import-transformer/config.pluginconfigs.jsonimport.html).
 
 #### Note on "folder import"
 
@@ -183,13 +186,17 @@ When writing `import './sth'` in TypeScript, this import declaration may means
 
 When writing an path transform plugin, don't forget to cover all the cases!
 
+> Update on 05/19/2020: Good news, you don't need to reinvent the wheel. [@magic-works/ttypescript-browser-like-import-transformer](https://jack-works.github.io/ttypescript-browser-like-import-transformer/config.pluginconfigs.folderimport.html) also supports folder import.
+
 ### 💥 No Tree-shaking
 
 It seems impossible to use tree-shaking with `@pika/web`. It doesn't scan your code to drop all unused dependencies. It tries to transform all packages in `dependencies` to ESModule in your `package.json`.
 
 Full packages of `lodash-es`, `@material-ui/core` and `@material-ui/icons` are generated with a horrifying size.
 
-🤔 Doesn't know how to resolve it yet.
+<del>🤔 Doesn't know how to resolve it yet.</del>
+
+> Update on 05/19/2020: Tree shaking is also supported now! ([Link to documentation](https://jack-works.github.io/ttypescript-browser-like-import-transformer/config.rewriterulesumd.treeshake.html))
 
 ### ❌ Cannot omit optional dependencies.
 
