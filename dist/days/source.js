@@ -4,7 +4,7 @@ const { Table, TableHead, TableRow, TableCell, TableBody, ListItemText, Divider,
 const React = __UMDBindCheck(globalThis["React"], [], "react", "globalThis.React", true);
 const ReactDOM = __UMDBindCheck(globalThis["ReactDOM"], [], "react-dom", "globalThis.ReactDOM", true);
 // @ts-ignore wrong typing. { Remarkable } is a private symbol.
-import { Remarkable as RemarkableConstructor } from "https://cdn.pika.dev/remarkable@2.0.0";
+import { Remarkable as RemarkableConstructor } from "https://cdn.pika.dev/remarkable@2.0.1";
 import Data from "./data.js";
 const render = new RemarkableConstructor({ breaks: true, html: true });
 export default function (hitokotoProvider) {
@@ -175,5 +175,5 @@ function Hitokoto(props) {
     return (React.createElement(EnhancedCard, { captionTitle: "Hitokoto", reference: by },
         React.createElement(React.Fragment, null, result)));
 }
-import { __UMDBindCheck as __UMDBindCheck } from "https://cdn.jsdelivr.net/npm/@magic-works/ttypescript-browser-like-import-transformer@2.0.2/es/ttsclib.min.js";
+import { __UMDBindCheck as __UMDBindCheck } from "https://cdn.jsdelivr.net/npm/@magic-works/ttypescript-browser-like-import-transformer@2.1.2/es/ttsclib.min.js";
 //# sourceMappingURL=source.js.map

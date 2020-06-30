@@ -4,7 +4,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { recommendStyle } from "./shared-css.js";
+import { recommendStyle } from './shared-css.js';
 import { customElement, LitElement, html, property } from "https://cdn.pika.dev/lit-element@2.3.1";
 const status = {
     active: '👀 This experiment is active.',
