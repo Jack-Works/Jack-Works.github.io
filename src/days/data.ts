@@ -17,19 +17,15 @@ const Data: IData = {
             title: 'Ingress / 清明上河图',
             progress: { max: 654, current: 286 },
         },
-        new Date().getFullYear() > 2019
-            ? {
-                  title: `2020 年 ⸺ ?? 、?? 与 ?? 之年 ⸺ ${getDayOfYear()} of 365`,
-                  content: {
-                      head: ['有趣的事物', '', ''],
-                      body: fill([
-                          //
-                      ]),
-                  },
-              }
-            : null,
         {
-            title: `2019 年 ⸺ 分布、魔术与突变之年 ⸺ ${getDayOfYear()} of 365`,
+            title: `2020 年 ⸺ 原理、旋律与 ?? 之年 ⸺ ${getDayOfYear()} of 365`,
+            content: {
+                head: ['有趣的事物', '', ''],
+                body: fill([['2048', '2020/07/02']]),
+            },
+        },
+        {
+            title: `2019 年 ⸺ 分布、魔术与突变之年`,
             content: {
                 head: ['有趣的事物', '', ''],
                 body: fill([
@@ -193,6 +189,6 @@ const Data: IData = {
                 ]),
             },
         },
-    ].filter(x => x) as IData['data'],
+    ].filter((x) => x) as IData['data'],
 }
 export default Data

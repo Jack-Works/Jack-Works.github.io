@@ -12,8 +12,9 @@
 
 ### 💭 Proposals
 
--   ⏳ [Proposal: Number.range and BigInt.range](./proposals/2019/tc39-number.range.md)
--   ⏳ [Proposal: ECMAScript parser](./proposals/2019/tc39-ecmascript-parser.md)
+-   1️⃣ [Proposal: Number.range and BigInt.range](./proposals/2019/tc39-number.range.md)
+-   0️⃣ [Proposal: ECMAScript parser](./proposals/2019/tc39-ecmascript-parser.md)
+-   0️⃣ [Proposal: await operations](./proposals/2020/tc39-await.ops.md)
 
 ### ⚙ Libraries
 

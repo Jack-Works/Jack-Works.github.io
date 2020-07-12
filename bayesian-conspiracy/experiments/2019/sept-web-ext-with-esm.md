@@ -155,7 +155,7 @@ Browser supporting:
 
 A GitHub organization `@pika/` has already made a solution for this.
 
-[A Future Without Webpack: @pika/web installs npm packages that run natively in the browser. Do you still need a bundler?](https://www.pika.dev/blog/pika-web-a-future-without-webpack/)
+[A Future Without Webpack: snowpack installs npm packages that run natively in the browser. Do you still need a bundler?](https://www.pika.dev/blog/pika-web-a-future-without-webpack/)
 
 Experiment in production: [DimensionDev/Maskbook:feature/experiment-pika](https://github.com/DimensionDev/Maskbook/commit/12482c87c307cc06d7d7e63a7938733f3dcbc3d8) and there are 2(or 3) problems.
 
@@ -190,7 +190,7 @@ When writing an path transform plugin, don't forget to cover all the cases!
 
 ### 💥 No Tree-shaking
 
-It seems impossible to use tree-shaking with `@pika/web`. It doesn't scan your code to drop all unused dependencies. It tries to transform all packages in `dependencies` to ESModule in your `package.json`.
+It seems impossible to use tree-shaking with `snowpack`. It doesn't scan your code to drop all unused dependencies. It tries to transform all packages in `dependencies` to ESModule in your `package.json`.
 
 Full packages of `lodash-es`, `@material-ui/core` and `@material-ui/icons` are generated with a horrifying size.
 
@@ -212,11 +212,11 @@ try {
 }
 ```
 
-[`@pika/web` currently cannot config to omit some of the packages][pika web opt deps]. And it will try to build everything even it is an optional dependency. This makes the compilation process slow even not available to work.
+[`snowpack` currently cannot config to omit some of the packages][snowpack opt deps]. And it will try to build everything even it is an optional dependency. This makes the compilation process slow even not available to work.
 
 ## Other related links
 
 -   Agoric/realms-shim: [Any signal about supporting ESModules?](https://github.com/Agoric/realms-shim/issues/47)
 
-[pika web opt deps]: https://www.pika.dev/packages/@pika/web/discuss/1113
+[snowpack opt deps]: https://www.pika.dev/packages/snowpack/discuss/1113
 [firefox content script import]: https://bugzilla.mozilla.org/show_bug.cgi?id=1536094
