@@ -40,41 +40,6 @@
             <description>A proposal for adding a built-in ECMAScript parser in the ECMAScript itself.</description>
         </item>
         <item>
-            <title>Project: Async Call</title>
-            <link>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/async-call.md</link>
-            <guid>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/async-call.md</guid>
-            <pubDate>Mon, Dec 23 2019 12:38:44 GMT</pubDate>
-            <description>A light JSON RPC server and client with 0 dependency.</description>
-        </item>
-        <item>
-            <title>Project: @holoflows/kit</title>
-            <link>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/holoflows-kit.md</link>
-            <guid>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/holoflows-kit.md</guid>
-            <pubDate>Mon, Dec 23 2019 12:38:44 GMT</pubDate>
-            <description>A toolbox for browser extension developing.</description>
-        </item>
-        <item>
-            <title>Project: Sync Watch</title>
-            <link>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/sync-watch.md</link>
-            <guid>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/sync-watch.md</guid>
-            <pubDate>Tue, Dec 23 2019 15:44:02 GMT</pubDate>
-            <description>Watch video with your friend and sync the progress.</description>
-        </item>
-        <item>
-            <title>Project: JSX-JSONML-devtools-renderer</title>
-            <link>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/devtools-jsx-render.md</link>
-            <guid>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2019/devtools-jsx-render.md</guid>
-            <pubDate>Mon, 06 Jan 2020 15:03:55 GMT</pubDate>
-            <description>Write and render JSX in devtools.</description>
-        </item>
-        <item>
-            <title>Project: @magic-works/ttypescript-browser-like-import-transformer</title>
-            <link>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2020/ttsc-bare-import.md</link>
-            <guid>https://jack-works.github.io/bayesian-conspiracy/#/./projects/2020/ttsc-bare-import.md</guid>
-            <pubDate>Sun, 23 Feb 2020 14:42:55 GMT</pubDate>
-            <description>use only ttsc to emit Web compatible ES Module output.</description>
-        </item>
-        <item>
             <title>Notes: Generate type definitions for matrix-js-sdk</title>
             <link>https://jack-works.github.io/bayesian-conspiracy/#/./notes/2019/generate-dts-for-matrix-js-sdk.md</link>
             <guid>https://jack-works.github.io/bayesian-conspiracy/#/./notes/2019/generate-dts-for-matrix-js-sdk.md</guid>
