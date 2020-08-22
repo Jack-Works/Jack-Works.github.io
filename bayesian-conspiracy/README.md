@@ -14,7 +14,8 @@
 
 -   1️⃣ [Proposal: Number.range and BigInt.range](https://github.com/tc39/proposal-Number.range/)
 -   1️⃣ [Proposal: await operations](https://github.com/tc39/proposal-await.ops)
--   0️⃣ [Proposal: ECMAScript parser](./proposals/2019/tc39-ecmascript-parser.md)
+-   0️⃣ [Proposal: ECMAScript parser](https://github.com/Jack-Works/proposal-ecmascript-parser)
+-   0️⃣ [Proposal: Serializer](https://github.com/Jack-Works/proposal-serializer)
 
 ### ⚙ Libraries
 
