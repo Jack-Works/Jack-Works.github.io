@@ -1,4 +1,4 @@
-import { customElement, LitElement, html, property, css } from 'lit-element'
+import { css } from 'lit-element'
 
 export const sharedBlockStyle = css`
     padding: 12px;
@@ -19,8 +19,9 @@ export const deprecatedStyle = css`
 export const recommendStyle = css`
     :host {
         border-left: 6px rgb(46, 255, 71) solid;
-        background: rgb(171, 255, 181);
+        background: rgb(0, 101, 34);
         ${sharedBlockStyle}
+        color: white;
     }
 `
 

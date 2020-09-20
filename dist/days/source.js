@@ -1,10 +1,10 @@
-const { styled, Box, makeStyles, createStyles, colors, createMuiTheme, ListItem } = __UMDBindCheck(globalThis["MaterialUI"], ["styled", "Box", "makeStyles", "createStyles", "colors", "createMuiTheme", "ListItem"], "@material-ui/core", "globalThis.MaterialUI", true);
-const { MuiThemeProvider, useMediaQuery, Card, CardContent, Typography, LinearProgress } = __UMDBindCheck(globalThis["MaterialUI"], ["MuiThemeProvider", "useMediaQuery", "Card", "CardContent", "Typography", "LinearProgress"], "@material-ui/core", "globalThis.MaterialUI", true);
-const { Table, TableHead, TableRow, TableCell, TableBody, ListItemText, Divider, List } = __UMDBindCheck(globalThis["MaterialUI"], ["Table", "TableHead", "TableRow", "TableCell", "TableBody", "ListItemText", "Divider", "List"], "@material-ui/core", "globalThis.MaterialUI", true);
-const React = __UMDBindCheck(globalThis["React"], [], "react", "globalThis.React", true);
-const ReactDOM = __UMDBindCheck(globalThis["ReactDOM"], [], "react-dom", "globalThis.ReactDOM", true);
+const { styled, Box, makeStyles, createStyles, colors, createMuiTheme, ListItem } = _import(globalThis["MaterialUI"], ["styled", "Box", "makeStyles", "createStyles", "colors", "createMuiTheme", "ListItem"], "@material-ui/core", "globalThis.MaterialUI", true);
+const { MuiThemeProvider, useMediaQuery, Card, CardContent, Typography, LinearProgress } = _import(globalThis["MaterialUI"], ["MuiThemeProvider", "useMediaQuery", "Card", "CardContent", "Typography", "LinearProgress"], "@material-ui/core", "globalThis.MaterialUI", true);
+const { Table, TableHead, TableRow, TableCell, TableBody, ListItemText, Divider, List } = _import(globalThis["MaterialUI"], ["Table", "TableHead", "TableRow", "TableCell", "TableBody", "ListItemText", "Divider", "List"], "@material-ui/core", "globalThis.MaterialUI", true);
+const React = _import(globalThis["React"], [], "react", "globalThis.React", true);
+const ReactDOM = _import(globalThis["ReactDOM"], [], "react-dom", "globalThis.ReactDOM", true);
 // @ts-ignore wrong typing. { Remarkable } is a private symbol.
-import { Remarkable as RemarkableConstructor } from "https://cdn.pika.dev/remarkable@2.0.1";
+import { Remarkable as RemarkableConstructor } from "https://cdn.skypack.dev/remarkable@2.0.1";
 import Data from "./data.js";
 const render = new RemarkableConstructor({ breaks: true, html: true });
 export default function (hitokotoProvider) {
@@ -175,5 +175,5 @@ function Hitokoto(props) {
     return (React.createElement(EnhancedCard, { captionTitle: "Hitokoto", reference: by },
         React.createElement(React.Fragment, null, result)));
 }
-import { __UMDBindCheck as __UMDBindCheck } from "https://cdn.jsdelivr.net/npm/@magic-works/ttypescript-browser-like-import-transformer@2.1.2/es/ttsclib.min.js";
+import { _import as _import } from "https://cdn.jsdelivr.net/npm/@magic-works/ttypescript-browser-like-import-transformer@2.3.0/es/ttsclib.min.js";
 //# sourceMappingURL=source.js.map

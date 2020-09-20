@@ -5,9 +5,9 @@
         "transform": "@magic-works/ttypescript-browser-like-import-transformer",
         "after": true,
         "bareModuleRewrite": {
-          "remarkable": "pikacdn",
+          "remarkable": "skypack",
           // lit-html & lit-element
-          "/lit-.+/": "pikacdn",
+          "/lit-.+/": "skypack",
           "/.+/": "umd"
         }
       }

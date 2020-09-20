@@ -1,4 +1,4 @@
-import { css } from "https://cdn.pika.dev/lit-element@2.3.1";
+import { css } from "https://cdn.skypack.dev/lit-element@2.4.0";
 export const sharedBlockStyle = css `
     padding: 12px;
     margin-top: 0.5em;
@@ -16,8 +16,9 @@ export const deprecatedStyle = css `
 export const recommendStyle = css `
     :host {
         border-left: 6px rgb(46, 255, 71) solid;
-        background: rgb(171, 255, 181);
+        background: rgb(0, 101, 34);
         ${sharedBlockStyle}
+        color: white;
     }
 `;
 export const warningStyle = css `

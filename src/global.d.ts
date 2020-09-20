@@ -1,7 +1,7 @@
 // declare module 'https://unpkg.com/lit-element@2.2.1/lit-element.js?module' {
 //     export * from 'lit-element'
 // }
-// declare module 'https://cdn.pika.dev/remarkable/v2' {
+// declare module 'https://cdn.skypack.dev/remarkable/v2' {
 //     const x: typeof import('remarkable')
 //     export const Remarkable: typeof x
 // }

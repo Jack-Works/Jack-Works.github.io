@@ -1,18 +1,18 @@
 dependencies:
-  '@material-ui/core': 4.11.0_@types+react@16.9.46
-  '@types/react': 16.9.46
+  '@material-ui/core': 4.11.0_@types+react@16.9.49
+  '@types/react': 16.9.49
   '@types/react-dom': 16.9.8
   '@types/remarkable': 1.7.4
-  csstype: 3.0.2
+  csstype: 3.0.3
   lit-element: 2.4.0
   lit-html: 1.3.0
   remarkable: 2.0.1
 devDependencies:
-  '@magic-works/ttypescript-browser-like-import-transformer': 2.2.0_f5416ba1a512eab7e8b294161659e4c7
+  '@magic-works/ttypescript-browser-like-import-transformer': 2.3.0_fcd9608e80f3a4c944722a1a51da0390
   docsify-cli: 4.4.1
-  ts-node: 9.0.0_typescript@4.0.2
-  ttypescript: 1.5.10_ts-node@9.0.0+typescript@4.0.2
-  typescript: 4.0.2
+  ts-node: 9.0.0_typescript@4.0.3
+  ttypescript: 1.5.12_ts-node@9.0.0+typescript@4.0.3
+  typescript: 4.0.3
 lockfileVersion: 5.1
 packages:
   /@babel/runtime/7.11.2:
@@ -32,11 +32,11 @@ packages:
     optional: true
     resolution:
       integrity: sha512-nLFrTEtqFd2AWRX2+0I3BFhwHrnc42AHayNTmjJwSxW2j9mnQAVQrT10oarQapPybygtIPy3YhedSjNb1/+4xQ==
-  /@magic-works/ttypescript-browser-like-import-transformer/2.2.0_f5416ba1a512eab7e8b294161659e4c7:
+  /@magic-works/ttypescript-browser-like-import-transformer/2.3.0_fcd9608e80f3a4c944722a1a51da0390:
     dependencies:
-      ts-node: 9.0.0_typescript@4.0.2
-      ttypescript: 1.5.10_ts-node@9.0.0+typescript@4.0.2
-      typescript: 4.0.2
+      ts-node: 9.0.0_typescript@4.0.3
+      ttypescript: 1.5.12_ts-node@9.0.0+typescript@4.0.3
+      typescript: 4.0.3
     dev: true
     optionalDependencies:
       '@jsenv/import-map': 6.7.4
@@ -45,15 +45,15 @@ packages:
       ttypescript: ^1.5.0
       typescript: ^3.2.2
     resolution:
-      integrity: sha512-znRsAtcKUpQiuDgPx0h+1vUGMi8Y4x6dhSFBauG4STrc1IaM7N78texOW9M6/DcODSfYEyEx7XIxcuAg7l4s/g==
-  /@material-ui/core/4.11.0_@types+react@16.9.46:
+      integrity: sha512-l+S7yPO8HTKQzgkBi0g2nW1Y0Y3eoXu+2C0UsRmR0DqXHHDU/hyVPta9StKnNlC8NqqdfL/3qbyncIyS6Dk5mQ==
+  /@material-ui/core/4.11.0_@types+react@16.9.49:
     dependencies:
       '@babel/runtime': 7.11.2
-      '@material-ui/styles': 4.10.0_@types+react@16.9.46
-      '@material-ui/system': 4.9.14_@types+react@16.9.46
-      '@material-ui/types': 5.1.0_@types+react@16.9.46
+      '@material-ui/styles': 4.10.0_@types+react@16.9.49
+      '@material-ui/system': 4.9.14_@types+react@16.9.49
+      '@material-ui/types': 5.1.0_@types+react@16.9.49
       '@material-ui/utils': 4.10.2
-      '@types/react': 16.9.46
+      '@types/react': 16.9.49
       '@types/react-transition-group': 4.4.0
       clsx: 1.1.1
       hoist-non-react-statics: 3.3.2
@@ -73,13 +73,13 @@ packages:
         optional: true
     resolution:
       integrity: sha512-bYo9uIub8wGhZySHqLQ833zi4ZML+XCBE1XwJ8EuUVSpTWWG57Pm+YugQToJNFsEyiKFhPh8DPD0bgupz8n01g==
-  /@material-ui/styles/4.10.0_@types+react@16.9.46:
+  /@material-ui/styles/4.10.0_@types+react@16.9.49:
     dependencies:
       '@babel/runtime': 7.11.2
       '@emotion/hash': 0.8.0
-      '@material-ui/types': 5.1.0_@types+react@16.9.46
+      '@material-ui/types': 5.1.0_@types+react@16.9.49
       '@material-ui/utils': 4.10.2
-      '@types/react': 16.9.46
+      '@types/react': 16.9.49
       clsx: 1.1.1
       csstype: 2.6.13
       hoist-non-react-statics: 3.3.2
@@ -104,11 +104,11 @@ packages:
         optional: true
     resolution:
       integrity: sha512-XPwiVTpd3rlnbfrgtEJ1eJJdFCXZkHxy8TrdieaTvwxNYj42VnnCyFzxYeNW9Lhj4V1oD8YtQ6S5Gie7bZDf7Q==
-  /@material-ui/system/4.9.14_@types+react@16.9.46:
+  /@material-ui/system/4.9.14_@types+react@16.9.49:
     dependencies:
       '@babel/runtime': 7.11.2
       '@material-ui/utils': 4.10.2
-      '@types/react': 16.9.46
+      '@types/react': 16.9.49
       csstype: 2.6.13
       prop-types: 15.7.2
     dev: false
@@ -123,9 +123,9 @@ packages:
         optional: true
     resolution:
       integrity: sha512-oQbaqfSnNlEkXEziDcJDDIy8pbvwUmZXWNqlmIwDqr/ZdCK8FuV3f4nxikUh7hvClKV2gnQ9djh5CZFTHkZj3w==
-  /@material-ui/types/5.1.0_@types+react@16.9.46:
+  /@material-ui/types/5.1.0_@types+react@16.9.49:
     dependencies:
-      '@types/react': 16.9.46
+      '@types/react': 16.9.49
     dev: false
     peerDependencies:
       '@types/react': '*'
@@ -184,6 +184,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-dbHzO3aAq1lB3jRQuNpuZ/mnu+CdD3H0WVaaBQA8LTT3S33xhVBUj232T8M3tAhSWJs/D/UqORYUlJNl/8VQZg==
+  /@types/react/16.9.49:
+    dependencies:
+      '@types/prop-types': 15.7.3
+      csstype: 3.0.3
+    dev: false
+    resolution:
+      integrity: sha512-DtLFjSj0OYAdVLBbyjhuV9CdGVHCkHn2R+xr3XkBvK2rS1Y1tkc14XSGjYgm5Fjjr90AxH9tiSzc1pCFMGO06g==
   /@types/remarkable/1.7.4:
     dev: false
     resolution:
@@ -463,6 +470,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ofovWglpqoqbfLNOTBNZLSbMuGrblAf1efvvArGKOZMBrIoJeu5UsAipQolkijtyQx5MtAzT/J9IHj/CEY1mJw==
+  /csstype/3.0.3:
+    dev: false
+    resolution:
+      integrity: sha512-jPl+wbWPOWJ7SXsWyqGRk3lGecbar0Cb0OvZF/r/ZU011R4YqiRehgkQ9p4eQfo9DSDLqLL3wHwfxeJiuIsNag==
   /debug/2.6.9:
     dependencies:
       ms: 2.0.0
@@ -1690,13 +1701,13 @@ packages:
       node: '>=0.6'
     resolution:
       integrity: sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
-  /ts-node/9.0.0_typescript@4.0.2:
+  /ts-node/9.0.0_typescript@4.0.3:
     dependencies:
       arg: 4.1.3
       diff: 4.0.2
       make-error: 1.3.6
       source-map-support: 0.5.19
-      typescript: 4.0.2
+      typescript: 4.0.3
       yn: 3.1.1
     dev: true
     engines:
@@ -1710,18 +1721,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
-  /ttypescript/1.5.10_ts-node@9.0.0+typescript@4.0.2:
+  /ttypescript/1.5.12_ts-node@9.0.0+typescript@4.0.3:
     dependencies:
       resolve: 1.17.0
-      ts-node: 9.0.0_typescript@4.0.2
-      typescript: 4.0.2
+      ts-node: 9.0.0_typescript@4.0.3
+      typescript: 4.0.3
     dev: true
     hasBin: true
     peerDependencies:
-      ts-node: ^8.0.2
-      typescript: ^3.2.2
+      ts-node: '>=8.0.2'
+      typescript: '>=3.2.2'
     resolution:
-      integrity: sha512-Hk7TRej1hM+p+Fo+Pyb/XK9pe9CAt3Sh5n5YRutxFS8hUgkh2u1Vd2K40kMcNP3WYhiVFBMqXwM/2E8O95Ep6g==
+      integrity: sha512-1ojRyJvpnmgN9kIHmUnQPlEV1gq+VVsxVYjk/NfvMlHSmYxjK5hEvOOU2MQASrbekTUiUM7pR/nXeCc8bzvMOQ==
   /tweezer.js/1.5.0:
     dev: true
     resolution:
@@ -1732,13 +1743,13 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-cUGJnCdr4STbePCgqNFbpVNCepa+kAVohJs1sLhxzdH+gnEoOd8VhbYa7pD3zZYGiURWM2xzEII3fQcRizDkYQ==
-  /typescript/4.0.2:
+  /typescript/4.0.3:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-e4ERvRV2wb+rRZ/IQeb3jm2VxBsirQLpQhdxplZ2MEzGvDkkMmPglecnNDfSUBivMjP93vRbngYYDQqQ/78bcQ==
+      integrity: sha512-tEu6DGxGgRJPb/mVPIZ48e69xCn2yRmCgYmDugAVwmJ6o+0u1RI18eO7E7WBTLYLaEVVOhwQmcdhQHweux/WPg==
   /unique-string/1.0.0:
     dependencies:
       crypto-random-string: 1.0.0
@@ -1895,16 +1906,16 @@ packages:
     resolution:
       integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
 specifiers:
-  '@magic-works/ttypescript-browser-like-import-transformer': ^2.1.2
+  '@magic-works/ttypescript-browser-like-import-transformer': ^2.3.0
   '@material-ui/core': ^4.11.0
-  '@types/react': ^16.9.43
+  '@types/react': ^16.9.49
   '@types/react-dom': ^16.9.8
   '@types/remarkable': ^1.7.4
-  csstype: ^3.0.2
+  csstype: ^3.0.3
   docsify-cli: ^4.4.1
   lit-element: ^2.3.1
   lit-html: ^1.2.1
   remarkable: ^2.0.1
   ts-node: ^9.0.0
-  ttypescript: ^1.5.10
-  typescript: ^4.0.2
+  ttypescript: ^1.5.12
+  typescript: ^4.0.3
