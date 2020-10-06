@@ -26,7 +26,7 @@ function parseURL(href) {
         data.image = `https://img.shields.io/github/${type}/detail/state/${org}/${repo}/${parseInt(id)}?style=flat-square`;
         data.alt = `Github ${type === 'issues' ? 'issue' : 'pull request'} at ${repo} by ${org}`;
     }
-    else if (href.startsWith(`https://www.npmjs.com/package/`)) {
+    else if (href.startsWith(`https://www.npmjs.com/package/`) || href.startsWith(`https://npmjs.com/package/`)) {
         // https://www.npmjs.com/package/@types/matrix-js-sdk
         // https://www.npmjs.com/package/matrix-js-sdk
         let [, , scope, name] = url.pathname.split('/');

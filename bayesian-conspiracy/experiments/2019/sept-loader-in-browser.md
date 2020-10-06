@@ -27,8 +27,8 @@ In a frontend group, there was a discussion about how to use a template (like a 
 ```ts
 import marked from 'https://..../marked.js'
 fetch('./markdown.md')
-    .then(x => x.text())
-    .then(x => (y.innerHTML = x))
+    .then((x) => x.text())
+    .then((x) => (y.innerHTML = x))
 ```
 
 This method works well but there must be a better way as in the webpack.
@@ -53,15 +53,15 @@ document.body.appendChild(document.createElement('div')).appendChild(article)
 
 ```ts
 // markdown-loader.js
-import { Remarkable } from 'https://cdn.pika.dev/remarkable/v2'
+import { Remarkable } from 'https://cdn.skypack.dev/remarkable/v2'
 
 const src = new URL(import.meta.url).searchParams.get('src')
 const container = document.createElement('p')
 
 fetch(src)
-    .then(x => x.text())
-    .then(x => new Remarkable().render(x))
-    .then(x => (container.innerHTML = x))
+    .then((x) => x.text())
+    .then((x) => new Remarkable().render(x))
+    .then((x) => (container.innerHTML = x))
 
 export default container
 ```
@@ -73,8 +73,8 @@ const src = new URL(import.meta.url).searchParams.get('src')
 const container = new CSSStyleSheet()
 
 fetch(src)
-    .then(x => x.text())
-    .then(x => container.replace(x))
+    .then((x) => x.text())
+    .then((x) => container.replace(x))
 
 export default container
 ```
@@ -118,13 +118,13 @@ By using the service worker it will be easier to transform a file to JavaScript 
 Here is [the first example](https://github.com/Jack-Works/loader-with-esmodule-example/commit/a2bd6a8b26ce6c90e8bebc589780d415ab6f3eba) of the service worker transformed a CSS file into the equivalent JavaScript Module
 
 ```ts
-addEventListener('fetch', e => {
+addEventListener('fetch', (e) => {
     const url = new URL(e.request.url)
     if (url.pathname === '/css-module-loader.js') {
         const request = fetch(url.searchParams.get('src'))
         const css = request
-            .then(x => x.text())
-            .then(x => {
+            .then((x) => x.text())
+            .then((x) => {
                 const headers = new Headers(request.headers)
                 const cssModule = `let s = new CSSStyleSheet()
 s.replace(${JSON.stringify(x)})
@@ -164,7 +164,7 @@ class Loader {
 Loader.add(
     new Loader(
         '/css-module-loader.js',
-        async res =>
+        async (res) =>
             `const container = new CSSStyleSheet()
 container.replace(${JSON.stringify(await res.text())})
 export default container`,
@@ -180,7 +180,7 @@ The [markdown loader in Service Worker](https://github.com/Jack-Works/loader-wit
 Loader.add(
     new Loader(
         '/markdown-loader.js',
-        async res => `const container = document.createElement('p')
+        async (res) => `const container = document.createElement('p')
 container.innerHTML = ${JSON.stringify(marked(await res.text()))}
 export default container`,
     ),
@@ -210,17 +210,17 @@ export const y = 1
 will be transformed into
 
 ```js
-System.register(['./d'], function(exports_1, context_1) {
+System.register(['./d'], function (exports_1, context_1) {
     'use strict'
     var d_1, b, y
     var __moduleName = context_1 && context_1.id
     return {
         setters: [
-            function(d_1_1) {
+            function (d_1_1) {
                 d_1 = d_1_1
             },
         ],
-        execute: function() {
+        execute: function () {
             b = context_1.import(d_1.default)
             exports_1('y', (y = 1))
         },
@@ -324,7 +324,7 @@ const data = import(a_complex_expression)
 
 // after
 const data = import(
-    (x =>
+    ((x) =>
         x.startsWith('.') || x.startsWith('/') ? '/typescript-loader.js?src=' + new URL(x, '/baseURL').pathname : x)(
         a_complex_expression,
     )
@@ -346,8 +346,8 @@ function runtimeCompile() {
     const css = new CSSStyleSheet()
 
     fetch(src)
-        .then(x => x.text())
-        .then(x => css.replace(x))
+        .then((x) => x.text())
+        .then((x) => css.replace(x))
     return css
 }
 
