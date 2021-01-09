@@ -18,16 +18,17 @@ const Data: IData = {
             progress: { max: 654, current: 286 },
         },
         {
-            title: `2021 年 ⸺ ??、?? 与 ?? 之年 ⸺ 0 of 365`,
+            title: `2021 年 ⸺ ??、?? 与 ?? 之年 ⸺ ${getDayOfYear()} of 365`,
             content: {
-                head: ['有趣的事物', '', ''],
-                body: fill([]),
+                body: fill([
+                    ['哆啦 A 梦：大雄的新恐龙', '2020/1/5'],
+                    ['心灵奇旅', '2020/1/9'],
+                ]),
             },
         },
         {
-            title: `2020 年 ⸺ 原理、旋律与冷漠之年 ⸺ ${getDayOfYear()} of 365`,
+            title: `2020 年 ⸺ 原理、旋律与冷漠之年`,
             content: {
-                head: ['有趣的事物', '', ''],
                 body: fill([
                     ['2048', '2020/07/02'],
                     ['Ori and the blind forest', '2020/11/29'],
@@ -37,7 +38,6 @@ const Data: IData = {
         {
             title: `2019 年 ⸺ 分布、魔术与突变之年`,
             content: {
-                head: ['有趣的事物', '', ''],
                 body: fill([
                     ['流浪地球', '2019/02/09'],
                     ['数学也荒唐', '2019/02/26'],
@@ -50,7 +50,6 @@ const Data: IData = {
         {
             title: '2018 年 ⸺ 解离、叹息与终结之年',
             content: {
-                head: ['有趣的事物', '', ''],
                 body: fill([
                     ['追踪引力波：寻找时空的涟漪', '2018/03/02'],
                     ['目隐都市的演绎者', "Let's「daze」 心を消さないで", '2018/04/01'],
@@ -68,7 +67,6 @@ const Data: IData = {
         {
             title: '2017年 ⸺ 幻想、魔法与冷静之年',
             content: {
-                head: ['有趣的事物', '', ''],
                 body: fill([
                     [
                         '大设计',
@@ -141,7 +139,6 @@ const Data: IData = {
         {
             title: '2016年 ⸺ 艺术、科学与平淡之年',
             content: {
-                head: ['有趣的事物', '', ''],
                 body: fill([
                     ['哥德尔、埃舍尔、巴赫⸺集异璧之大成', '2016/03/06'],
                     // ['果壳中的宇宙'.link('https://www.amazon.cn/gp/product/B01931SPYE'), '"宇宙的目的是什么？"', '2016/07/02'],
@@ -170,7 +167,6 @@ const Data: IData = {
         {
             title: '2015年 ⸺ 懵懂、失望与觉醒之年',
             content: {
-                head: ['有趣的事物', '', ''],
                 body: fill([
                     ['提问的智慧'.link('#book_smart_questions'), '2015'],
                     ['黑客与画家'.link('#book_hackers_and_painters'), '2015'],

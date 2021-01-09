@@ -1,12 +1,11 @@
-const { styled, Box, makeStyles, createStyles, colors, createMuiTheme, ListItem } = _import(globalThis["MaterialUI"], ["styled", "Box", "makeStyles", "createStyles", "colors", "createMuiTheme", "ListItem"], "@material-ui/core", "globalThis.MaterialUI", true);
-const { MuiThemeProvider, useMediaQuery, Card, CardContent, Typography, LinearProgress } = _import(globalThis["MaterialUI"], ["MuiThemeProvider", "useMediaQuery", "Card", "CardContent", "Typography", "LinearProgress"], "@material-ui/core", "globalThis.MaterialUI", true);
-const { Table, TableHead, TableRow, TableCell, TableBody, ListItemText, Divider, List } = _import(globalThis["MaterialUI"], ["Table", "TableHead", "TableRow", "TableCell", "TableBody", "ListItemText", "Divider", "List"], "@material-ui/core", "globalThis.MaterialUI", true);
-const React = _import(globalThis["React"], [], "react", "globalThis.React", true);
-const ReactDOM = _import(globalThis["ReactDOM"], [], "react-dom", "globalThis.ReactDOM", true);
-// @ts-ignore wrong typing. { Remarkable } is a private symbol.
-import { Remarkable as RemarkableConstructor } from "https://cdn.skypack.dev/remarkable@2.0.1";
+const { styled, Box, makeStyles, createStyles, colors, createMuiTheme, ListItem } = _import_1(globalThis["MaterialUI"], ["styled", "Box", "makeStyles", "createStyles", "colors", "createMuiTheme", "ListItem"], "@material-ui/core", "globalThis.MaterialUI", true);
+const { MuiThemeProvider, useMediaQuery, Card, CardContent, Typography, LinearProgress } = _import_1(globalThis["MaterialUI"], ["MuiThemeProvider", "useMediaQuery", "Card", "CardContent", "Typography", "LinearProgress"], "@material-ui/core", "globalThis.MaterialUI", true);
+const { Table, TableRow, TableCell, TableBody, ListItemText, Divider, List } = _import_1(globalThis["MaterialUI"], ["Table", "TableRow", "TableCell", "TableBody", "ListItemText", "Divider", "List"], "@material-ui/core", "globalThis.MaterialUI", true);
+const React = _import_1(globalThis["React"], [], "react", "globalThis.React", true);
+const ReactDOM = _import_1(globalThis["ReactDOM"], [], "react-dom", "globalThis.ReactDOM", true);
+import { Remarkable } from "https://cdn.skypack.dev/remarkable@2.0.1";
 import Data from "./data.js";
-const render = new RemarkableConstructor({ breaks: true, html: true });
+const render = new Remarkable({ breaks: true, html: true });
 export default function (hitokotoProvider) {
     ReactDOM.render(React.createElement(Page, { data: Data, getHitokoto: hitokotoProvider }), document.querySelector('.container'));
 }
@@ -47,9 +46,9 @@ function Page(props) {
         React.createElement(Footer, { caption: data.motto })));
 }
 // basic components
-const Markdown = ({ children, ...props }) => {
+function Markdown({ children, ...props }) {
     return typeof children === 'string' ? (React.createElement("span", { dangerouslySetInnerHTML: { __html: render.renderInline(children) } })) : (React.createElement("span", Object.assign({}, props, { children: children })));
-};
+}
 function EnhancedCard(props) {
     const classes = useStyles();
     const isMobile = useMediaQuery('(max-width: 700px)');
@@ -106,14 +105,11 @@ function EnhancedCard(props) {
             // List
             return null;
         }
-        if (((x) => x.head && x.body)(child)) {
+        if (((x) => x.body)(child)) {
             // Table
-            const { head, body } = child;
+            const { body } = child;
             function Desktop() {
                 return (React.createElement(Table, null,
-                    React.createElement(TableHead, null,
-                        React.createElement(TableRow, null, head.map((x, i) => (React.createElement(TableCell, { key: i },
-                            React.createElement(Markdown, null, x)))))),
                     React.createElement(TableBody, null, body.map((line, n) => (React.createElement(TableRow, { key: n }, line.map((row, j) => (React.createElement(TableCell, { align: typeof row === 'number' ? 'right' : 'left', key: j },
                         React.createElement(Markdown, null, row))))))))));
             }
@@ -153,7 +149,7 @@ function Hitokoto(props) {
     let [text, by, link] = props.hitokoto;
     text = text.replace(new RegExp(/\s+\\n/g), '\n');
     let using = false;
-    const result = text.split('\n').map(x => {
+    const result = text.split('\n').map((x) => {
         const text = x.match(/(.+) \/ (.+)/);
         // Firefox does not support named capture group yet.
         // const text = x.match(/(?<original>.+) \/ (?<translated>.+)/)
@@ -175,5 +171,5 @@ function Hitokoto(props) {
     return (React.createElement(EnhancedCard, { captionTitle: "Hitokoto", reference: by },
         React.createElement(React.Fragment, null, result)));
 }
-import { _import as _import } from "https://cdn.jsdelivr.net/npm/@magic-works/ttypescript-browser-like-import-transformer@2.3.0/es/ttsclib.min.js";
+import { _import as _import_1 } from "https://cdn.jsdelivr.net/npm/@magic-works/ttypescript-browser-like-import-transformer@3.0.0/es/ttsclib.min.js";
 //# sourceMappingURL=source.js.map

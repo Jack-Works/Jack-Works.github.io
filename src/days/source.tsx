@@ -1,14 +1,13 @@
 import { Theme, styled, Box, makeStyles, createStyles, colors, createMuiTheme, ListItem } from '@material-ui/core'
 import { MuiThemeProvider, useMediaQuery, Card, CardContent, Typography, LinearProgress } from '@material-ui/core'
-import { Table, TableHead, TableRow, TableCell, TableBody, ListItemText, Divider, List } from '@material-ui/core'
+import { Table, TableRow, TableCell, TableBody, ListItemText, Divider, List } from '@material-ui/core'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-// @ts-ignore wrong typing. { Remarkable } is a private symbol.
-import Remarkable, { Remarkable as RemarkableConstructor } from 'remarkable'
+import { Remarkable } from 'remarkable'
 import { IData, ICard, ITable } from './type.js'
 import Data from './data'
-const render: Remarkable = new RemarkableConstructor({ breaks: true, html: true })
-export default function(hitokotoProvider: () => string[]) {
+const render = new Remarkable({ breaks: true, html: true })
+export default function (hitokotoProvider: () => string[]) {
     ReactDOM.render(<Page data={Data} getHitokoto={hitokotoProvider} />, document.querySelector('.container'))
 }
 //#region Styles
@@ -65,7 +64,7 @@ function Page(props: { data: IData; getHitokoto(): string[] }) {
 
 // basic components
 
-const Markdown: React.SFC<React.HtmlHTMLAttributes<HTMLSpanElement>> = ({ children, ...props }) => {
+function Markdown({ children, ...props }: React.PropsWithChildren<React.HtmlHTMLAttributes<HTMLSpanElement>>) {
     return typeof children === 'string' ? (
         <span dangerouslySetInnerHTML={{ __html: render.renderInline(children) }}></span>
     ) : (
@@ -139,21 +138,12 @@ function EnhancedCard(props: React.PropsWithChildren<EnhancedCardProps>) {
             // List
             return null
         }
-        if ((((x: any) => x.head && x.body) as (x: any) => x is ITable)(child)) {
+        if ((((x: any) => x.body) as (x: any) => x is ITable)(child)) {
             // Table
-            const { head, body } = child
+            const { body } = child
             function Desktop() {
                 return (
                     <Table>
-                        <TableHead>
-                            <TableRow>
-                                {head.map((x, i) => (
-                                    <TableCell key={i}>
-                                        <Markdown>{x}</Markdown>
-                                    </TableCell>
-                                ))}
-                            </TableRow>
-                        </TableHead>
                         <TableBody>
                             {body.map((line, n) => (
                                 <TableRow key={n}>
@@ -228,7 +218,7 @@ function Hitokoto(props: { hitokoto: string[] }) {
     let [text, by, link] = props.hitokoto
     text = text.replace(new RegExp(/\s+\\n/g), '\n')
     let using = false
-    const result = text.split('\n').map(x => {
+    const result = text.split('\n').map((x) => {
         const text = x.match(/(.+) \/ (.+)/)
         // Firefox does not support named capture group yet.
         // const text = x.match(/(?<original>.+) \/ (?<translated>.+)/)
