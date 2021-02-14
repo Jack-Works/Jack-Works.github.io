@@ -18,8 +18,8 @@ export const deprecatedStyle = css`
 
 export const recommendStyle = css`
     :host {
-        border-left: 6px rgb(46, 255, 71) solid;
-        background: rgb(0, 101, 34);
+        border-left: 6px rgb(2, 184, 255) solid;
+        background: rgb(0, 120, 167);
         ${sharedBlockStyle}
         color: white;
     }

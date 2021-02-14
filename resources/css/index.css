@@ -20,11 +20,11 @@ header h4 {
     opacity: 0.8;
 }
 header h5 {
-    font-weight: bold;
+    /* font-weight: bold; */
     color: gray;
     margin-top: 0;
     transition-duration: 0.5s;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 nav a {
