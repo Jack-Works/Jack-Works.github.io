@@ -1,8 +1,7 @@
 {
   "name": "jack-works.github.io",
   "scripts": {
-    "start": "server.bat",
-    "go": "docsify serve",
+    "start": "docsify serve",
     "tsc": "ttsc"
   },
   "repository": {
