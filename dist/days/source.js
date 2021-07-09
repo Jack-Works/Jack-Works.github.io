@@ -47,7 +47,7 @@ function Page(props) {
 }
 // basic components
 function Markdown({ children, ...props }) {
-    return typeof children === 'string' ? (React.createElement("span", { dangerouslySetInnerHTML: { __html: render.renderInline(children) } })) : (React.createElement("span", Object.assign({}, props, { children: children })));
+    return typeof children === 'string' ? (React.createElement("span", { dangerouslySetInnerHTML: { __html: render.renderInline(children) } })) : (React.createElement("span", { ...props, children: children }));
 }
 function EnhancedCard(props) {
     const classes = useStyles();

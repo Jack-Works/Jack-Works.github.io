@@ -1,4 +1,4 @@
-import { css } from "https://cdn.skypack.dev/lit-element@2.4.0";
+import { css } from "https://cdn.skypack.dev/lit-element@2.5.1";
 export const sharedBlockStyle = css `
     padding: 12px;
     margin-top: 0.5em;

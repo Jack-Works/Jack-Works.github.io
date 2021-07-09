@@ -5,7 +5,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { deprecatedStyle } from "./shared-css.js";
-import { customElement, LitElement, html, property } from "https://cdn.skypack.dev/lit-element@2.4.0";
+import { customElement, LitElement, html, property } from "https://cdn.skypack.dev/lit-element@2.5.1";
 let Archived = class Archived extends LitElement {
     constructor() {
         super(...arguments);
