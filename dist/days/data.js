@@ -16,8 +16,16 @@ const Data = {
             title: 'Ingress / 清明上河图',
             progress: { max: 654, current: 286 },
         },
+        // {
+        //     title: `2022 年 ⸺ ？？、？？与？？之年 ⸺ ${getDayOfYear()} of 365`,
+        //     content: {
+        //         body: fill([
+        //             // ['Ori And The Will Of The Wisps', 'Become the legend.', '2021/12/19'],
+        //         ]),
+        //     },
+        // },
         {
-            title: `2021 年 ⸺ 循环、?? 与 ?? 之年 ⸺ ${getDayOfYear()} of 365`,
+            title: `2021 年 ⸺ 循环、尝试与永别之年 ⸺ ${getDayOfYear()} of 365`,
             content: {
                 body: fill([
                     ['哆啦 A 梦：大雄的新恐龙', '2020/1/5'],
@@ -27,7 +35,8 @@ const Data = {
                     ['魔戒：双塔奇兵', '2021/5/8'],
                     ['魔戒：王者归来', '2021/5/16'],
                     ['少女终末旅行', '2021/5/29'],
-                    ['Oneshot', "I'm not a cat!", '2021/7/9'],
+                    ['Oneshot', "「照顾好自己」", '2021/7/9'],
+                    ['Ori And The Will Of The Wisps', 'Become the legend.', '2021/12/19'],
                 ]),
             },
         },
