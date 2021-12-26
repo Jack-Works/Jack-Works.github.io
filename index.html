@@ -1,41 +1,93 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"
-        />
-        <title>暗之城！科学之城！</title>
-        <link rel="stylesheet" href="./resources/css/index.css" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./resources/img/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="./resources/img/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="./resources/img/favicon-16x16.png" />
-        <link rel="manifest" href="./site.webmanifest" />
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"
+    />
+    <title>暗之城！科学之城！</title>
+    <link rel="stylesheet" href="./resources/css/next.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./resources/img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./resources/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./resources/img/favicon-16x16.png" />
+  </head>
 
-    <body>
-        <main>
+  <body>
+    <ax-reveal-provider id="page">
+      <ax-elevation>
+        <ax-reveal-bound>
+          <ax-acrylic style="--acrylic-tint-color: black; --acrylic-tint-opacity: 0.1; --acrylic-blur: 5px">
             <header>
-                <h2>Jack<span style="opacity: 0">-</span>Works</h2>
-                <h4>.github.io</h4>
-                <h5 lang="jp">「これが未来だと言うならいっそ<br />遣り切れない明日を手放して」</h5>
+              <h1 id="title">
+                <pre>Jack<span class="fade">-</span>Works<span class="fade resize">.github.io</span></pre>
+              </h1>
+              <caption lang="jp">
+                <h2 id="subtitle">
+                  「
+                  <ruby>
+                    これが未来だと言うならいっそ
+                    <rp>(</rp>
+                    <rt lang="en">
+                      If this is the so-called
+                      <i>future</i>
+                      ,
+                    </rt>
+                    <rp>)</rp>
+                  </ruby>
+                  /
+                  <ruby>
+                    遣り切れない明日を手放して
+                    <rp>(</rp>
+                    <rt>let go of the unbearable tomorrow</rt>
+                    <rp>)</rp>
+                  </ruby>
+                  」
+                </h2>
+              </caption>
             </header>
-            <nav>
-                <a href="days/index.html">
-                    <div data-alt-left="Map the Civil / ">测绘文明</div>
-                </a>
-                <a href="https://blog.jackworks.dev/">
-                    <div data-alt-right=" / 暗之城 贝叶斯阴谋会">Bayesian Conspiracy</div>
-                </a>
+            <nav id="nav">
+              <ul>
+                <li>
+                  <a href="days/index.html">
+                    <i-block>
+                      <i-icon icon="nav" slot="icon"></i-icon>
+                      测绘文明
+                    </i-block>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://blog.jackworks.dev/">
+                    <i-block>
+                      <i-icon icon="blog" slot="icon"></i-icon>
+                      Bayesian Conspiracy
+                    </i-block>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://telegram.me/cityofscience">
+                    <i-block>
+                      <i-icon icon="city" slot="icon"></i-icon>
+                      暗之城！科学之城！
+                    </i-block>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/Jack-Works">
+                    <i-block>
+                      <i-icon icon="github" slot="icon"></i-icon>
+                      Jack-Works
+                    </i-block>
+                  </a>
+                </li>
+              </ul>
             </nav>
-            <footer>
-                <div><a target="_blank" href="https://github.com/Jack-Works">Jack-Works@Github</a></div>
-                <div>
-                    <a target="_blank" href="https://telegram.me/cityofscience">暗之城！科学之城！</a>
-                </div>
-                <div>Background by +AustinClark1</div>
-            </footer>
-        </main>
-    </body>
+            <footer></footer>
+          </ax-acrylic>
+        </ax-reveal-bound>
+      </ax-elevation>
+    </ax-reveal-provider>
+    <script type="module" src="./resources/ax.js"></script>
+    <script type="module" src="./resources/icon.js"></script>
+  </body>
 </html>
