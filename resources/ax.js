@@ -3,7 +3,9 @@ import { register as acrylic } from 'https://cdn.skypack.dev/@ax-design/acrylic'
 import { register as pressure } from 'https://cdn.skypack.dev/@ax-design/pressure'
 import { register as elevation } from 'https://cdn.skypack.dev/@ax-design/elevation'
 
-hl({})
+hl({
+  compat: true,
+})
 acrylic({})
 pressure({})
 elevation({})
@@ -44,18 +46,18 @@ class Block extends HTMLElement {
       this.shadowRoot.adoptedStyleSheets = [styleInstance]
     }
     this.shadowRoot.innerHTML = `${styleInstance ? '' : `<style>${style}</style>`}
+        <ax-pressure>
         <ax-acrylic>
         <ax-elevation>
-        <ax-pressure>
         <ax-reveal>
         <div>
         <span class="icon"><slot name="icon" /></span>
         <span class="text"><slot /></span>
         </div>
         </ax-reveal>
-        </ax-pressure>
         </ax-elevation>
         </ax-acrylic>
+        </ax-pressure>
         `
   }
 }

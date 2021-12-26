@@ -30,4 +30,7 @@ class Icon extends HTMLElement {
     return ['icon']
   }
 }
-customElements.define('i-icon', Icon)
+function define() {
+  customElements.define('i-icon', Icon)
+}
+customElements.get('i-block') ? define() : customElements.whenDefined('i-block').then(define)
