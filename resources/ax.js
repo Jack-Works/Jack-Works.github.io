@@ -3,7 +3,10 @@ import { register as acrylic } from 'https://cdn.skypack.dev/@ax-design/acrylic'
 import { register as pressure } from 'https://cdn.skypack.dev/@ax-design/pressure'
 import { register as elevation } from 'https://cdn.skypack.dev/@ax-design/elevation'
 
-hl({})
+hl({
+      compat: true,
+      borderDetectionMode: 'experimentalAutoFit',
+})
 acrylic({})
 pressure({})
 elevation({})
