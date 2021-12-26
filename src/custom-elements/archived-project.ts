@@ -10,9 +10,9 @@ export class Archived extends LitElement {
         return html`
             <div>
                 ${this.working ? '👎' : '💥'} This project has stopped maintained since
-                ${new Date(this.to).toLocaleDateString()}.<br />${this.working
-                    ? 'This project can work properly now.'
-                    : 'This project can not work properly now.'}
+                ${new Date(this.to).toLocaleDateString()}.
+                <br />
+                ${this.working ? 'This project can work properly now.' : 'This project can not work properly now.'}
                 <br />
                 <slot></slot>
             </div>

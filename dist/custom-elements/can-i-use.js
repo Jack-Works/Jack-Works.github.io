@@ -9,7 +9,7 @@ let CanIUse = class CanIUse extends LitElement {
     constructor() {
         super();
         this.feature = '';
-        window.addEventListener('message', e => {
+        window.addEventListener('message', (e) => {
             const data = e.data;
             if (typeof data === 'string' && data.indexOf('ciu_embed') > -1) {
                 const height = parseInt(data.split(':')[2]) + 30;
@@ -26,8 +26,7 @@ let CanIUse = class CanIUse extends LitElement {
                 frameborder="0"
                 width="100%"
                 height="400px"
-            >
-            </iframe>
+            ></iframe>
         `;
     }
     static get styles() {

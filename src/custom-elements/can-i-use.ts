@@ -10,15 +10,14 @@ export class CanIUse extends LitElement {
                 frameborder="0"
                 width="100%"
                 height="400px"
-            >
-            </iframe>
+            ></iframe>
         `
     }
     constructor() {
         super()
         window.addEventListener(
             'message',
-            e => {
+            (e) => {
                 const data = e.data
                 if (typeof data === 'string' && data.indexOf('ciu_embed') > -1) {
                     const height = parseInt(data.split(':')[2]) + 30

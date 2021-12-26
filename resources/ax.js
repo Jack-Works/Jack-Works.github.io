@@ -4,7 +4,7 @@ import { register as pressure } from 'https://cdn.skypack.dev/@ax-design/pressur
 import { register as elevation } from 'https://cdn.skypack.dev/@ax-design/elevation'
 
 hl({
-  compat: true,
+    compat: true,
 })
 acrylic({})
 pressure({})
@@ -12,40 +12,40 @@ elevation({})
 
 const css = String.raw
 const style = css`
-  .icon {
-    left: 20px;
-    top: 0;
-    position: absolute;
-  }
-  ax-reveal,
-  ax-acrylic,
-  ax-elevation,
-  ax-pressure,
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 100%;
-  }
+    .icon {
+        left: 20px;
+        top: 0;
+        position: absolute;
+    }
+    ax-reveal,
+    ax-acrylic,
+    ax-elevation,
+    ax-pressure,
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 100%;
+    }
 `
 const styleInstance = (() => {
-  try {
-    const o = new CSSStyleSheet()
-    o.replace(style)
-    return o
-  } catch (e) {}
+    try {
+        const o = new CSSStyleSheet()
+        o.replace(style)
+        return o
+    } catch (e) {}
 })()
 
 class Block extends HTMLElement {
-  connectedCallback() {
-    if (!this.isConnected) return
+    connectedCallback() {
+        if (!this.isConnected) return
 
-    this.attachShadow({ mode: 'open' })
-    if (styleInstance) {
-      this.shadowRoot.adoptedStyleSheets = [styleInstance]
-    }
-    this.shadowRoot.innerHTML = `${styleInstance ? '' : `<style>${style}</style>`}
+        this.attachShadow({ mode: 'open' })
+        if (styleInstance) {
+            this.shadowRoot.adoptedStyleSheets = [styleInstance]
+        }
+        this.shadowRoot.innerHTML = `${styleInstance ? '' : `<style>${style}</style>`}
         <ax-pressure>
         <ax-acrylic>
         <ax-elevation>
@@ -59,6 +59,6 @@ class Block extends HTMLElement {
         </ax-acrylic>
         </ax-pressure>
         `
-  }
+    }
 }
 customElements.define('i-block', Block)

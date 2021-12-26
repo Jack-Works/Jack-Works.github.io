@@ -37,7 +37,10 @@ export class BadgedLink extends LitElement {
     @property({ type: String }) href = ''
     render() {
         const meta = parseURL(this.href)
-        if (meta.image === '') return html` <slot></slot> `
+        if (meta.image === '')
+            return html`
+                <slot></slot>
+            `
         return html`
             <a target="_blank" href="${meta.href}"><img src="${meta.image}" alt="${meta.alt}" /></a>
             <slot style="${meta.hideSlot ? 'display:none' : ''}"></slot>

@@ -1,135 +1,135 @@
 body {
-  margin: 0;
-  background: fixed;
-  background-color: rgb(0, 22, 43);
-  background-image: url(../img/background.png);
-  background-position: 50% 100%;
-  background-repeat: no-repeat;
-  font-family: system-ui;
+    margin: 0;
+    background: fixed;
+    background-color: rgb(0, 22, 43);
+    background-image: url(../img/background.png);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    font-family: system-ui;
 }
 body,
 a {
-  color: white;
+    color: white;
 }
 
 #page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  min-height: 100vh;
-  --elevation-depth: 16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    --elevation-depth: 16;
 }
 #page > * {
-  display: inline-flex;
-  color: white;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    display: inline-flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 #page main {
-  padding: 1em 0 2em;
-  margin: 0 6em;
+    padding: 1em 0 2em;
+    margin: 0 6em;
 }
 @media screen and (max-width: 600px) {
-  #page main {
-    margin: 0;
-    width: 100vw;
-  }
+    #page main {
+        margin: 0;
+        width: 100vw;
+    }
 }
 
 .fade {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 .fade.resize {
-  font-size: 16px;
-  margin: 0 6px;
+    font-size: 16px;
+    margin: 0 6px;
 }
 
 #title {
-  font-size: 42px;
-  margin: 0.5em 0;
-  font-weight: 100;
+    font-size: 42px;
+    margin: 0.5em 0;
+    font-weight: 100;
 }
 #title pre {
-  font-family: system-ui;
-  margin: 0;
+    font-family: system-ui;
+    margin: 0;
 }
 
 #subtitle {
-  font-size: 16px;
-  font-weight: 100;
+    font-size: 16px;
+    font-weight: 100;
 }
 
 .no-linebreak {
-  white-space: nowrap;
+    white-space: nowrap;
 }
 
 @media screen and (max-width: 300px) {
-  #subtitle {
-    display: none;
-  }
+    #subtitle {
+        display: none;
+    }
 }
 
 #nav ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 0;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
 }
 #nav a {
-  display: inline-block;
-  text-align: center;
-  padding: 3px 0;
-  text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    padding: 3px 0;
+    text-decoration: none;
 }
 
 #page footer {
-  align-self: end;
-  position: fixed;
-  right: 2em;
-  bottom: 2em;
+    align-self: end;
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
 
-  text-align: right;
-  font-size: 14px;
+    text-align: right;
+    font-size: 14px;
 }
 @media screen and (min-height: 600px) {
-  #page footer::after {
-    content: 'Thanks to +AustinClark1 for the background';
-  }
+    #page footer::after {
+        content: 'Thanks to +AustinClark1 for the background';
+    }
 }
 
 ax-acrylic,
 ax-reveal-bound,
 ax-reveal-provider,
 ax-elevation {
-  display: block;
+    display: block;
 }
 ax-acrylic {
-  background-color: rgba(43, 79, 111, 0.2);
+    background-color: rgba(43, 79, 111, 0.2);
 }
 ax-acrylic:defined {
-  background-color: unset;
+    background-color: unset;
 }
 
 i-block {
-  --elevation-depth: 12;
-  --reveal-color: white;
-  --acrylic-tint-opacity: 0.2;
-  --acrylic-tint-color: white;
-  display: flex;
-  background: rgba(255, 255, 255, 0.3);
-  transition-property: background;
-  transition-duration: 400ms;
-  width: 300px;
-  height: 48px;
-  justify-content: center;
-  align-items: center;
+    --elevation-depth: 12;
+    --reveal-color: white;
+    --acrylic-tint-opacity: 0.2;
+    --acrylic-tint-color: white;
+    display: flex;
+    background: rgba(255, 255, 255, 0.3);
+    transition-property: background;
+    transition-duration: 400ms;
+    width: 300px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
 }
 i-block:hover {
-  background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
 i-block:defined,
 i-block:defined:hover {
-  background: unset;
+    background: unset;
 }

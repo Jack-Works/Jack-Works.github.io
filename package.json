@@ -1,30 +1,30 @@
 {
-  "name": "jack-works.github.io",
-  "scripts": {
-    "start": "docsify serve",
-    "tsc": "ttsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Jack-Works/Jack-Works.github.io.git"
-  },
-  "author": "Jack Works",
-  "homepage": "https://Jack-Works.github.io",
-  "dependencies": {
-    "@material-ui/core": "^4.12.1",
-    "@types/react": "^17.0.14",
-    "@types/react-dom": "^17.0.9",
-    "@types/remarkable": "^2.0.3",
-    "csstype": "^3.0.8",
-    "lit-element": "^2.5.1",
-    "lit-html": "^1.4.1",
-    "remarkable": "^2.0.1"
-  },
-  "devDependencies": {
-    "@magic-works/ttypescript-browser-like-import-transformer": "^3.0.0",
-    "docsify-cli": "^4.4.3",
-    "ts-node": "^10.0.0",
-    "ttypescript": "^1.5.12",
-    "typescript": "^4.3.5"
-  }
+    "name": "jack-works.github.io",
+    "scripts": {
+        "start": "docsify serve",
+        "tsc": "ttsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Jack-Works/Jack-Works.github.io.git"
+    },
+    "author": "Jack Works",
+    "homepage": "https://Jack-Works.github.io",
+    "dependencies": {
+        "@material-ui/core": "^4.12.1",
+        "@types/react": "^17.0.14",
+        "@types/react-dom": "^17.0.9",
+        "@types/remarkable": "^2.0.3",
+        "csstype": "^3.0.8",
+        "lit-element": "^2.5.1",
+        "lit-html": "^1.4.1",
+        "remarkable": "^2.0.1"
+    },
+    "devDependencies": {
+        "@magic-works/ttypescript-browser-like-import-transformer": "^3.0.0",
+        "docsify-cli": "^4.4.3",
+        "ts-node": "^10.0.0",
+        "ttypescript": "^1.5.12",
+        "typescript": "^4.3.5"
+    }
 }
