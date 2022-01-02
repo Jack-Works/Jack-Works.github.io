@@ -77,10 +77,12 @@ a {
     padding-left: 0;
     margin-bottom: 0;
 }
+#nav li {
+    margin: 8px 0;
+}
 #nav a {
     display: inline-block;
     text-align: center;
-    padding: 3px 0;
     text-decoration: none;
 }
 
@@ -105,11 +107,8 @@ ax-reveal-provider,
 ax-elevation {
     display: block;
 }
-ax-acrylic {
+ax-acrylic:not(:defined) {
     background-color: rgba(43, 79, 111, 0.2);
-}
-ax-acrylic:defined {
-    background-color: unset;
 }
 
 i-block {
@@ -118,18 +117,33 @@ i-block {
     --acrylic-tint-opacity: 0.2;
     --acrylic-tint-color: white;
     display: flex;
-    background: rgba(255, 255, 255, 0.3);
-    transition-property: background;
     transition-duration: 400ms;
     width: 300px;
-    height: 48px;
-    justify-content: center;
     align-items: center;
 }
-i-block:hover {
+a:focus i-block {
+    --acrylic-tint-opacity: 0.4;
+}
+i-block:not(:defined) {
+    background: rgba(255, 255, 255, 0.3);
+    height: 48px;
+}
+a:focus i-block:not(:defined), i-block:not(:defined):hover {
     background: rgba(255, 255, 255, 0.5);
 }
-i-block:defined,
-i-block:defined:hover {
-    background: unset;
+i-block > * {
+    vertical-align: middle;
+}
+
+i-icon {
+    display: inline-block;
+    margin-right: 6px;
+    padding-left: 24px;
+    height: 22px;
+}
+i-icon:not(:defined) {
+    display: none;
+}
+i-icon:not(:defined) + * {
+    padding-left: 24px;
 }

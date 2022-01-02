@@ -2,21 +2,15 @@ import './ax.js'
 import { css, html } from './utils.js'
 
 const style = css`
-    .icon {
-        left: 20px;
-        top: 0;
-        position: absolute;
+    div {
+        padding: 12px 0;
     }
     ax-reveal,
     ax-acrylic,
     ax-elevation,
-    ax-pressure,
-    div {
+    ax-pressure {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 300px;
-        height: 100%;
+        width: 100%;
     }
 `
 
@@ -26,8 +20,7 @@ const template = html`
             <ax-elevation>
                 <ax-reveal>
                     <div>
-                        <span class="icon"><slot name="icon" /></span>
-                        <span class="text"><slot /></span>
+                        <slot />
                     </div>
                 </ax-reveal>
             </ax-elevation>
