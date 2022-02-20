@@ -13,20 +13,20 @@ const Data: IData = {
     weekMessage: 'これが未来だと言うならいっそ、遣り切れない明日を手放して',
     motto: '那你为什么不现在就去做呢？',
     data: [
-        {
-            title: 'Ingress / 清明上河图',
-            progress: { max: 654, current: 323 },
-        },
         // {
-        //     title: `2022 年 ⸺ ？？、？？与？？之年 ⸺ ${getDayOfYear()} of 365`,
-        //     content: {
-        //         body: fill([
-        //             // ['Ori And The Will Of The Wisps', 'Become the legend.', '2021/12/19'],
-        //         ]),
-        //     },
+        //     title: 'Ingress / 清明上河图',
+        //     progress: { max: 654, current: 323 },
         // },
         {
-            title: `2021 年 ⸺ 循环、尝试与永别之年 ⸺ ${getDayOfYear()} of 365`,
+            title: `2022 年 ⸺ ？？、？？与？？之年 ⸺ ${getDayOfYear()} of 365`,
+            content: {
+                body: fill([
+                    // ['Ori And The Will Of The Wisps', 'Become the legend.', '2021/12/19'],
+                ]),
+            },
+        },
+        {
+            title: `2021 年 ⸺ 循环、尝试与永别之年`,
             content: {
                 body: fill([
                     ['哆啦 A 梦：大雄的新恐龙', '2020/1/5'],
